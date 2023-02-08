@@ -15,7 +15,6 @@
         width: 100%;
       }
 
-    
       #first-p {
         text-align: center;
         font-size: 250%;
@@ -38,16 +37,31 @@
       #second-box > div {
         width: auto;
         height: 100%;
+        border: 2px solid rgb(255, 0, 0);
       }
-
+      #second-box  p {
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        background-color: rgb(239, 49, 49);
+        font-weight: bolder;
+        font-size: 20px;
+        font-family: Bahnschrift;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        color: rgb(255, 255, 255);
+       
+      }
       #second-box > div > img {
         width: 100%;
       }
 
-      img + img {
+
+
+     img + img {
         margin-top: -100%;
         padding-bottom: 30px;
         padding-left: 20px;
+       
       }
 
       #second-p {
@@ -116,7 +130,7 @@
 
       .carousel-cell {
         margin-left: 2%;
-        border: 2px solid black;
+        border: 4px solid rgb(188, 184, 184);
         width: 30%;
         height: 550px;
         box-shadow: rgba(142, 140, 140, 0.25) 0px 30px 60px -12px,
@@ -125,7 +139,7 @@
         border-radius: 20px;
       }
       .carousel-cell > img {
-        border-radius: 20px 20px 0px 0px;
+        border-radius: 15px 15px 0px 0px;
         width: 100%;
         height: 75%;
       }
@@ -148,28 +162,159 @@
         padding-top: 10px;
         padding-bottom: 10px;
       }
-      
 
-      #fifth-box{
+      #fifth-box {
         width: 94%;
         height: 700px;
         margin-top: 100px;
         margin: 3%;
-        border: 2px solid black;
+        border: 4px solid rgb(254, 75, 75);
         object-fit: cover;
+        overflow: hidden;
       }
-      
-      
-      #red-below{
+
+      #red-below {
         width: 100%;
         height: 696px;
       }
       #bred-font {
         margin-top: -50%;
-        margin-left: 25%;
+        margin-left: 50%;
         width: 90%;
-        
+        object-fit: cover;
       }
+      /* ___________________________fifth__________________ */
+      #sixth-box {
+        width: 94%;
+        height: 700px;
+        margin-top: 100px;
+        margin: 3%;
+        border: 4px solid rgb(247, 201, 115);
+        object-fit: cover;
+        overflow: hidden;
+      }
+      #sixth-red {
+        width: 60%;
+      }
+
+      /* ___________________________seven three box in row__________________ */
+
+      #seven-box {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-left: 3%;
+        margin-right: 3%;
+        background-color: rgb(225, 230, 230);
+      }
+
+      #forimage {
+        padding: 20px;
+        width: 100%;
+        height: 400px;
+      }
+
+      #seven-box h3 {
+        font-size: 30px;
+        text-align: center;
+        font-weight: bolder;
+        padding-top: 90px;
+      }
+      #seven-box h2 {
+        font-family: Brush Script MT;
+        font-size: 25px;
+        text-align: center;
+
+        color: rgb(110, 108, 108);
+      }
+      #seven-box p {
+        font-family: Brush Script MT;
+        font-size: 25px;
+        text-align: center;
+
+        color: rgb(110, 108, 108);
+      }
+      #seven-box button {
+        height: 40px;
+        margin-left: 160px;
+        text-align: center;
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        border: 2px solid rgb(137, 137, 137);
+        border-radius: 4px;
+        font-size: 20px;
+        text-align: center;
+        background-color: rgb(255, 255, 255);
+        color: rgb(110, 108, 108);
+        padding-left: 10px;
+        padding-right: 10px;
+        font-weight: bolder;
+        margin-top: 10px;
+      }
+
+      #seven-box #tag1 {
+        color: rgb(254, 254, 254);
+        position: absolute;
+        top: 4090px;
+        left: 25%;
+        transform: translate(-50%, -50%);
+        font-size: 35px;
+      }
+
+      #seven-box #tag2 {
+        color: rgb(255, 255, 255);
+        position: absolute;
+        top: 3940px;
+        left: 75%;
+        transform: translate(-50%, -50%);
+        font-size: 35px;
+      }
+
+      /* _______________________________eight section______________________ */
+
+      #last-p {
+        text-align: center;
+        font-size: 250%;
+        margin-top: 3.4%;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-weight: bolder;
+        color: rgb(51, 50, 50);
+        background-color: rgb(252, 247, 247);
+        margin-bottom: 3%;
+      }
+
+      #eight-box {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-left: 3%;
+        margin-right: 3%;
+        grid-row-gap: 6%;
+        grid-column-gap: 0.4%;
+        margin-bottom: 8%;
+      }
+
+      #eight-box button {
+        width: 98%;
+        height: 60px;
+        border: 4px solid rgb(252, 243, 240);
+        border-radius: 5px;
+        font-size: 20px;
+        font-weight: bolder;
+        color: rgb(87, 86, 86);
+        background-color: rgb(230, 235, 235);
+      }
+      .blink {
+                animation: blinker 0.4s linear infinite;
+                color: red;
+                font-family: sans-serif;
+                font-weight: bolder;
+               
+            }
+            @keyframes blinker {
+                50% {
+                    opacity: 0;
+                }
+            }
+              
 
       /* medium screen */
       @media only screen and (min-width: 481px) and (max-width: 768px) {
@@ -197,7 +342,14 @@
           width: 100%;
           height: 65%;
         }
-       
+        #second-box {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        /* gap: 1%;
+        margin-top: 2%;
+        margin-left: 3%;
+        margin-right: 3%; */
+      }
       }
       /* small screens */
 
@@ -229,6 +381,14 @@
           width: 100%;
           height: 65%;
         }
+        #second-box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1%;
+        margin-top: 2%;
+        margin-left: 3%;
+        margin-right: 3%;
+      }
       }
     </style>
   </head>
@@ -243,20 +403,22 @@
         style="margin-top: -35%"
       />
     </div>
+    <marquee class="blink" direction="up" scrollamount="2" style="padding-left: 45px;">*Valid Till Tommorow</marquee>
     <p id="first-p">Limited-Time Deals</p>
+    
 
     <!-- __________________________________OFFER SECTION 2ND DISCOUNT_____________________________ -->
     <div id="second-box">
       <div>
         <img
-          src="https://ak1.ostkcdn.com/images/products/is/images/direct/e4f0a65da76f10e7e4f5640c3d7dd00fabc07d39/Jordan-Color-Block-Shag-Area-Rug.jpg?imwidth=480&impolicy=medium"
-          alt="rugs"
+          src="https://ak1.ostkcdn.com/img/mxc/01232023_HB_DOMESTIC_2.jpg?imwidth=1920"
+          alt="furnature"
         />
-        <img
-          src="https://ak1.ostkcdn.com/img/mxc/HP-HB-ostk-red-extra-20.svg?imwidth=1920"
+        <img id="check"
+          src="https://ak1.ostkcdn.com/img/mxc/HP-HB-ostk-red-extra-15.svg?imwidth=1920"
           style="margin-left: -20%"
         />
-        <p></p>
+        <p>Accent Chair</p>
       </div>
       <div>
         <img
@@ -267,52 +429,52 @@
           src="https://ak1.ostkcdn.com/img/mxc/HP-HB-ostk-red-extra-20.svg?imwidth=1920"
           style="margin-left: -20%"
         />
-        <p></p>
+        <p>Rugs</p>
       </div>
       <div>
         <img
-          src="https://ak1.ostkcdn.com/img/mxc/01232023_HB_INTL-CAN_1.jpg?imwidth=1920"
-          alt="rugs"
+          src="https://ak1.ostkcdn.com/img/mxc/0109023_HB_INTL-CAN_3.jpg?imwidth=1920"
+          alt="dining set"
         />
         <img
           src="https://ak1.ostkcdn.com/img/mxc/HP-HB-ostk-red-extra-20.svg?imwidth=1920"
           style="margin-left: -20%"
         />
-        <p></p>
+        <p>Dining Furniture</p>
       </div>
 
       <div>
         <img
-          src="https://ak1.ostkcdn.com/img/mxc/01232023_HB_INTL-CAN_1.jpg?imwidth=1920"
-          alt="rugs"
+          src="https://ak1.ostkcdn.com/img/mxc/01232023_HB_INTL-CAN_6.jpg?imwidth=1920"
+          alt="wall-hangins"
         />
         <img
-          src="https://ak1.ostkcdn.com/img/mxc/HP-HB-ostk-red-extra-20.svg?imwidth=1920"
+          src="https://ak1.ostkcdn.com/img/mxc/HP-HB-ostk-red-extra-10.svg?imwidth=1920"
           style="margin-left: -20%"
         />
-        <p></p>
+        <p>Home Decore</p>
       </div>
       <div>
         <img
-          src="https://ak1.ostkcdn.com/img/mxc/01232023_HB_INTL-CAN_1.jpg?imwidth=1920"
-          alt="rugs"
+          src="https://ak1.ostkcdn.com/img/mxc/01232023_HB_INTL-CAN_5.jpg?imwidth=1920"
+          alt="towels"
         />
         <img
-          src="https://ak1.ostkcdn.com/img/mxc/HP-HB-ostk-red-extra-20.svg?imwidth=1920"
+          src="https://ak1.ostkcdn.com/img/mxc/HP-HB-ostk-red-extra-15.svg?imwidth=1920"
           style="margin-left: -20%"
         />
-        <p></p>
+        <p>Bath Sheet</p>
       </div>
       <div>
         <img
-          src="https://ak1.ostkcdn.com/img/mxc/01232023_HB_INTL-CAN_1.jpg?imwidth=1920"
-          alt="rugs"
+          src="https://ak1.ostkcdn.com/img/mxc/01232023_HB_INTL-CAN_3.jpg?imwidth=1920"
+          alt="kitchen stuff"
         />
         <img
-          src="https://ak1.ostkcdn.com/img/mxc/HP-HB-ostk-red-extra-20.svg?imwidth=1920"
+          src="https://ak1.ostkcdn.com/img/mxc/HP-HB-ostk-red-extra-10.svg?imwidth=1920"
           style="margin-left: -20%"
         />
-        <p></p>
+       <p>Kitchen Appliances</p>
       </div>
     </div>
     <p id="second-p">Beautiful Finds for Every Room</p>
@@ -462,7 +624,8 @@
     </div>
     <!-- _______________________________________FIFTH BOX WITH BED ____________________________________________________________ -->
     <div id="fifth-box">
-      <img id="red-below"
+      <img
+        id="red-below"
         src="https://ak1.ostkcdn.com/img/mxc/01232023-SB-BedroomFurniture-767x800_Promo1.jpg?imwidth=1080"
         alt="home-image"
       />
@@ -473,9 +636,199 @@
     </div>
 
     <!-- ____________________________________________SIXTH  BOXX STYLE BORN LIGHT IMAGE_____________________ -->
+    <div id="sixth-box">
+      <img
+        id="sixth-below"
+        src="https://ak1.ostkcdn.com/img/mxc/01232023-SB-Lighting-767x800_Promo2.jpg?imwidth=1920"
+      />
+      <img
+        id="sixth-red"
+        src="https://ak1.ostkcdn.com/img/mxc/01232023-SB-Lighting-767x800_Promo2.svg?imwidth=1920"
+        style="background-color: aqua"
+      />
+    </div>
+    <!-- __________________________________________________seven boxxx click on image____________________________ -->
+    <div id="seven-box">
+      <div>
+        <img
+          id="forimage"
+          src="https://edge.curalate.com/v1/img/kDWHalUqWFNGX3BdcyVLi9ZTIJtQrkfqGc59qACBzXc=/w/1080"
+        />
+        <i
+          id="tag1"
+          class="fa-solid fa-tags"
+          title="Click on this tag for more rug designs!!"
+        ></i>
+      </div>
+      <div>
+        <h3>#OverStockStyle</h3>
+        <h2>saving & styling in real life</h2>
+        <p>
+          See how others are styling their rooms & score great deals on the
+          look!
+        </p>
+        <button>Explore Room</button>
+      </div>
+      <div>
+        <img
+          id="forimage"
+          src="https://edge.curalate.com/v1/img/s4qxofcMtyDq8NuPPYdXTdO-8Znb6L6VwtRih2L7TM4=/w/1080"
+        />
+        <a
+          href="https://www.tutorialbrain.com/css_tutorial/css_font_family_list/"
+          target="_blank"
+        >
+          <i
+            id="tag2"
+            class="fa-solid fa-tags"
+            title="Click on this tag for more light designs!!"
+          ></i
+        ></a>
+      </div>
+    </div>
+    <!-- _________________________________________________Eight section__________________________ -->
+    <p id="last-p">Trending Searches</p>
 
-    
+    <div id="eight-box">
+      <button>Pillows</button>
+      <button>TV Stand</button>
+      <button>Lamps</button>
+      <button>Futons</button>
+      <button>Dressers</button>
+      <button>Humidifiers</button>
+      <button>Blenders</button>
+      <button>Weighted Blankets</button>
+      <button>Pergolas</button>
+      <button>Armoires</button>
+      <button>Desks</button>
+      <button>Fireplaces</button>
+</div>
+      <!-- _____________________________________FOOTER PART________________________________________ -->
+      <footer class="text-gray-600 body-font" style="background-color: rgb(231, 231, 231);">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-wrap md:text-left text-center order-first">
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+              <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">COMPANY INFORMATION</h2>
+              <nav class="list-none mb-10">
+                <li>
+                  <a class="text-gray-600 hover:text-gray-800">About Overstock™</a>
+                </li>
+                <li>
+                  <a class="text-gray-600 hover:text-gray-800">Contact Us</a>
+                </li>
+                <li>
+                  <a class="text-gray-600 hover:text-gray-800">Careers</a>
+                </li>
+                <li>
+                  <a class="text-gray-600 hover:text-gray-800">Investor Relations</a>
+                </li>
+              </nav>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+              <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">LET US HELP</h2>
+              <nav class="list-none mb-10">
+                <li>
+                  <a class="text-gray-600 hover:text-gray-800">Contact Customer Care</a>
+                </li>
+                <li>
+                  <a class="text-gray-600 hover:text-gray-800">Shipping Information</a>
+                </li>
+                <li>
+                  <a class="text-gray-600 hover:text-gray-800">Return Policy</a>
+                </li>
+                <li>
+                  <a class="text-gray-600 hover:text-gray-800">International Help</a>
+                </li>
+              </nav>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+              <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">MORE WAYS TO SHOP</h2>
+              <nav class="list-none mb-10">
+                <li>
+                  <a class="text-gray-600 hover:text-gray-800">Tips & Ideas</a>
+                </li>
+                <li>
+                  <a class="text-gray-600 hover:text-gray-800">Deals</a>
+                </li>
+                <li>
+                  <a class="text-gray-600 hover:text-gray-800">Clearance</a>
+                </li>
+                <li>
+                  <a class="text-gray-600 hover:text-gray-800">New Arrivals</a>
+                </li>
+              </nav>
+            </div>
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+              <h2 class="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">OVERSTOCK</h2>
+              <div class="flex xl:flex-nowrap md:flex-nowrap lg:flex-wrap flex-wrap justify-center items-end md:justify-start">
+                <div class="relative w-40 sm:w-auto xl:mr-4 lg:mr-0 sm:mr-4 mr-2">
+                  <label for="footer-field" class="leading-7 text-sm text-gray-600" title="Want to see more products on list or more features on webiste">Any Suggestion</label>
+                  <input type="text" id="footer-field" name="footer-field" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 focus:border-indigo-500 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+                </div>
+                <button class="lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded" style="background-color: #ec353e;">Button</button>
+              </div>
+              <p class="text-gray-500 text-sm mt-2 md:text-left text-center">
+                <br class="lg:block hidden">
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-gray-100">
+          <div class="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
+            <a class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+              <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1561 1566" width="50" height="50">
+                <title>overstock-svg</title>
+                <style>
+                  .s0 { fill: #ffffff } 
+                  .s1 { fill: #ff1f2c } 
+                </style>
+                <g id="Layer">
+                  <g id="Layer">
+                    <path id="Shape 1" class="s0" d="m3.9 2.9h1556.2v1562.2h-1556.2z"/>
+                    <path id="Layer" fill-rule="evenodd" class="s1" d="m1560.9 0.4v1563.4h-802c276.1-98.4 509.8-346.2 571.5-636.5 79.8-376.6-160.1-682-536.1-682-339.5 0-673.6 248.9-794.2 574.4v-819.3c0 0 1560.8 0 1560.8 0z"/>
+                    <path id="Layer" fill-rule="evenodd" class="s1" d="m649.5 1516.8c-238.6 0-431.5-263.5-431.5-589.5 0-326 192.9-589.5 431.5-589.5 238.7 0 431.6 263.5 431.6 589.5 0 326-192.9 589.5-431.6 589.5z"/>
+                  </g>
+                </g>
+              </svg>
+             
+              <span class="ml-3 text-xl">OVERSTOCK</span>
+            </a>
+            <p class="text-sm text-gray-500 sm:ml-6 sm:mt-0 mt-4">© 2020 Overstock —
+              <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" class="text-gray-600 ml-1" target="_blank">@homestyle</a>
+            </p>
+            <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+              <a class="text-gray-500">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                </svg>
+              </a>
+              <a class="ml-3 text-gray-500">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                </svg>
+              </a>
+              <a class="ml-3 text-gray-500">
+                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                </svg>
+              </a>
+              <a class="ml-3 text-gray-500">
+                <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+                  <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+                  <circle cx="4" cy="4" r="2" stroke="none"></circle>
+                </svg>
+              </a>
+            </span>
+          </div>
+        </div>
+      </footer>
+      
   </body>
 </html>
 
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script
+  src="https://kit.fontawesome.com/d5e11ff79d.js"
+  crossorigin="anonymous"
+></script>
