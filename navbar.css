@@ -96,11 +96,13 @@ ul li a:hover{
     color: rgb(145, 152, 40);
     /* scrollbar-arrow-color: beige; */
     box-shadow: 2px 2px 5px #fc894d;
+    display: none;
+    display: block;
 
     
 }
 #red{
-    color: red;
+    color: rgb(190, 29, 29);
 }
 .search{
     width: 70%;
@@ -152,4 +154,10 @@ ul li a:hover{
     margin-top: 20px;
     margin-right: 25px;
 }
-
+/* medium screen */
+/* @media only screen and ( min-widht: 480px) and (max-widht:768){
+    .container{
+        grid-template-columns: repeat(4,1fr);
+    }
+    
+} */
