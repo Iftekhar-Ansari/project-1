@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PRODUCT DETAILS</title>
+    <style>
+
+      body {     
+        animation: mymove 4s infinite;
+      }     
+
+      
+@keyframes mymove {
+  from {background-color:  rgb(218, 246, 255)}
+  to {background-color: rgb(244, 195, 241);}
+
+  /* 0%   {background-color:rgb(247, 194, 194);}
+  25%  {background-color:rgb(253, 253, 182); }
+  50%  {background-color:rgb(186, 186, 255); }
+  75%  {background-color:rgb(174, 252, 174);}
+  100% {background-color:rgb(250, 175, 175); } */
+}
+      #parent-box {
+        margin-top: 5%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        width: 70%;
+        height: 500px;
+
+        margin-left: 15%;
+        margin-right: 15%;
+        gap: 2%;
+      }
+
+      #second-box {
+        margin-top: 5%;
+        width: 66%;
+        height: 550px;
+        border: 2px solid rgb(163, 161, 161);
+        margin-left: 15%;
+        margin-right: 15%;
+        color: rgb(94, 93, 93);
+        border-radius: 10px;
+        background-color: rgb(255, 255, 255);
+        font-weight: bolder;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-bottom: 5%;
+      }
+
+      #second-box h3 {
+        text-align: center;
+        font-size: 40px;
+      }
+      h3 {
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        text-decoration: underline;
+      }
+      #box1 {
+        width: 100%;
+        height: 100%;
+        border: 2px solid rgb(184, 182, 182);
+        border-radius: 10px;
+      }
+
+      #box1 img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+      }
+      #box2 {
+        width: 100%;
+        height: 100%;
+        border: 2px solid rgb(186, 185, 185);
+        border-radius: 10px;
+      }
+
+      .name1 {
+        padding-top: 10px;
+        padding-left: 30px;
+        padding-right: 30px;
+        font-size: 30px;
+        font-family: Candara;
+      }
+      .rating {
+        padding-left: 30px;
+        padding-right: 30px;
+        font-size: 50px;
+        color: rgb(246, 197, 91);
+        margin-top: -45px;
+      }
+
+      .price {
+        margin-top: -50px;
+        padding-left: 30px;
+        padding-right: 30px;
+        font-size: 30px;
+        font-family: Candara;
+        color: rgb(0, 0, 0);
+        font-weight: bolder;
+      }
+
+      button {
+        height: 50px;
+        width: 94%;
+        align-items: center;
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-top: 3%;
+        border-radius: 10px;
+        border: 2px solid rgb(166, 164, 164);
+        font-family: Candara;
+        font-size: 20px;
+      }
+
+      .text1{
+        padding-left: 30px;
+        padding-right: 30px;
+        font-family: Candara;
+        margin-bottom: -5px;
+      }
+      .text2{
+        padding-left: 30px;
+        padding-right: 30px;
+        font-family: Candara;
+        margin-bottom: -5px;
+        font-weight: bold;
+       
+      }
+      .text3{
+        padding-left: 30px;
+        padding-right: 30px;
+        font-family: Candara;
+
+      }
+
+      button:hover{
+        background-color:rgb(246, 197, 91);
+      }
+
+
+      #second-box:hover{
+        background-color:rgb(252, 232, 187);
+      }
+
+
+
+      #product1{
+    text-align: center;
+    /* cop */
+}
+
+#product1 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+    /* cop */
+}
+
+#product1 .pro{
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+    /* cop */
+}
+
+#product1 .pro:hover{
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+    /* cop */
+}
+
+#product1 .pro img{
+    width: 100%;
+    border-radius: 20px;
+    /* cop */
+}
+
+#product1 .pro .des{
+    text-align: start;
+    pad: 10px 0;
+    /* cop */
+}
+
+#product1 .pro .des span{
+color: #606063;
+font-size: 12px;
+/* cop */
+}
+
+#product1 .pro .des h5{
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+    /* cop */
+}
+
+#product1 .pro .des i{
+    font-size: 12px;
+    color: rgb(243, 181, 25);
+    /* cop */
+}
+
+#product1 .pro .des h4{
+    padding-top: 7px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #088178;
+    /* cop */
+}
+
+#product1 .pro .cart{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #e8f6ea;
+    font-weight: 500;
+    color: #088178;
+    border: 1px solid #cce7d0;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    /* cop */
+}
+
+
+    </style>
+  </head>
+  <body>
+    <div id="parent-box">
+      <div id="box1"></div>
+      <div id="box2"></div>
+    </div>
+
+    <div id="second-box">
+      <h3>Product Details</h3>
+      <h2>ITEM#: 11942884</h2>
+      <p>
+        Complement your patio furniture with the traditional elegance of this
+        area rug from Safavieh's Courtyard collection. This rug is machine-woven
+        of durable synthetic fibers that resist the effects of the weather. This
+        rug is also easy to clean; simply hose it off with some soapy water and
+        allow it to air dry.
+      </p>
+      <h4>Features:</h4>
+      <ul>
+        <li>Made of polypropylene and polyester</li>
+        <li>Machine-made weave</li>
+        <li>Geometric floral border pattern</li>
+        <li>Available in multiple color options</li>
+        <li>For indoor or outdoor use</li>
+        <li>Stain-, weather- and UV-resistant</li>
+        <li>Kid- and pet-friendly</li>
+        <li>Non-shedding</li>
+        <li>Suitable for high-traffic areas</li>
+        <li>
+          Easy to clean with regular vacuuming and rinsing with a garden hose
+          and soapy water
+        </li>
+        <li>When not in use outside, we recommend storing away</li>
+        <li>0.25-inch pile height</li>
+        <li>Multiple sizes available</li>
+      </ul>
+    </div>
+    
+    <section id="product1" class="section-p1">
+      <h2>Featured Products</h2>
+      <p>Summer Collection Mew Modern Design</p>
+      <div class="pro-container">
+        <div class="pro">
+          <img src="https://ak1.ostkcdn.com/images/products/is/images/direct/7695801d0428aa0b8a20666804107041aad66b99/Cozy-Line-Florabella-Cotton-Floral-3-pc.-Reversible-Quilt-Set.jpg?imwidth=480" alt="" />
+          <div class="des">
+            <span>adidas</span>
+            <h5>Cartoon Antronaut T-Shirts</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>₹ 1200</h4>
+          </div>
+          <a href="#"
+          ><span class="material-symbols-outlined cart">
+
+          </span></a>
+        </div>
+
+        <div class="pro">
+          <img src="https://ak1.ostkcdn.com/images/products/is/images/direct/e681ee85cafabf668cf99d7bffd000713a026efa/Modern-1-light-Metal-Wire-Woven-Pendant-Cage-Ceiling-Lights-for-Dining-Room.jpg?imwidth=480&impolicy=medium" alt="" />
+          <div class="des">
+            <span>adidas</span>
+            <h5>Cartoon Antronaut T-Shirts</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>₹ 1200</h4>
+          </div>
+          <a href="#"
+          ><span class="material-symbols-outlined cart">
+            
+          </span></a>
+        </div>
+
+        <div class="pro">
+          <img src="https://ak1.ostkcdn.com/images/products/is/images/direct/2f1a88be8f9df5afba4add8a302ab04055f3d8be/SAFAVIEH-Handmade-Cape-Cod-Marget-Boho-Coastal-Jute-Rug.jpg?imwidth=480&impolicy=medium" alt="" />
+          <div class="des">
+            <span>adidas</span>
+            <h5>Cartoon Antronaut T-Shirts</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>₹ 1200</h4>
+          </div>
+          <a href="#"
+          ><span class="material-symbols-outlined cart">
+            
+          </span></a>
+        </div>
+
+        <div class="pro">
+          <img src="https://ak1.ostkcdn.com/images/products/is/images/direct/f962f79817b3e4a0ac636ccfc9f10477e6a144ae/39-in-Orchid-Matte-Black-Retro-Fit-2-Spray-Massage-Jet-Shower-Panel-System.jpg?imwidth=480&impolicy=medium" alt="" />
+          <div class="des">
+            <span>adidas</span>
+            <h5>Cartoon Antronaut T-Shirts</h5>
+            <div class="star">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <h4>₹ 1200</h4>
+          </div>
+          <a href="#"
+          ><span class="material-symbols-outlined cart" >
+          
+          </span></a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+<script>
+  var x = JSON.parse(localStorage.getItem("prod_details"));
+  console.log(x.name);
+  var image = document.createElement("img");
+  image.setAttribute("src", x.image_url);
+
+  var name1 = document.createElement("h4");
+  name1.textContent = x.name;
+  name1.setAttribute("class", "name1");
+
+  var rating = document.createElement("p");
+  rating.textContent = x.rating;
+  rating.setAttribute("class", "rating");
+
+  var price = document.createElement("p");
+  price.textContent = x.price;
+  price.setAttribute("class", "price");
+
+  var text1 = document.createElement("p");
+  text1.textContent = "Get it by Sunday, February 12";
+  text1.setAttribute("class", "text1");
+
+  var text2 = document.createElement("p");
+  text2.textContent = "FREE Delivery over ₹499.";
+  text2.setAttribute("class", "text2");
+
+  var text3 = document.createElement("p");
+  text3.textContent = "Fulfilled by OverStock.";
+  text3.setAttribute("class", "text3");
+
+  
+
+
+  button1 = document.createElement("button");
+  button1.textContent = "Buy";
+  button1.setAttribute("class", "button");
+
+  button2 = document.createElement("button");
+  button2.textContent = "Add to Cart";
+  button2.setAttribute("class", "button");
+  button2.addEventListener("click",function(){
+       
+       prod_details(x);
+      
+      })
+
+      //  var arr=JSON.parse(localStorage.getItem("cartLD")) || []
+      var arr= JSON.parse(localStorage.getItem("cartLD")) || []
+      function  prod_details(x){
+        arr.push(x);
+     localStorage.setItem("cartLD",JSON.stringify(arr))
+     alert("One Item Added To Cart")
+    
+ }
+ console.log(arr)
+  document.getElementById("box1").append(image);
+  document.getElementById("box2").append(name1, rating, price,text1,text2,text3, button1, button2);
+   
+</script>
