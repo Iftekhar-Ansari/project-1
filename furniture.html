@@ -6,33 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>furniture</title>
     <style>
-      body {
+      * {
         margin: 0;
         padding: 0;
-      }
-      #container {
-        display: flex;
-        word-wrap: wrap;
-      }
-      #sortDiv {
-        width: 30%;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        padding-top: 10px;
-        
-        /* display: flex; */
-        /* align-items: center; */
-      }
-
-      select{
-        margin-bottom: 20px;
       }
       .addToCart {
         background-color: teal;
         color: white;
         border-radius: 10px;
         border: none;
-        padding: 10px 0;
         width: 100%;
+        padding: 5px;
       }
       .addToCart:hover {
         background-color: red;
@@ -40,20 +24,24 @@
       }
 
       #main-container {
+        width: 90%;
+        margin: auto;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 10px;
       }
 
       #main-container > div {
+        justify-content: center;
+        text-align: center;
         padding: 10px;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       }
 
       .priceBox {
+        margin: 10px;
         display: flex;
         justify-content: space-between;
-        margin: -25px 0;
       }
       img {
         width: 100%;
@@ -63,22 +51,14 @@
         color: red;
       }
       .ratingBox {
+        margin-bottom: 10px;
         display: flex;
+        align-items: center;
         justify-content: space-between;
       }
-      .price {
-        font-size: 20px;
-        font-size: 20px;
-        font-weight: bold;
-      }
-
-      .rating {
-        font-size: 20px;
-        color: green;
-      }
       .Details {
+        width: 50px;
         height: 20px;
-        margin-top: 20px;
         background-color: rgb(19, 128, 19);
         border: none;
         color: white;
@@ -87,6 +67,11 @@
       .Details:hover {
         background-color: red;
         color: white;
+      }
+      .rating {
+        font-size: 20px;
+        color: gold;
+        font-weight: 800;
       }
 
       @media all and (max-width: 575px) {
@@ -113,40 +98,235 @@
         }
       }
 
-      #slider{
-        width: 100%;
-        margin: 20px;
+      #top-container {
+        width: 90%;
 
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
       }
-      #slider img{
+
+      #top-container > div {
+        padding: 10px;
+        background-color: #088178;
+      }
+
+      #filter,
+      #sort {
+        font-size: 20px;
+        padding: 10px;
+      }
+      #filter option,
+      #sort option {
+        color: crimson;
+      }
+
+      /* slidee show start */
+
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Verdana, sans-serif;
+      }
+      .mySlides {
+        display: none;
+      }
+      img {
+        vertical-align: middle;
         width: 100%;
-        height: 60vh;
+        height: 400px;
       }
+
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Verdana, sans-serif;
+      }
+      .mySlides {
+        display: none;
+      }
+      img {
+        vertical-align: middle;
+      }
+
+      /* Slideshow container */
+      .slideshow-container {
+        max-width: 1200px;
+        position: relative;
+        margin: auto;
+      }
+
+      /* Caption text */
+      .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+      }
+
+      /* Number text (1/3 etc) */
+      .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+
+      /* The dots/bullets/indicators */
+      .dot {
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+
+      .active {
+        background-color: #717171;
+      }
+
+      /* Fading animation */
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .text {
+          font-size: 11px;
+        }
+      }
+
+      /* slide show end */
+
+      /* pagination */
+      .section-p1 {
+        padding: 40px 80px;
+      }
+
+      #pagination {
+        text-align: center;
+        /* cop */
+      }
+
+      #pagination a {
+        text-decoration: none;
+        background-color: #088178;
+        padding: 15px 20px;
+        border-radius: 4px;
+        color: #fff;
+        font-weight: 600;
+        /* cop */
+      }
+
+      #pagination a i {
+        font-size: 16px;
+        font-weight: 600;
+        /* cop */
+      }
+
+      @media (max-width: 799px) {
+        .section-p1 {
+          padding: 40px 40px;
+          /* cop */
+        }
+
+        @media (max-width: 477px) {
+          .section-p1 {
+            padding: 20px;
+            /* cop */
+          }
+        }
+      }
+
+      /* end pagination */
     </style>
   </head>
   <body>
-    <div id="slider">
-        <img src="https://www.jodhpurifurniture.com/assets/images/Tallboy%20Bedroom.jpg" alt="">
-    </div>
-    <div id="container">
-      <div id="sortDiv">
-        <label for="price">Sort by Price:</label>
-        <select name="price" id="price">
-            <option value="deleteFilter">Delete Filter</option>
-          <option value="lth">Low to High</option>
-          <option value="htl">Hight to Low</option>
-        </select>
-        <br>
+    <section id="slideshow">
+      <h2>Automatic Slideshow</h2>
+      <p>Change image every 2 seconds:</p>
 
-        <label for="rating">Sort by Rating:</label>
-        <select name="rating" id="rating">
-            <option value="deleteFilter">Delete Filter</option>
-          <option value="lth">Low to High</option>
-          <option value="htl">Hight to Low</option>
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img
+            src="https://ak1.ostkcdn.com/images/products/is/images/direct/2ebad0a4e7d94b6acf2bee922879c8f1ec5bda9d/Middlebrook-Gammelstaden-Mid-Century-Solid-Wood-6-Drawer-Dresser.jpg?imwidth=480&impolicy=medium"
+            style="width: 100%"
+          />
+          <div class="text">Caption Text</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img
+            src="https://ak1.ostkcdn.com/images/products/is/images/direct/9fb70a27d1a1e067f65a6f2ef2e0bfb98e0e525d/CraftPorch-2-Piece-Bedroom-Set-in-Luxurious-Velvet-Wingback-Panel.jpg?imwidth=480&impolicy=medium"
+            style="width: 100%"
+          />
+          <div class="text">Caption Two</div>
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img
+            src="https://ak1.ostkcdn.com/images/products/is/images/direct/a47942e09d11c9b004b7dab974245ea920445883/Kotter-Home-Zinnia-Victorian-Metal---Iron-Bed.jpg?imwidth=480&impolicy=medium"
+            style="width: 100%"
+          />
+          <div class="text">Caption Three</div>
+        </div>
+      </div>
+      <br />
+
+      <div style="text-align: center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </section>
+    <section id="top-container">
+      <div>
+        <select id="filter" onchange="handleFilter">
+          <option value="">Filter By Rating</option>
+          <option value="★★★★★">★★★★★</option>
+          <option value="★★★★">★★★★</option>
+          <option value="★★★">★★★</option>
+          <option value="★★">★★</option>
+          <option value="★">★</option>
         </select>
       </div>
-      <div id="main-container"></div>
-    </div>
+      <div>
+        <select id="sort" onchange="handleSort">
+          <option value="">Sort by price</option>
+          <option value="lth">Low to High</option>
+          <option value="htl">High to Low</option>
+        </select>
+      </div>
+    </section>
+    <div id="main-container"></div>
+
+    <section id="pagination" class="section-p1">
+      <a href="#">1</a>
+      <a href="#">2</a>
+      <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+    </section>
   </body>
 </html>
 
@@ -374,22 +554,25 @@
     },
   ];
 
+  // var getItem = JSON.parse(localStorage.getItem("book-list")) || [];
+
   displayData();
 
   function displayData() {
     furniture.map(function (elem) {
       var div = document.createElement("div");
+      div.addEventListener('click', product_details)
 
       var image = document.createElement("img");
       image.setAttribute("src", elem.image_url);
 
-      var name = document.createElement("h4");
+      var name = document.createElement("h5");
       name.textContent = elem.name;
 
       var priceBox = document.createElement("div");
       priceBox.setAttribute("class", "priceBox");
 
-      var price = document.createElement("p");
+      var price = document.createElement("h2");
       price.textContent = elem.price;
       price.setAttribute("class", "price");
 
@@ -407,6 +590,7 @@
 
       Details = document.createElement("button");
       Details.textContent = "Details";
+      Details.onclick = "";
       Details.setAttribute("class", "Details");
 
       ratingBox.append(rating, Details);
@@ -420,4 +604,39 @@
       document.getElementById("main-container").append(div);
     });
   }
+
+function product_details () {
+  div.src = spoduct.html;
+}
+
+  //  slide show start js
+
+  let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+      slideIndex = 1;
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+  }
+
+  //slid show end
 </script>
+
+<script
+  src="https://kit.fontawesome.com/25bb53796d.js"
+  crossorigin="anonymous"
+></script>

@@ -18,12 +18,12 @@
         width: 30%;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         padding-top: 10px;
-        
+
         /* display: flex; */
         /* align-items: center; */
       }
 
-      select{
+      select {
         margin-bottom: 20px;
       }
       .addToCart {
@@ -113,34 +113,156 @@
         }
       }
 
-      #slider{
-        width: 100%;
-        margin: 20px;
+      /* slide show style start*/
 
+      * {
+        box-sizing: border-box;
       }
-      #slider img{
+      body {
+        font-family: Verdana, sans-serif;
+      }
+      .mySlides {
+        display: none;
+      }
+      img {
+        vertical-align: middle;
         width: 100%;
-        height: 60vh;
+        height: 400px;
+      }
+
+      /* Slideshow container */
+      .slideshow-container {
+        max-width: 1200px;
+        position: relative;
+        margin: auto;
+      }
+
+      /* Caption text */
+      .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+      }
+
+      /* Number text (1/3 etc) */
+      .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+
+      /* The dots/bullets/indicators */
+      .dot {
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+
+      .active {
+        background-color: #717171;
+      }
+
+      /* Fading animation */
+      .fade {
+        animation-name: fade;
+        animation-duration: 2.0s;
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .text {
+          font-size: 11px;
+        }
+      }
+
+      /* slide show end */
+
+      #navbar{
+        width: 100%;
+        background-color: red;
+        height: 80px;
+        text-align: center;
       }
     </style>
   </head>
   <body>
-    <div id="slider">
-        <img src="https://ak1.ostkcdn.com/images/products/20254898/The-Curated-Nomad-Sandia-3-piece-Cotton-Quilt-Set-59e6f5de-193d-412f-a0d3-d94faa394b62_1000.jpg?imwidth=480" alt="">
+    <!-- slide show -->
+
+    <div id="navbar">
+      <p style="font-size: 50px;">navbar</p>
     </div>
+
+    <h2>Automatic Slideshow</h2>
+
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img
+          src="https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=800"
+          style="width: 100%"
+        />
+        <div class="text">Caption Text</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img
+          src="https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=800"
+          style="width: 100%"
+        />
+        <div class="text">Caption Two</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img
+          src="https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg?auto=compress&cs=tinysrgb&w=800"
+          style="width: 100%"
+        />
+        <div class="text">Caption Three</div>
+      </div>
+    </div>
+    <br />
+
+    <div style="text-align: center">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
+    <!-- slide show end -->
     <div id="container">
       <div id="sortDiv">
         <label for="price">Sort by Price:</label>
         <select name="price" id="price">
-            <option value="deleteFilter">Delete Filter</option>
+          <option value="deleteFilter">Delete Filter</option>
           <option value="lth">Low to High</option>
           <option value="htl">Hight to Low</option>
         </select>
-        <br>
+        <br />
 
         <label for="rating">Sort by Rating:</label>
         <select name="rating" id="rating">
-            <option value="deleteFilter">Delete Filter</option>
+          <option value="deleteFilter">Delete Filter</option>
           <option value="lth">Low to High</option>
           <option value="htl">Hight to Low</option>
         </select>
@@ -178,7 +300,7 @@
       id: 3,
       image_url:
         "https://ak1.ostkcdn.com/images/products/is/images/direct/3fe53e2fecfd9324937952bb25d0665a0dd11cee/Wildwood-Beach-Party-2-Piece-Reversible-Ultra-Soft-Microfiber-Quilt-Set.jpg?imwidth=480",
-      name: "Wildwood Beach Party Reversible Ultra-Soft Microfiber Quilt Set",
+      name: "Wildwood Beach Party Reversible Ultra-Soft",
       price: "₹ 6555",
       strikedoffprice: "₹ 9999",
       rating: "★★★★",
@@ -189,7 +311,7 @@
       id: 4,
       image_url:
         "https://ak1.ostkcdn.com/images/products/20102300/Southshore-Fine-Linens-Pure-Melody-Quilt-Set-e59d7222-f1a3-478c-8e7c-8e5afb597f20_1000.jpg?imwidth=480",
-      name: "Vilano Ultra-soft Lightweight Pure Melody 3-piece Paisley Quilt Set",
+      name: "Vilano Ultra-soft Lightweight Pure Melody 3-piece",
       price: "₹ 4475",
       strikedoffprice: "₹ 7999",
       rating: "★★★★",
@@ -200,10 +322,10 @@
       id: 5,
       image_url:
         "https://ak1.ostkcdn.com/images/products/is/images/direct/8584804718022501874a78b61e3228f3066aa035/Oversized-Solid-3-piece-Quilt-Set-by-Southshore-Fine-Linens.jpg?imwidth=480",
-      name: "Oversized Solid 3-piece Quilt Set by Southshore Fine Linens",
+      name: "Oversized Solid 3-piece Quilt Set by Southshore Fine Linens with 2 pilow",
       price: "₹ 3444",
       strikedoffprice: "₹ 5999",
-      rating: "r★★★★★",
+      rating: "★★★★★",
       Details: "Details",
       addCart: "Addtocart",
     },
@@ -244,7 +366,7 @@
       id: 9,
       image_url:
         "https://ak1.ostkcdn.com/images/products/is/images/direct/2034e3c0fbe3218a601190f1fe576d0e9d618db5/Madison-Park-Mansfield-Reversible-Bedspread-Set-%2811-Color-Option%29.jpg?imwidth=480",
-      name: "Madison Park Mansfield Reversible Bedspread Set",
+      name: "Madison Park Mansfield Reversible Bedspread with beautiful set",
       price: "₹ 5874",
       strikedoffprice: "₹ 9999",
       rating: "★★★★★",
@@ -266,7 +388,7 @@
       id: 11,
       image_url:
         "https://ak1.ostkcdn.com/images/products/is/images/direct/781e4223c577f255128d7934c44e9230069ded97/Beaute-Living-Sophia-Floral-Printed-Lightweight-5-Piece-Comforter.jpg?imwidth=480",
-      name: "Beaute Living Sophia 5-Piece Floral Pattern Comforter Set",
+      name: "Beaute Living Sophia 5-Piece Floral Pattern Comforter comfortable ",
       price: "₹ 8938",
       strikedoffprice: "₹ 9000",
       rating: "★★",
@@ -288,7 +410,7 @@
       id: 13,
       image_url:
         "https://ak1.ostkcdn.com/images/products/is/images/direct/97d919f27014f30c8bbec56fa968593e19830e3e/Naples-Oversized-Quilt-Set.jpg?imwidth=480",
-      name: "Naples Solid Oversized Quilt Set",
+      name: "Naples Solid Oversized Quilt with comfortable for two person",
       price: "₹ 4320",
       strikedoffprice: "₹ 9990",
       rating: "★★★★★",
@@ -310,7 +432,7 @@
       id: 15,
       image_url:
         "https://ak1.ostkcdn.com/images/products/is/images/direct/2799d25353ac2226ab5799b3c15e3c3f9e60d14d/VCNY-Nina-Embossed-Quilt-Set.jpg?imwidth=480",
-      name: "VCNY Nina Embossed Quilt Set",
+      name: "VCNY Nina Embossed Quilt with two confortable beautiful pillow",
       price: "₹ 3200",
       strikedoffprice: "₹ 7000",
       rating: "★★★★★",
@@ -321,7 +443,7 @@
       id: 16,
       image_url:
         "https://ak1.ostkcdn.com/images/products/is/images/direct/29b74603c736db047917c61add269c485e416506/Lugano-Honeycomb-Velvet-Oversized-Solid-Quilt-Set.jpg?imwidth=480",
-      name: "Lugano Honeycomb Velvet Oversized Solid Quilt Set",
+      name: "Lugano Honeycomb Velvet Oversized Solid Quilt beautiful set",
       price: "₹ 6416",
       strikedoffprice: "₹ 8678",
       rating: "★★★★★",
@@ -332,7 +454,7 @@
       id: 17,
       image_url:
         "https://ak1.ostkcdn.com/images/products/is/images/direct/9d7e3b55ed55a175d515aa36ef8394317593a30b/Madison-Park-Emery-Faux-Velvet-Reversible-3-Piece-Coverlet-Set.jpg?imwidth=480",
-      name: "Madison Park Emery Velvet 3 Piece Coverlet Set",
+      name: "Madison Park Emery Velvet 3 Piece Coverlet multicoloue and veri confortable Set",
       price: "₹ 6042",
       strikedoffprice: "₹ 8999",
       rating: "★★★★",
@@ -343,7 +465,7 @@
       id: 18,
       image_url:
         "https://ak1.ostkcdn.com/images/products/is/images/direct/d9c54a2852d42224c54a8fdeed88999b935a28bc/Capri-Medallion-Velvet-Oversized-Solid-Quilt-Set.jpg?imwidth=480",
-      name: "Capri Medallion Velvet Oversized Solid Quilt Set",
+      name: "Capri Medallion Velvet Oversized Solid Quilt very soft and colourful Set",
       price: "₹ 6454",
       strikedoffprice: "₹ 9678",
       rating: "★★★",
@@ -354,7 +476,7 @@
       id: 19,
       image_url:
         "https://ak1.ostkcdn.com/images/products/is/images/direct/078e7bf053813f1769debb3034284da641737d58/Copper-Grove-Boylston-Ikat-Blue-5-piece-Coverlet-Set.jpg?imwidth=480",
-      name: "Boylston Ikat Blue 5-piece Coverlet Set",
+      name: "Boylston Ikat Blue 5-piece Coverlet confortable and colourful Set",
       price: "₹ 4567",
       strikedoffprice: "₹ 9765",
       rating: "★★",
@@ -365,7 +487,7 @@
       id: 20,
       image_url:
         "https://ak1.ostkcdn.com/images/products/is/images/direct/279f8f55c5d4926756af889c1a56fd2ee923bcca/Serenta-5-Piece-Printed-Microfiber-LA-Boheme-Quilt-Set.jpg?imwidth=480",
-      name: "Serenta 5 Piece Printed Microfiber LA Boheme Quilt Set",
+      name: "Serenta 5 Piece Printed Microfiber LA Boheme Quilt beautiful Set",
       price: "₹ 6349",
       strikedoffprice: "₹ 9678",
       rating: "★★★★",
@@ -420,4 +542,30 @@
       document.getElementById("main-container").append(div);
     });
   }
+
+  // slide show
+
+  let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+      slideIndex = 1;
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+  }
+
+  //
 </script>
