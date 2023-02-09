@@ -4,35 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>furniture</title>
+    <title>Bedding</title>
     <style>
-      body {
+      * {
         margin: 0;
         padding: 0;
-      }
-      #container {
-        display: flex;
-        word-wrap: wrap;
-      }
-      #sortDiv {
-        width: 30%;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-        padding-top: 10px;
-
-        /* display: flex; */
-        /* align-items: center; */
-      }
-
-      select {
-        margin-bottom: 20px;
       }
       .addToCart {
         background-color: teal;
         color: white;
         border-radius: 10px;
         border: none;
-        padding: 10px 0;
         width: 100%;
+        padding: 5px;
       }
       .addToCart:hover {
         background-color: red;
@@ -40,20 +24,24 @@
       }
 
       #main-container {
+        width: 90%;
+        margin: auto;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 10px;
       }
 
       #main-container > div {
+        justify-content: center;
+        text-align: center;
         padding: 10px;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       }
 
       .priceBox {
+        margin: 10px;
         display: flex;
         justify-content: space-between;
-        margin: -25px 0;
       }
       img {
         width: 100%;
@@ -63,22 +51,14 @@
         color: red;
       }
       .ratingBox {
+        margin-bottom: 10px;
         display: flex;
+        align-items: center;
         justify-content: space-between;
       }
-      .price {
-        font-size: 20px;
-        font-size: 20px;
-        font-weight: bold;
-      }
-
-      .rating {
-        font-size: 20px;
-        color: green;
-      }
       .Details {
+        width: 50px;
         height: 20px;
-        margin-top: 20px;
         background-color: rgb(19, 128, 19);
         border: none;
         color: white;
@@ -87,6 +67,11 @@
       .Details:hover {
         background-color: red;
         color: white;
+      }
+      .rating {
+        font-size: 20px;
+        color: gold;
+        font-weight: 800;
       }
 
       @media all and (max-width: 575px) {
@@ -113,7 +98,30 @@
         }
       }
 
-      /* slide show style start*/
+      #top-container {
+        width: 90%;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+
+      #top-container > div {
+        padding: 10px;
+        background-color: #088178;
+      }
+
+      #filter,
+      #sort {
+        font-size: 20px;
+        padding: 10px;
+      }
+      #filter option,
+      #sort option {
+        color: crimson;
+      }
+
+      /* slidee show start */
 
       * {
         box-sizing: border-box;
@@ -128,6 +136,19 @@
         vertical-align: middle;
         width: 100%;
         height: 400px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Verdana, sans-serif;
+      }
+      .mySlides {
+        display: none;
+      }
+      img {
+        vertical-align: middle;
       }
 
       /* Slideshow container */
@@ -175,7 +196,7 @@
       /* Fading animation */
       .fade {
         animation-name: fade;
-        animation-duration: 2.0s;
+        animation-duration: 1.5s;
       }
 
       @keyframes fade {
@@ -196,79 +217,116 @@
 
       /* slide show end */
 
-      #navbar{
-        width: 100%;
-        background-color: red;
-        height: 80px;
-        text-align: center;
+      /* pagination */
+      .section-p1 {
+        padding: 40px 80px;
       }
+
+      #pagination {
+        text-align: center;
+        /* cop */
+      }
+
+      #pagination a {
+        text-decoration: none;
+        background-color: #088178;
+        padding: 15px 20px;
+        border-radius: 4px;
+        color: #fff;
+        font-weight: 600;
+        /* cop */
+      }
+
+      #pagination a i {
+        font-size: 16px;
+        font-weight: 600;
+        /* cop */
+      }
+
+      @media (max-width: 799px) {
+        .section-p1 {
+          padding: 40px 40px;
+          /* cop */
+        }
+
+        @media (max-width: 477px) {
+          .section-p1 {
+            padding: 20px;
+            /* cop */
+          }
+        }
+      }
+
+      /* end pagination */
     </style>
   </head>
   <body>
-    <!-- slide show -->
+    <section id="slideshow">
+      <h2>Automatic Slideshow</h2>
+      <p>Change image every 2 seconds:</p>
 
-    <div id="navbar">
-      <p style="font-size: 50px;">navbar</p>
-    </div>
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img
+            src="https://ak1.ostkcdn.com/images/products/is/images/direct/2ebad0a4e7d94b6acf2bee922879c8f1ec5bda9d/Middlebrook-Gammelstaden-Mid-Century-Solid-Wood-6-Drawer-Dresser.jpg?imwidth=480&impolicy=medium"
+            style="width: 100%"
+          />
+          <div class="text">Caption Text</div>
+        </div>
 
-    <h2>Automatic Slideshow</h2>
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img
+            src="https://ak1.ostkcdn.com/images/products/is/images/direct/9fb70a27d1a1e067f65a6f2ef2e0bfb98e0e525d/CraftPorch-2-Piece-Bedroom-Set-in-Luxurious-Velvet-Wingback-Panel.jpg?imwidth=480&impolicy=medium"
+            style="width: 100%"
+          />
+          <div class="text">Caption Two</div>
+        </div>
 
-    <div class="slideshow-container">
-      <div class="mySlides fade">
-        <div class="numbertext">1 / 3</div>
-        <img
-          src="https://images.pexels.com/photos/1350789/pexels-photo-1350789.jpeg?auto=compress&cs=tinysrgb&w=800"
-          style="width: 100%"
-        />
-        <div class="text">Caption Text</div>
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img
+            src="https://ak1.ostkcdn.com/images/products/is/images/direct/a47942e09d11c9b004b7dab974245ea920445883/Kotter-Home-Zinnia-Victorian-Metal---Iron-Bed.jpg?imwidth=480&impolicy=medium"
+            style="width: 100%"
+          />
+          <div class="text">Caption Three</div>
+        </div>
       </div>
+      <br />
 
-      <div class="mySlides fade">
-        <div class="numbertext">2 / 3</div>
-        <img
-          src="https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=800"
-          style="width: 100%"
-        />
-        <div class="text">Caption Two</div>
+      <div style="text-align: center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
       </div>
-
-      <div class="mySlides fade">
-        <div class="numbertext">3 / 3</div>
-        <img
-          src="https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg?auto=compress&cs=tinysrgb&w=800"
-          style="width: 100%"
-        />
-        <div class="text">Caption Three</div>
-      </div>
-    </div>
-    <br />
-
-    <div style="text-align: center">
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span>
-    </div>
-
-    <!-- slide show end -->
-    <div id="container">
-      <div id="sortDiv">
-        <label for="price">Sort by Price:</label>
-        <select name="price" id="price">
-          <option value="deleteFilter">Delete Filter</option>
-          <option value="lth">Low to High</option>
-          <option value="htl">Hight to Low</option>
-        </select>
-        <br />
-
-        <label for="rating">Sort by Rating:</label>
-        <select name="rating" id="rating">
-          <option value="deleteFilter">Delete Filter</option>
-          <option value="lth">Low to High</option>
-          <option value="htl">Hight to Low</option>
+    </section>
+    <section id="top-container">
+      <div>
+        <select id="filter" onchange="handleFilter">
+          <option value="">Filter By Rating</option>
+          <option value="★★★★★">★★★★★</option>
+          <option value="★★★★">★★★★</option>
+          <option value="★★★">★★★</option>
+          <option value="★★">★★</option>
+          <option value="★">★</option>
         </select>
       </div>
-      <div id="main-container"></div>
-    </div>
+      <div>
+        <select id="sort" onchange="handleSort">
+          <option value="">Sort by price</option>
+          <option value="lth">Low to High</option>
+          <option value="htl">High to Low</option>
+        </select>
+      </div>
+    </section>
+    <div id="main-container"></div>
+
+    <section id="pagination" class="section-p1">
+      <a href="#">1</a>
+      <a href="#">2</a>
+      <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+    </section>
   </body>
 </html>
 
@@ -277,7 +335,7 @@
     {
       id: 1,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/f40ebe3bd492c083a88167c1a48ebf040e107501/Serenta-Emma-5-Piece-Printed-Quilt-Bedspread-Coverlet-Set.jpg?imwidth=480",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/da0b69990c8cc5966c25f4393e0425a7b03223d9/Moorea-Patchwork-3-piece-Quilt-Set.jpg?imwidth=480",
       name: "Serenta Emma 5 Piece Printed Quilt Bedspread Coverlet Set",
       price: "₹ 7689",
       strikedoffprice: "₹ 9999",
@@ -289,7 +347,7 @@
       id: 2,
       image_url:
         "https://ak1.ostkcdn.com/images/products/29806746/Watercolor-Floral-Cotton-Quilt-Set-5b67608c-d9cc-483a-af6e-8811be5e26c9_1000.jpg?imwidth=480",
-      name: "Watercolor Floral Cotton Quilt Set",
+      name: "Watercolor Floral Cotton Quilt ultra-soft and comfortable Set",
       price: "₹ 14814",
       strikedoffprice: "₹ 19999",
       rating: "★★★★",
@@ -299,8 +357,8 @@
     {
       id: 3,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/3fe53e2fecfd9324937952bb25d0665a0dd11cee/Wildwood-Beach-Party-2-Piece-Reversible-Ultra-Soft-Microfiber-Quilt-Set.jpg?imwidth=480",
-      name: "Wildwood Beach Party Reversible Ultra-Soft",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/25e98963a16c779e5d5498f105c4386261235cc3/Greenland-Home-Fashions-Atlantis-Coastal-Reversible-Quilt-Set.jpg?imwidth=480",
+      name: "Wildwood Beach Party Reversible Ultra-Soft comforatable set",
       price: "₹ 6555",
       strikedoffprice: "₹ 9999",
       rating: "★★★★",
@@ -311,7 +369,7 @@
       id: 4,
       image_url:
         "https://ak1.ostkcdn.com/images/products/20102300/Southshore-Fine-Linens-Pure-Melody-Quilt-Set-e59d7222-f1a3-478c-8e7c-8e5afb597f20_1000.jpg?imwidth=480",
-      name: "Vilano Ultra-soft Lightweight Pure Melody 3-piece",
+      name: "Vilano Ultra-soft Lightweight Pure Melody 3-piece comfertable set",
       price: "₹ 4475",
       strikedoffprice: "₹ 7999",
       rating: "★★★★",
@@ -321,7 +379,7 @@
     {
       id: 5,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/8584804718022501874a78b61e3228f3066aa035/Oversized-Solid-3-piece-Quilt-Set-by-Southshore-Fine-Linens.jpg?imwidth=480",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/826b5d24aad8802ec99b0d6189cc76a16e884b36/Soft-Essentials-All-Season-2-Piece-Watercolor-Leaves-Stripe-Reversible-Quilt-Set-with-Shams.jpg?imwidth=480",
       name: "Oversized Solid 3-piece Quilt Set by Southshore Fine Linens with 2 pilow",
       price: "₹ 3444",
       strikedoffprice: "₹ 5999",
@@ -376,7 +434,7 @@
     {
       id: 10,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/41d1a1b353cc4370e68cbd95094b1fa794d20272/Serenta-Bloom-Medallion-5-Piece-Reversible-Quilt-Bedspread-Set.jpg?imwidth=480",
+        "https://ak1.ostkcdn.com/images/products/30109999/Christmas-Quilt-Bedspread-Set-bd54c37c-10bd-4c6a-9298-1081c1317023_1000.jpg?imwidth=480",
       name: "Serenta Bloom Medallion 5 Piece Reversible Quilt Bedspread Set",
       price: "₹ 6952",
       strikedoffprice: "₹ 9999",
@@ -505,13 +563,13 @@
       var image = document.createElement("img");
       image.setAttribute("src", elem.image_url);
 
-      var name = document.createElement("h4");
+      var name = document.createElement("h5");
       name.textContent = elem.name;
 
       var priceBox = document.createElement("div");
       priceBox.setAttribute("class", "priceBox");
 
-      var price = document.createElement("p");
+      var price = document.createElement("h2");
       price.textContent = elem.price;
       price.setAttribute("class", "price");
 
@@ -529,6 +587,7 @@
 
       Details = document.createElement("button");
       Details.textContent = "Details";
+      Details.onclick = "";
       Details.setAttribute("class", "Details");
 
       ratingBox.append(rating, Details);
@@ -543,7 +602,7 @@
     });
   }
 
-  // slide show
+  //  slide show start js
 
   let slideIndex = 0;
   showSlides();
@@ -567,5 +626,11 @@
     setTimeout(showSlides, 2000); // Change image every 2 seconds
   }
 
-  //
+  //slid show end
 </script>
+
+<script
+  src="https://kit.fontawesome.com/25bb53796d.js"
+  crossorigin="anonymous"
+></script>
+

@@ -5,49 +5,516 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>single product page </title>
-    <link rel="stylesheet" href="style.css" />
+    <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan', sans-serif;
+}
+
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+
+h4{
+    font-size: 20px;
+    color: #222;
+}
+
+h6{
+    font-size: 12px;
+    font-weight: 700;
+}
+
+p{
+    font-size: 16px;
+    color: #465b52;
+    margin: 15px 0 20px 0;
+}
+
+.section-p1{
+    padding: 40px 80px;
+}
+
+.section-m1{
+    margin: 40px 0;
+}
+
+button.normal{
+    font-size: 14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: black;
+    background-color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+
+button.white{
+    font-size: 13px;
+    font-weight: 600;
+    padding: 11px 18px;
+    color: #fff;
+    background-color: transparent;
+    cursor: pointer;
+    border: 1px solid #fff;
+    outline: none;
+    transition: 0.2s;
+}
+
+#page-header{
+    background-image: url("background_img/furniture.jpg");
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 14px;
+/* cop */
+}
+
+#page-header h2,
+#page-header p {
+    color: #fff;
+    /* cop */
+}
+
+#product1{
+    text-align: center;
+    /* cop */
+}
+
+#product1 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    flex-wrap: wrap;
+    /* cop */
+}
+
+#product1 .pro{
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+    /* cop */
+}
+
+#product1 .pro:hover{
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);
+    /* cop */
+}
+
+#product1 .pro img{
+    width: 100%;
+    border-radius: 20px;
+    /* cop */
+}
+
+#product1 .pro .des{
+    text-align: start;
+    pad: 10px 0;
+    /* cop */
+}
+
+#product1 .pro .des span{
+color: #606063;
+font-size: 12px;
+/* cop */
+}
+
+#product1 .pro .des h5{
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+    /* cop */
+}
+
+#product1 .pro .des i{
+    font-size: 12px;
+    color: rgb(243, 181, 25);
+    /* cop */
+}
+
+#product1 .pro .des h4{
+    padding-top: 7px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #088178;
+    /* cop */
+}
+
+#product1 .pro .cart{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: #e8f6ea;
+    font-weight: 500;
+    color: #088178;
+    border: 1px solid #cce7d0;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    /* cop */
+}
+
+#pagination {
+    text-align: center;
+    /* cop */
+}
+
+#pagination a {
+    text-decoration: none;
+    background-color: #088178;
+    padding: 15px 20px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 600;
+    /* cop */
+}
+
+#pagination a i {
+    font-size: 16px;
+    font-weight: 600;
+    /* cop */
+}
+
+#newsletter{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    background-image: url("background_img/newslwtter.jpg");
+    background-repeat: no-repeat;
+    background-position: 20% 30%;
+    background-color: #041e42;
+    /* cop */
+}
+
+#newsletter h4{
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    /* cop */
+}
+
+#newsletter p{
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #088178;
+    /* cop */
+}
+
+#newsletter p span{
+    color: #ffbd27;
+    /* cop */
+}
+
+#newsletter .form {
+    display: flex;
+    width: 40%;
+    /* cop */
+}
+
+#newsletter input{
+    height: 3.125rem;
+    padding: 0 1.25em;
+    font-size: 14px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    outline: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    /* cop */
+}
+
+#newsletter  button{
+    background-color: #088178;
+    color: #fff;
+    white-space: nowrap;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    /* cop */
+}
+
+/* single product details page //////////////////////////////////////////////////////////////////////////// */
+#prodetails {
+    display: flex;
+    margin-top: 20px;
+/* cop */
+}
+
+#prodetails .single-pro-image {
+    width: 50%;
+    margin-right: 5%;
+    /* cop */
+}
+
+.small-img-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.small-img-col {
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+#prodetails .single-pro-details{
+    width: 50%;
+    padding-top: 30px;
+    /* cop */
+}
+
+#prodetails .single-pro-details h4 {
+    padding: 40px 0 20px 0;
+    /* cop */
+}
+
+#prodetails .single-pro-details h2 {
+    font-size: 26px;
+    /* cop */
+}
+
+#prodetails .single-pro-details select {
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    /* cop */
+}
+
+#prodetails .single-pro-details input {
+    width: 50px;
+    height: 47px;
+    padding-left: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    /* cop */
+}
+
+#prodetails .single-pro-details button {
+    background-color: #088178;
+    color: #fff;
+    /* cop */
+}
+
+#prodetails .single-pro-details input:focus {
+    outline: none;
+    /* cop */
+}
+
+#prodetails .single-pro-details span {
+    line-height: 25px;
+    /* cop */
+}
+
+/* banner 3 */
+#banner3{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 80px;
+}
+
+#banner3 .banner-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-image: url("https://cdn.pixabay.com/photo/2014/08/11/21/39/wall-416060__480.jpg");
+    min-width: 30%;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+#banner3 .banner-box2{
+    background-image: url("https://cdn.pixabay.com/photo/2017/09/09/18/25/living-room-2732939__480.jpg");
+}
+
+#banner3 .banner-box3{
+    background-image: url("https://cdn.pixabay.com/photo/2017/08/02/01/01/living-room-2569325__480.jpg");
+}
+
+#banner3 h2{
+    color: #fff;
+    font-weight: 900;
+    font-size: 22px;
+}
+
+#banner3 h3{
+    color: #ec544e;
+    font-weight: 800;
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media quory */
+
+@media (max-width: 799px) {
+
+    .section-p1{
+        padding: 40px 40px;
+        /* cop */
+    }
+
+    #product1 .pro-container {
+        justify-content: center;
+        /* cop */
+    }
+
+    #product1 .pro {
+        margin: 15px;
+        /* cop */
+    }
+
+
+
+
+    #newsletter .form {
+        width: 70%;
+    }
+
+    #banner3 {
+        padding: 0 40px;
+    }
+
+    #banner3 .banner-box {
+        width: 28%;
+    }
+}
+
+
+@media (max-width: 477px) {
+
+    .section-p1 {
+        padding: 20px;
+        /* cop */
+    }
+
+    #product1 .pro {
+        width: 100%;
+        /* cop */
+    }
+
+
+
+    #newsletter{
+        padding: 40px 20px;
+        /* cop */
+    }
+
+    #newsletter .form {
+        width: 100%;
+        /* cop */
+    }
+
+
+
+
+    #banner3 {
+        padding: 0 20px;
+    }
+
+    #banner3 .banner-box{
+        width: 100%;
+    }
+
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+#sorting{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+#sorting div{
+    padding: 10px 10px;
+    border: 1px solid #041e42;
+
+}
+
+#sorting div select {
+    font-size: 20px;
+    color: #fff;
+    background-color: #088178;
+}
+
+#sorting div select option { 
+    color: gold;
+}
+
+    </style>
   </head>
   <body>
-    <section id="header">
-      <a id="main-logo" href="#"><img src="logo.png" alt="" class="logo" /></a>
-      <div>
-        <ul id="navbar">
-          <li><a href="index.html">Home</a></li>
-          <li><a class="active" href="shop.html">Shop</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li id="lg-bag">
-            <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
-          </li>
-          <a href="#" id="close"> <i class="far fa-times"></i> </a>
-        </ul>
-      </div>
-      <div id="mobile">
-        <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
-        <i id="bar" class="fas fa-outdent"></i>
-      </div>
-    </section>
 
     <section id="prodetails" class="section-p1">
         <div class="single-pro-image">
-            <img src="products/f1.jpg" width="100%" id="MainImg" alt="">
+            <img src="https://ak1.ostkcdn.com/images/products/is/images/direct/eb3fbf0627b5ba8a73db004039ac20d24fdfa484/Carbon-Loft-Kenyon-Round-Metal-Wrap-Side-Table.jpg?imwidth=480&impolicy=medium" width="100%" id="MainImg" alt="">
 
             <div class="small-img-group">
                 <div class="small-img-col">
-                    <img src="products/f1.jpg" width="100%" class="small-img" alt="">
+                    <img src="https://ak1.ostkcdn.com/images/products/is/images/direct/eb3fbf0627b5ba8a73db004039ac20d24fdfa484/Carbon-Loft-Kenyon-Round-Metal-Wrap-Side-Table.jpg?imwidth=480&impolicy=medium" width="100%" class="small-img" alt="">
                 </div>
 
                 <div class="small-img-col">
-                    <img src="products/f2.jpg" width="100%" class="small-img" alt="">
+                    <img src="https://ak1.ostkcdn.com/images/products/is/images/direct/8b443b1ea64b9ada5fb734c0a4e9a64682862445/Simple-Living-Country-Cottage-Drop-Leaf-3-piece-Dining-Set.jpg?imwidth=480&impolicy=medium" width="100%" class="small-img" alt="">
                 </div>
 
                 <div class="small-img-col">
-                    <img src="products/f3.jpg" width="100%" class="small-img" alt="">
+                    <img src="https://ak1.ostkcdn.com/images/products/is/images/direct/fa60b94336d4a60c62b883bff19daa1dac8f9d3c/Simple-Living-Templeton-5-Piece-Dining-Set.jpg?imwidth=480&impolicy=medium" width="100%" class="small-img" alt="">
                 </div>
 
                 <div class="small-img-col">
-                    <img src="products/f4.jpg" width="100%" class="small-img" alt="">
+                    <img src="https://ak1.ostkcdn.com/images/products/is/images/direct/37d9bcf79421ca145356830df977df1434dddce6/Art-Leon-Adjustable-Swivel-Barstool-%28Set-of-2%29.jpg?imwidth=480&impolicy=medium" width="100%" class="small-img" alt="">
                 </div>
             </div>
         </div>
@@ -55,14 +522,14 @@
             <h6>Home / T-Shirts</h6>
             <h4>Mans fashion T-Shirts</h4>
             <h2>₹ 1300</h2>
-            <select>
+            <!-- <select>
                 <option>Select Size</option>
                 <option>XL</option>
                 <option>XXL</option>
                 <option>Large</option>
                 <option>Medium</option>
                 <option>Small</option>
-            </select>
+            </select> -->
 
             <input type="number" value="1">
             <button class="normal">Add to Cart</button>
@@ -76,7 +543,7 @@
         <p>Summer Collection Mew Modern Design</p>
         <div class="pro-container">
           <div class="pro">
-            <img src="products/f1.jpg" alt="" />
+            <img src="https://ak1.ostkcdn.com/images/products/is/images/direct/7695801d0428aa0b8a20666804107041aad66b99/Cozy-Line-Florabella-Cotton-Floral-3-pc.-Reversible-Quilt-Set.jpg?imwidth=480" alt="" />
             <div class="des">
               <span>adidas</span>
               <h5>Cartoon Antronaut T-Shirts</h5>
@@ -89,11 +556,14 @@
               </div>
               <h4>₹ 1200</h4>
             </div>
-            <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+            <a href="#"
+            ><span class="material-symbols-outlined cart">
+  
+            </span></a>
           </div>
   
           <div class="pro">
-            <img src="products/f1.jpg" alt="" />
+            <img src="https://ak1.ostkcdn.com/images/products/is/images/direct/e681ee85cafabf668cf99d7bffd000713a026efa/Modern-1-light-Metal-Wire-Woven-Pendant-Cage-Ceiling-Lights-for-Dining-Room.jpg?imwidth=480&impolicy=medium" alt="" />
             <div class="des">
               <span>adidas</span>
               <h5>Cartoon Antronaut T-Shirts</h5>
@@ -106,11 +576,14 @@
               </div>
               <h4>₹ 1200</h4>
             </div>
-            <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+            <a href="#"
+            ><span class="material-symbols-outlined cart">
+              
+            </span></a>
           </div>
   
           <div class="pro">
-            <img src="products/f1.jpg" alt="" />
+            <img src="https://ak1.ostkcdn.com/images/products/is/images/direct/2f1a88be8f9df5afba4add8a302ab04055f3d8be/SAFAVIEH-Handmade-Cape-Cod-Marget-Boho-Coastal-Jute-Rug.jpg?imwidth=480&impolicy=medium" alt="" />
             <div class="des">
               <span>adidas</span>
               <h5>Cartoon Antronaut T-Shirts</h5>
@@ -123,11 +596,14 @@
               </div>
               <h4>₹ 1200</h4>
             </div>
-            <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+            <a href="#"
+            ><span class="material-symbols-outlined cart">
+              
+            </span></a>
           </div>
   
           <div class="pro">
-            <img src="products/f1.jpg" alt="" />
+            <img src="https://ak1.ostkcdn.com/images/products/is/images/direct/f962f79817b3e4a0ac636ccfc9f10477e6a144ae/39-in-Orchid-Matte-Black-Retro-Fit-2-Spray-Massage-Jet-Shower-Panel-System.jpg?imwidth=480&impolicy=medium" alt="" />
             <div class="des">
               <span>adidas</span>
               <h5>Cartoon Antronaut T-Shirts</h5>
@@ -140,7 +616,10 @@
               </div>
               <h4>₹ 1200</h4>
             </div>
-            <a href="#"><i class="fa-solid fa-cart-shopping cart"></i></a>
+            <a href="#"
+            ><span class="material-symbols-outlined cart" >
+            
+            </span></a>
           </div>
         </div>
       </section>
@@ -159,62 +638,6 @@
         <button class="normal">Sign Up</button>
       </div>
     </section>
-
-    <footer class="section-p1">
-      <div class="col">
-        <img class="logo" src="logo.png" alt="" />
-        <h4>Contact</h4>
-        <p><strong>Adress: </strong> Alpha 1, Greater Noida, Uttar Pradesh</p>
-        <p><strong>Phone: </strong> +1234567810/ (+91)7263863548</p>
-        <p><strong>Hours: </strong> 10:00 - 18:00, Mon - Sat</p>
-        <div class="follow">
-          <h4>Follow Us</h4>
-          <div class="icon">
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-twitter"></i>
-            <i class="fa-brands fa-pinterest"></i>
-            <i class="fa-brands fa-youtube"></i>
-          </div>
-        </div>
-      </div>
-
-      <div class="col">
-        <h4>About</h4>
-        <a href="#">About us</a>
-        <a href="#">Delivey Information</a>
-        <a href="#">Privicy Policy</a>
-        <a href="#">Terms & Conditions</a>
-        <a href="#">Contact Us</a>
-      </div>
-
-      <div class="col">
-        <h4>My Account</h4>
-        <a href="#">Sign In</a>
-        <a href="#">View Cart</a>
-        <a href="#">My Wishlist</a>
-        <a href="#">Track My order</a>
-        <a href="#">Help</a>
-      </div>
-
-      <div class="col install">
-        <h4>Install App</h4>
-        <p>From App Store or Google Play Store</p>
-        <div class="row">
-          <img src="payment/google-play-png-logo-3802.png" alt="" />
-          <img src="payment/app-store-png-logo-33116.png" alt="" />
-        </div>
-        <p>Secure Payment Getway</p>
-        <img
-          src="payment/25689-2-major-credit-card-logo-transparent-image.png"
-          alt=""
-        />
-      </div>
-
-      <div class="copyright">
-        <p>2023, Cpyrights Reserved by Sumit Saurabh</p>
-      </div>
-    </footer>
 
     <script>
         var MainImg = document.getElementById("MainImg");
