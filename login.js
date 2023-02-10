@@ -1,10 +1,4 @@
-// isUserAvailable()
-// let ptoggle = 0;
-// let users = JSON.parse(localStorage.getItem("users")) || [];
 
-// document.querySelector("#homepage").addEventListener("click", function (event) {
-//   window.location.href = "index.html";
-// });
 
 document.querySelector("#ca").addEventListener("click", createAccount);
 
@@ -195,15 +189,3 @@ function checkValdationSigIn(e,p){
 }
 
 
-// function isUserAvailable(){
-//   let obj = JSON.parse(localStorage.getItem("loggedUser"))||{}
-//   let count =0
-//  for(let x in obj){
-//   count++
-//  }
-
-//  if(count>0){
-//   window.location.href="index.html"
-//  }
-
-// }
