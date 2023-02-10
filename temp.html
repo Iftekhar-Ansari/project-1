@@ -1,1049 +1,858 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image" href="https://media.glassdoor.com/sql/14907/overstock-com-squarelogo-1529535998697.png">
-    <title>Area Rugs | Overstock.com: Buy Rugs Online</title>
-    <link rel="stylesheet" href="/styles/navbar.css">
-    <link rel="stylesheet" href="/styles/footer.css">
-    <link rel="stylesheet" href="/styles/rugs.css">
-    <script src="https://kit.fontawesome.com/24c494a6b6.js" crossorigin="anonymous"> </script>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>furniture</title>
     <style>
-        #container{
-    width: 95%;
-    margin: auto;
-    margin-top: 190px;
-}
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .addToCart {
+        background-color: teal;
+        color: white;
+        border-radius: 10px;
+        border: none;
+        width: 100%;
+        padding: 5px;
+      }
+      .addToCart:hover {
+        background-color: red;
+        scale: 1.2;
+      }
 
-#cp1{
-    width: 100%;
-    display: flex;
+      #main-container {
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
 
+      #main-container > div {
+        border-radius: 20px;
+        justify-content: center;
+        text-align: center;
+        padding: 10px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
 
-}
-h1{
-    color: #2f3337;
-}
-h2{
-    text-align: center;
-    color: #2f3337;
-    margin-top: 40px;
+      #main-container > div img{
+        transition: transform 0.5s;
+      }
 
-}
-#cp1>div:nth-child(1){
-    width: 20%;
-    padding: 0px 40px;
-    
-}
+      #main-container > div img:hover{
+        transform: scale(1.2);
+        border-radius: 10px;
+      }
 
-#cp1>div:nth-child(2){
-    width: 70%;
-}
+      #main-container > div h2{
+        transition: transform 0.5s;
+      }
 
-#cp1>div:nth-child(2)>img{
-    width: 100%;
-}
+      #main-container > div h2:hover{
+        transform: scale(1.2);
+        border-radius: 10px;
+      }
 
-#cp1>div:nth-child(1)>p:last-child{
-    color: red;
-}
+      .priceBox {
+        margin: 10px;
+        display: flex;
+        justify-content: space-between;
+      }
+      img {
+        width: 100%;
+      }
+      .strikedoffprice {
+        text-decoration: line-through;
+        color: red;
+      }
+      .ratingBox {
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .Details {
+        width: 50px;
+        height: 20px;
+        background-color: rgb(19, 128, 19);
+        border: none;
+        color: white;
+        border-radius: 5px;
+      }
+      .Details:hover {
+        background-color: red;
+        color: white;
+      }
+      .rating {
+        font-size: 20px;
+        color: gold;
+        font-weight: 800;
+      }
 
-#cp2{
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 15px;
-    text-align: center;
-    margin-top: 50px;
-}
+      @media all and (max-width: 575px) {
+        #main-container {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          gap: 10px;
+        }
+      }
 
-#cp2>div{
-    position: relative ;
+      @media all and (min-width: 576px) and (max-width: 800px) {
+        #main-container {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 10px;
+        }
+      }
 
- 
-}
+      @media all and (min-width: 801px) and (max-width: 1080px) {
+        #main-container {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 10px;
+        }
+      }
 
-h6{
-    position: absolute;
-    font-weight: normal;
-    font-size: 12px;
-    background-color: #c7202c;
-    padding: 4px 10px;
-    color: white;
-}
-#cp2>div>img{
-    width: 100%;
-}
-
-#cp4{
-    display: flex;
-    justify-content: right;
-    margin: 20px;
-
-}
-select{
-    padding: 8px;
-}
-
-#cp5{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(3,auto);
-    gap: 15px;
-    
-   
-}
-#cp5>div{
-    position: relative;
-    border: 1px solid gainsboro;
-    cursor: pointer;
-}
-#cp5>div>img{
-    width: 100%;
-    max-height: 300px;
-
-}
-#cp5>div>i{
-    position: absolute;
-    margin-right: 16px;
-    right: 0;
-    background-color: white;
-    margin-top: 30px;
-    border: 1px solid black;
-    border-radius: 20px;
-    cursor: pointer;
-    padding: 8px;
-}
-#cp5>div>h3{
-    color: #c7202c;
-    margin-left: 16px;
-}
-#cp5>div>p{
-    color: #2f3337;
-    font-size: 12px;
-    padding: 10px 0px;
-    margin-left: 16px;
-}
-
-#cp6{
-    width: 100%;
-    margin-top: 70px;
-}
-
-#cp6>img{
-    width: 100%;
-}
-
-
-
-@media all and (max-width: 950px) and (min-width:601px){
-    #cp5{
-        grid-template-columns: repeat(2,1fr);
-        grid-template-rows: repeat(6,auto);
+      #top-container {
         
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 20px;
+        margin-left:  5%;
+      
+        width: 433px;
+        border: 4px solid black;
+  animation: mymove 5s infinite;
+      
+      }
+      @keyframes mymove {
+  50% {
+  border-color: rgb(176, 178, 178);}
+  100%{
+    border-color: rgb(238, 189, 99);
+  }
+}
+
+
+
+      #top-container > div {
+        padding: 10px;
+        background-color: #eae6e6;
+
+      }
+
+      #filter,
+      #sort {
+        font-size: 20px;
+        padding: 10px;
+        
+      }
+      #filter option,
+      #sort option {
+        color: rgb(12, 12, 12);
+        
+      }
+
+      /* slidee show start */
+
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Verdana, sans-serif;
+      }
+      .mySlides {
+        /* display: none; */
        
-    }
-    
+        width: 100%;
+        
+        
+      }
+
+
+      img {
+        vertical-align: middle;
+        width: 100%;
+        height: 400px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Verdana, sans-serif;
+      }
+      .mySlides {
+        display: none;
+      }
+      img {
+        vertical-align: middle;
+      }
+
+      
+
+      /* Slideshow container */
+      .slideshow-container {
+         height: 500px;
+        max-width: 90%;
+        margin-left: 3%;
+        margin-right: 3%;
+        position: relative;
+        margin: auto;
+       
+        margin-top: 20px;
+      
+      }
+      .slideshow-container img {
+             min-height:100%
 
 }
 
-@media all and (max-width: 601px) and (min-width:200px){
-    #cp5{
-        grid-template-columns: repeat(1,1fr);
-        grid-template-rows: repeat(12,auto);
-        
-       
-    }
-} 
+
+      /* Caption text */
+      .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+      }
+
+      /* Number text (1/3 etc) */
+      .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+
+      /* The dots/bullets/indicators */
+      .dot {
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+
+      .active {
+        background-color: #717171;
+      }
+
+      /* Fading animation */
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .text {
+          font-size: 11px;
+        }
+      }
+
+      /* slide show end */
+
+      /* pagination */
+      .section-p1 {
+        padding: 40px 80px;
+      }
+
+      #pagination {
+        text-align: center;
+        /* cop */
+      }
+
+      #pagination a {
+        text-decoration: none;
+        background-color: #088178;
+        padding: 15px 20px;
+        border-radius: 4px;
+        color: #fff;
+        font-weight: 600;
+        /* cop */
+      }
+
+      #pagination a i {
+        font-size: 16px;
+        font-weight: 600;
+        /* cop */
+      }
+
+      @media (max-width: 799px) {
+        .section-p1 {
+          padding: 40px 40px;
+          /* cop */
+        }
+
+        #banner3 {
+          padding: 0 40px;
+        }
+
+        #banner3 .banner-box {
+          width: 28%;
+        }
+      }
+
+      @media (max-width: 477px) {
+        .section-p1 {
+          padding: 20px;
+          /* cop */
+        }
+
+        #banner3 {
+          padding: 0 20px;
+        }
+
+        #banner3 .banner-box {
+          width: 100%;
+        }
+      }
+
+      /* end pagination */
+
+      /* banner 3 start */
+      #banner3 {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 0 80px;
+      }
+
+      #banner3 .banner-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        background-image: url("https://ak1.ostkcdn.com/img/mxc/12292022-MOPS-WinterUpdate-Frame2.jpg?imwidth=3840");
+        min-width: 30%;
+        height: 30vh;
+        background-size: cover;
+        background-position: center;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+
+      #banner3 .banner-box2 {
+        background-image: url("https://ak1.ostkcdn.com/img/mxc/12292022-MOPS-WinterUpdate-Frame3.jpg?imwidth=3840");
+      }
+
+      #banner3 .banner-box3 {
+        background-image: url("https://ak1.ostkcdn.com/img/mxc/12292022-MOPS-WinterUpdate-Frame4.jpg?imwidth=3840");
+      }
+
+      #banner3 h2 {
+        color: #fff;
+        font-weight: 900;
+        font-size: 22px;
+      }
+
+      #banner3 h3 {
+        color: #ec544e;
+        font-weight: 800;
+        font-size: 15px;
+      }
+
+      #banner3 .banner-box2 h2{
+        transition: transform 0.5s;
+      }
+
+      #banner3 .banner-box2 h2:hover{
+        transform: scale(1.2);
+      }
+
+      #banner3 .banner-box3 h2{
+        transition: transform 0.5s;
+      }
+
+      #banner3 .banner-box3 h2:hover{
+        transform: scale(1.2);
+      }
+
+      #banner3 .banner-box h2{
+        transition: transform 0.5s;
+      }
+
+      #banner3 .banner-box h2:hover{
+        transform: scale(1.4);
+      }
+      /* banner 3 end */
     </style>
-</head>
-
-<body>
-
-  
-    <div id="navbar">
-
-        <div id="accordian">
-            <!-- nav toggle -->
-            <div>
-                <div>
-                    <div></div>
-                    <p>Sign up to receive our latest <span style="font-weight: bold;">deals</span> and get a <span
-                            style="font-weight: bold;">10% off coupon</span>.<i id="toggle"
-                            class="fa-solid fa-chevron-down"></i></p>
-                    <i id="close" class="fa-solid fa-xmark"></i>
-                </div>
-
-                <div>
-                    <input type="email" placeholder="enter email address">
-                    <p>Sign up</p>
-                </div>
-
-                <p>Terms & Conditions | Privacy Policy | *You can unsubscribe at any time</p>
-
-            </div>
-
-            <!-- location -->
-
-            <div>
-                <p>Ships to: </p>
-                <img src="https://ak1.ostkcdn.com/img/mxc/intFlag_IN.gif" alt="">
-                <h5>INDIA</h5>
-            </div>
-
-            <!-- logo -->
-
-            <div>
-                <img id="homepage" src="https://ak1.ostkcdn.com/img/mxc/OSTK_MAIN_LOGO_20181127KCH.jpg" alt="">
-
-                <div>
-                    <input type="text" placeholder="Search...everything you finds ships for free">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </div>
-
-                <div>
-
-                    <div id="myAccount">
-                        <img id="account" src="https://cdn-icons-png.flaticon.com/512/747/747376.png" alt="">
-                        <p id="username">Account</p>
-                        <div>
-                            <p>Singin</p>
-                            <p>Signout</p>
-                        </div>
-                    </div>
-                    <div>
-                        <img src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png" alt="">
-                        <p>Lists</p>
-                    </div>
-
-                    <div id="cartNum">
-                        <img id="cartImage" src="https://cdn-icons-png.flaticon.com/512/2838/2838895.png" alt="">
-                        <div></div>
-                        <p>Cart</p>
-                    </div>
-
-                </div>
-
-                <button id="topcheckout"><i class="fa-solid fa-lock"></i>&nbspCheck Out</button>
-                <i id="menu" class="fa-solid fa-bars"></i>
-
-
-
-            </div>
-
-            <!-- tab -->
-            <div id="tabs">
-
-                <div>
-                    <p class="tab">Furniture</p>
-                    <div class="dropDown">
-
-                        <div id="furniture">
-
-
-                            <div>
-                                <h5>Living Room Furniture</h5>
-
-                                <p>Sofas & Couches</p>
-                                <p>Sectionals</p>
-                                <p>Benches</p>
-                                <p>Ottomans & Poufs</p>
-                                <p>Accent Chairs</p>
-                                <p>Recliners</p>
-                                <p>Coffee & Accent Tables</p>
-                                <p>TV Stands</p>
-
-
-                            </div>
-
-                            <div>
-                                <h5>Bedroom Furniture</h5>
-                                <p>Beds</p>
-                                <p>Bedroom Sets</p>
-                                <p>Headboards</p>
-                                <p>Bed Frames</p>
-                                <p>Dressers & Chests</p>
-                                <p>Nightstands</p>
-                                <p>Armoires & Wardrobes</p>
-                                <p>Mattresses</p>
-                                <p>Kids Beds</p>
-
-                            </div>
-                            <div>
-                                <h5>Dining, Kitchen & Bar</h5>
-                                <p>Kitchen & Dining Sets</p>
-                                <p>Kitchen & Dining Chairs</p>
-                                <p>Kitchen & Dining Tables</p>
-                                <p>Counter & Bar Stools</p>
-                                <p>Bar Tables</p>
-                                <p>Buffets & Sideboards</p>
-                                <p>Home Bars</p>
-                                <p>Kitchen Islands & Carts</p>
-                                <p>Kitchen Furniture</p>
-
-                            </div>
-                            <div>
-                                <img src="https://ak1.ostkcdn.com/images/products/is/images/direct/eb6657e6f8fb0814ee891f8ce33e6da2268e6f32/Signature-Design-by-Ashley-Limited-Edition-13-inch-Hybrid-Mattress.jpg?imwidth=320"
-                                    alt="">
-
-                                <h3>extra 20% off</h3>
-                                <p>Select Furniture by Signature Design by Ashley*</p>
-                            </div>
-                            <div>
-                                <h5>Patio & Outdoor Furniture</h5>
-                                <p>Patio Furniture Sets</p>
-                                <p>Sofas, Chairs & Sectionals</p>
-                                <p>Dining Sets</p>
-                                <p>Coffee & Side Tables</p>
-                                <p>Chaise Lounges</p>
-                                <p>Adirondack Chairs</p>
-                                <p>Hammocks & Swings</p>
-                                <p>Outdoor Benches</p>
-                            </div>
-                            <div>
-                                <h5>Office Furniture</h5>
-                                <p>Desks</p>
-                                <p>Office Chairs</p>
-                                <p>Small Space Desks</p>
-                                <p>Office Shelves & Storage</p>
-                                <p>File Cabinets</p>
-                                <p>Office & Conference Tables</p>
-                                <p>Bookshelves</p>
-                                <p>Gaming Chairs</p>
-
-                            </div>
-                            <div>
-                                <h5>More</h5>
-                                <p>Entryway</p>
-                                <p>Bathroom</p>
-                                <p>Home Gym</p>
-                                <p>Recreation Room</p>
-                                <p>Small Space Living</p>
-                                <p>Kids and Toddler Furniture</p>
-                                <p>Baby Furniture</p>
-
-                            </div>
-                            <div>
-                                <h5>More Ways to Shop</h5>
-                                <p>Featured Sales</p>
-                                <p>New Arrivals</p>
-                                <p>Clearance</p>
-                                <p>Furniture Advice</p>
-
-                            </div>
-
-
-
-                        </div>
-
-                    </div>
-                </div>
-                <div>
-                    <p class="tab">Rugs</p>
-                    <div class="dropDown">
-                        <div id="rugs">
-
-                            <div>
-                                <h5>Area Rugs By Size</h5>
-                                <p>3x5</p>
-                                <p>4x6</p>
-                                <p>5x8</p>
-                                <p>6x9</p>
-                                <p>7 x 9</p>
-                                <p>8x10</p>
-                                <p>9x12</p>
-                                <p>10x14</p>
-                                <p>Runner</p>
-
-
-
-                            </div>
-
-                            <div>
-                                <h5>Area Rugs By Color</h5>
-                                <p>Grey</p>
-                                <p>Blue</p>
-                                <p>Ivory</p>
-                                <p>White</p>
-                                <p>Black</p>
-                                <p>Red</p>
-                                <p>Brown</p>
-                                <p>Orange</p>
-                                <p>Pink</p>
-
-                            </div>
-                            <div>
-                                <h5>Rugs By Type</h5>
-                                <p>Area Rugs</p>
-                                <p>Outdoor Rugs</p>
-                                <p>Rug Pads</p>
-                                <p>One of a Kind Rugs</p>
-                                <p>Kids & Tweens Rugs</p>
-                                <p>Door Mats</p>
-                                <p>Stair Treads</p>
-                                <p>Kitchen Mats & Rugs</p>
-                                <p>Bath Mats & Rugs</p>
-
-                            </div>
-                            <div>
-                                <img src="https://ak1.ostkcdn.com/images/products/is/images/direct/cf512e903f15d3b0e8fea7c150af2c0b0d3eaa8e/SAFAVIEH-Madison-Snowflake-Medallion-Rustic-Farmhouse-Distressed-Rug.jpg?imwidth=320"
-                                    alt="">
-
-                                <h3>extra 20% off</h3>
-                                <p>Select Area Rugs by Safavieh*</p>
-                            </div>
-                            <div>
-                                <h5>Trending Rugs</h5>
-                                <p>Washable Rugs</p>
-                                <p>Round Rugs</p>
-                                <p>Shag Rugs</p>
-                                <p>Wool Rugs</p>
-                                <p>Jute Rugs</p>
-                                <p>Cowhide Rugs</p>
-                                <p>Braided Rugs</p>
-                                <p>Handmade Rugs</p>
-                                <p>Vintage Rugs</p>
-                            </div>
-                            <div>
-                                <h5>Area Rugs By Style</h5>
-                                <p>Modern & Contemporary</p>
-                                <p>Bohemian & Eclectic</p>
-                                <p>Persian</p>
-                                <p>Transitional</p>
-                                <p>Geometric</p>
-                                <p>Abstract</p>
-                                <p>Solid</p>
-                                <p>Floral & Botanical</p>
-
-
-                            </div>
-                            <div>
-
-
-                            </div>
-                            <div>
-                                <h5>More Ways to Shop</h5>
-                                <p>Featured Sales</p>
-                                <p>New Arrivals</p>
-                                <p>Clearance</p>
-                                <p>Rugs Advice</p>
-
-                            </div>
-
-
-
-                        </div>
-
-
-                    </div>
-
-                </div>
-                <div>
-                    <p class="tab">Decor</p>
-                    <div class="dropDown">
-
-
-                        <div id="decor">
-
-
-                            <div>
-                                <h5>Mirrors</h5>
-                                <p>Wall Mirrors</p>
-                                <p>Bathroom Vanity Mirrors</p>
-                                <p>Floor Mirrors</p>
-                                <p>Full Length Mirrors</p>
-                                <p>Rectangular Mirrors</p>
-                                <p>Round Mirrors</p>
-                                <p>Window Mirrors</p>
-                                <p>Mirror Sets</p><br>
-                                <h5>Art Gallery</h5>
-                                <p>Gallery Wrapped Canvas</p>
-                                <p>Canvas Art</p>
-                                <p>Framed Prints</p>
-                                <p>Unframed Prints</p>
-                                <p>Metal Art</p>
-                                <p>Wood Wall Art</p>
-                                <p>Matching Sets</p>
-
-
-
-                            </div>
-
-                            <div>
-                                <h5>Decorative Accessories</h5>
-                                <p>Indoor Fireplaces</p>
-                                <p>Outdoor Decor</p>
-                                <p>Accent Pieces</p>
-                                <p>Silk Plants</p>
-                                <p>Candles & Holders</p>
-                                <p>Vases</p>
-                                <p>Room Dividers</p>
-                                <p>Photo Frames & Albums</p>
-                                <p>Planters, Hangers & Stands</p><br>
-
-                                <h5>Window Treatments</h5>
-                                <p>Curtains & Drapes</p>
-                                <p>Blinds & Shades</p>
-                                <p>Curtain Rods & Hardware</p>
-                                <p>Sheer Curtains</p>
-                                <p>Blackout Curtains</p>
-                                <p>Kitchen Curtains</p>
-                                <p>Valances</p>
-                                <p>Stained Glass Panels</p>
-
-                            </div>
-                            <div>
-                                <h5>Wall Decor</h5>
-                                <p>Wall Sculptures</p>
-                                <p>Decorative Shelves</p>
-                                <p>Wall Tapestries</p>
-                                <p>Clocks</p>
-                                <p>Wall Decals</p>
-                                <p>Acrylic Wall Art</p><br>
-                                <h5>Throw pillows</h5>
-                                <p>Accent Pillows</p>
-                                <p>Outdoor Pillows</p>
-                                <p>Floor Pillows</p>
-                                <p>Poufs</p>
-                                <p>Pillow Covers</p>
-                                <p>Bed Rest</p>
-
-
-                            </div>
-                            <div>
-                                <img src="https://ak1.ostkcdn.com/images/products/is/images/direct/e1091fd2788bdba18f11d5d08319b1bf2da83288/nuLOOM-Handmade-Moroccan-Leather-Filled-Ottoman-Pouf.jpg"
-                                    alt="">
-
-                                <h3>extra 15% off</h3>
-                                <p>Select Home Decor*</p><br>
-                                <h5>More Ways to Shop</h5>
-                                <p>Featured Sales</p>
-                                <p>New Arrivals</p>
-                                <p>Clearance</p>
-                                <p>Decor Advice</p>
-
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-                <div>
-                    <p class="tab">Bedding</p>
-                    <div class="dropDown">
-                        <div id="bedding">
-
-
-                            <div>
-                                <h5>Bedding Sets</h5>
-                                <p>Comforters and Sets</p>
-                                <p>Bed Sheet Sets</p>
-                                <p>Quilts and Bedspreads</p>
-                                <p>Duvet Cover and Sets</p>
-                                <p>Bed-in-a-Bag</p>
-                                <p>Daybed Cover Sets</p><br>
-                                <h5>Bedding Essentials</h5>
-                                <p>Down Comforters and Duvet Inserts</p>
-                                <p>Bed Pillows</p>
-                                <p>Pillow Shams</p>
-                                <p>Bed Skirts</p>
-                                <p>Kids Bedding</p>
-                                <p>Baby Bedding</p>
-                                <p>Bed Canopies</p>
-
-
-
-                            </div>
-
-                            <div>
-
-                                <h5>Bed Sheets and Pillowcases</h5>
-                                <p>Bed Sheet Sets</p>
-                                <p>Pillow Shams</p>
-                                <p>Pillowcases</p>
-                                <p>Fitted Bed Sheets</p>
-                                <p>Pillow Protectors</p>
-                                <p>Flat Bed Sheets</p><br>
-                                <h5>Mattress Pads and Toppers</h5>
-                                <p>Mattress Toppers</p>
-                                <p>Mattress Protectors</p>
-                                <p>Mattress Pads</p>
-
-
-                            </div>
-                            <div>
-
-                                <h5>Mattresses</h5>
-                                <p>Twin Mattress</p>
-                                <p>Twin XL Mattress</p>
-                                <p>Full Mattress</p>
-                                <p>Queen Mattress</p>
-                                <p>King Mattress</p>
-                                <p>California King Mattress</p>
-                                <p>Air Mattress</p>
-                                <p>Mattress in a Box</p><br>
-                                <h5>Blankets</h5>
-                                <p>Blankets and Throws</p>
-                                <p>Heated Blankets</p>
-                                <p>Weighted Blankets</p>
-
-
-
-                            </div>
-                            <div>
-                                <img src="https://ak1.ostkcdn.com/images/products/is/images/direct/43c02f6392cd73d692826b497a5a8a8f9cc8654a/Signature-Design-by-Ashley-Chime-12-inch-Memory-Foam-Mattress.jpg?imwidth=320"
-                                    alt="">
-                                <h3>extra 20% off</h3>
-                                <p>Select Mattresses & More by Signature Design by Ashley*</p><br>
-                                <h5>More Ways to Shop</h5>
-                                <p>Featured Sales</p>
-                                <p>New Arrivals</p>
-                                <p>Clearance</p>
-                                <p>Bedding Advice</p>
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div>
-                    <p class="tab">Home Improvement</p>
-                    <div class="dropDown">
-
-                        <div id="homeI">
-
-
-                            <div>
-
-                                <h5>Kitchen</h5>
-                                <p>Ranges & Ovens</p>
-                                <p>Refrigerators</p>
-                                <p>Kitchen Carts & Islands</p>
-                                <p>Kitchen Sinks</p>
-                                <p>Kitchen Faucets</p>
-                                <p>Kitchen Cabinets</p>
-                                <p>Backsplash</p><br>
-                                <h5>Flooring & Wall</h5>
-                                <p>Tile</p>
-                                <p>Laminate Flooring</p>
-                                <p>Vinyl Flooring</p>
-                                <p>Hardwood Flooring</p>
-                                <p>Wallpaper</p>
-                                <p>Wall Tiles</p>
-                                <p>Ceiling Tiles</p>
-
-
-                            </div>
-
-                            <div>
-
-                                <h5>Bathroom</h5>
-                                <p>Bathroom Vanities</p>
-                                <p>Bathroom Vanity Mirrors</p>
-                                <p>Bathroom Sinks</p>
-                                <p>Bathroom Faucets</p>
-                                <p>Bathroom Cabinets</p>
-                                <p>Tubs</p>
-                                <p>Showers</p>
-                                <p>Toilets</p><br>
-                                <h5>Home Essentials</h5>
-                                <p>Vacuums & Floorcare</p>
-                                <p>Heating & Cooling</p>
-                                <p>Air Quality</p>
-                                <p>Sewing Machines</p>
-                                <p>Craft Machines</p>
-
-
-
-
-
-                            </div>
-                            <div>
-
-                                <h5>Storage & Organization</h5>
-                                <p>Outdoor Storage</p>
-                                <p>Laundry Room</p>
-                                <p>Garage Storage</p>
-                                <p>Decorative Storage</p>
-                                <p>Closet Organizers</p>
-                                <p>Kitchen & Pantry</p>
-                                <p>Cabinets</p>
-                                <p>Furniture Storage</p>
-                                <p>Safes</p>
-
-
-
-
-                            </div>
-                            <div>
-                                <img src="https://ak1.ostkcdn.com/images/products/is/images/direct/8ae6687667c075d1d993a7673053bbbf74e0ba26/Louise-48in-Bath-Vanity.jpg"
-                                    alt="">
-                                <h3>extra 10% off</h3>
-                                <p>Select Home Improvement*</p><br>
-                                <h5>More Ways to Shop</h5>
-                                <p>Featured Sales</p>
-                                <p>New Arrivals</p>
-                                <p>Clearance</p>
-                                <p>Home Improvement Advice</p>
-
-
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-                <div>
-                    <p class="tab">Kitchen</p>
-                    <div class="dropDown">
-
-                        <div id="kitchen">
-
-
-                            <div>
-
-                                <h5>Dinnerware</h5>
-                                <p>Dinnerware Sets</p>
-                                <p>Formal Dinnerware</p>
-                                <p>Plates</p>
-                                <p>Bowls</p>
-                                <p>Cups & Saucers</p>
-                                <p>Mugs</p>
-                                <p>Flatware</p>
-                                <p>Tumblers</p>
-                                <p>Glasses & Barware</p><br>
-                                <h5>Cookware & Bakeware</h5>
-                                <p>Cookware Sets</p>
-                                <p>Pots & Pans</p>
-                                <p>Specialty Cookware</p>
-                                <p>Grill Pans & Griddles</p>
-                                <p>Cooking Essentials</p>
-                                <p>Cutlery</p>
-                                <p>Bakeware</p>
-
-
-                            </div>
-
-                            <div>
-
-                                <h5>Kitchen Furniture</h5>
-                                <p>Counter & Bar Stools</p>
-                                <p>Kitchen & Dining Sets</p>
-                                <p>Kitchen & Dining Chairs</p>
-                                <p>Kitchen & Dining Tables</p>
-                                <p>Buffets & Sideboards</p>
-                                <p>Home Bars</p>
-                                <p>Kitchen Carts</p>
-                                <p>Bar Tables</p>
-                                <p>Kitchen Cabinets</p><br>
-                                <h5>Kitchen Appliances</h5>
-                                <p>Mixers</p>
-                                <p>Blenders</p>
-                                <p>Coffee Makers</p>
-                                <p>Air Fryers</p>
-                                <p>Pressure Cookers</p>
-                                <p>Food Processors</p>
-                                <p>Major Appliances</p>
-
-                            </div>
-                            <div>
-                                <h5>Serveware</h5>
-                                <p>Serving Platters & Trays</p>
-                                <p>Serving Bowls</p>
-                                <p>Warming Buffet & Trays</p>
-                                <p>Drink Pitchers</p>
-                                <p>Salt & Pepper Shakers</p>
-                                <p>Chip & Dip Sets</p>
-                                <p>Table Linens</p><br>
-                                <h5>Kitchen Storage</h5>
-                                <p>Wine Racks</p>
-                                <p>Kitchen Trash Cans</p>
-                                <p>Pot Racks</p>
-                                <p>Pantry Storage</p>
-                                <p>Kitchen Canisters</p>
-                                <p>Plastic Storage Containers</p>
-
-
-
-                            </div>
-                            <div>
-                                <img src="https://ak1.ostkcdn.com/images/products/is/images/direct/39bf512a95c18b5fb2798135e8f8f46550a62455/Simple-Living-Manhattan-Bar-Cart.jpg"
-                                    alt="">
-                                <h3>extra 15% off</h3>
-                                <p>Select Kitchen & Dining*</p><br>
-                                <h5>More Ways to Shop</h5>
-                                <p>Featured Sales</p>
-                                <p>New Arrivals</p>
-                                <p>Clearance</p>
-                                <p>Kitchen Advice</p>
-
-
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-                <div>
-                    <p class="tab">Outdoor</p>
-                    <div class="dropDown">
-                        <div id="outdoor">
-
-
-                            <div>
-                                <h5>Patio Furniture</h5>
-                                <p>Patio Furniture Sets</p>
-                                <p>Sofas, Chairs & Sectionals</p>
-                                <p>Dining Sets</p>
-                                <p>Dining Tables</p>
-                                <p>Dining Chairs</p>
-                                <p>Coffee & Side Tables</p>
-                                <p>Chaise Lounges</p>
-                                <p>Adirondack Chairs</p>
-                                <p>Hammocks & Swings</p><br>
-                                <h5>Gardening & Yard Care</h5>
-                                <p>Sheds & Outdoor Storage</p>
-                                <p>Greenhouses</p>
-                                <p>Gardening & Yard Tools</p>
-                                <p>Mowers & Trimmers</p>
-                                <p>Hoses & Sprinklers</p>
-                                <p>Fencing & Privacy Screens</p>
-
-
-
-
-                            </div>
-
-
-                            <div>
-                                <h5>Outdoor Decor</h5>
-                                <p>Fire Pits</p>
-                                <p>Outdoor Rugs</p>
-                                <p>Doormats</p>
-                                <p>Outdoor Lighting</p>
-                                <p>Garden Accents</p>
-                                <p>Outdoor Curtains & Shades</p>
-                                <p>Outdoor Cushions & Pillows</p>
-                                <p>Planters, Hangers & Stands</p>
-                                <p>Patio Furniture Covers</p><br>
-                                <h5>Grills & Outdoor Cooking</h5>
-                                <p>Gas Grills</p>
-                                <p>Charcoal Grills</p>
-                                <p>Smokers</p>
-                                <p>Grilling Accessories</p>
-                                <p>Grilling Tools & Cookware</p>
-
-
-                            </div>
-                            <div>
-                                <h5>Umbrellas & Shades</h5>
-                                <p>Patio Umbrellas</p>
-                                <p>Sunsails</p>
-                                <p>Gazebos & Pergolas</p>
-                                <p>Umbrella Bases</p>
-                                <p>Beach Umbrellas</p><br>
-                                <p>Tents & Outdoor Canopies</p>
-                                <h5>Sports & Outdoors</h5>
-                                <p>Cycling</p>
-                                <p>Hot Tubs & Spas</p>
-                                <p>Inflatable Bounce Houses</p>
-                                <p>Kids Outdoor Furniture</p>
-                                <p>Lawn Games</p>
-                                <p>Outdoor Play</p>
-                                <p>Outdoor Playhouses & Play Tents</p>
-                                <p>Skating & Scooters</p>
-                                <p>Swimming Pools</p>
-                                <p>Swing Sets</p>
-                                <p>Trampolines</p>
-
-
-                            </div>
-                            <div>
-                                <img src="https://ak1.ostkcdn.com/images/products/is/images/direct/fe95310c3d23a0dac7662d2cf1cd8b5f7280e787/Brava-Outdoor-4-Piece-Wood-Sectional-Set-w--Cushions-by-Christopher-Knight-Home.jpg"
-                                    alt="">
-                                <h3>extra 15% off</h3>
-                                <p>Select Garden & Patio*</p><br>
-                                <h5>More Ways to Shop</h5>
-                                <p>Featured Sales</p>
-                                <p>New Arrivals</p>
-                                <p>Clearance</p>
-                                <p>Patio Advice</p>
-
-
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div>
-                    <p>Kids & Baby</p>
-                    <!-- <div class="dropDown">
-                    </div> -->
-                </div>
-                <div>
-                    <p>More</p>
-                    <!-- <div class="dropDown">
-                    </div> -->
-                </div>
-                <div>
-                    <p>|</p>
-
-                </div>
-                <div>
-                    <p>Ideas</p>
-                    <!-- <div class="dropDown">
-                    </div> -->
-                </div>
-                <div>
-                    <p>Sales & Deals</p>
-                    <!-- <div class="dropDown">
-                    </div> -->
-                </div>
-
-            </div>
-
-
+  </head>
+  <body>
+    <section id="slideshow">
+     
+
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img
+            src="https://ak1.ostkcdn.com/img/mxc/01232023-HP-A1-INTL-1400x550_DSK-INTL.jpg"
+            style="width: 100%;height: 500px; object-fit: cover;"
+          />
+          <div class="text"></div>
         </div>
 
-    </div>
-
-    <div id="container">
-        <p>Home Decor/Rugs/Area Rugs</p>
-        <h1>Area Rugs</h1>
-        <!-- <div id="cp1">
-            <div>
-                <p>Sofas & Couches</p>
-                <p>Sectional Sofas</p>
-                <p>Coffee, Sofa & End Tables</p>
-                <p>Accent Chairs</p>
-                <p>Living Room Sets</p>
-                <p>TV Stands</p>
-                <p><i class="fa-solid fa-bookmark"></i>&nbspShop All Living Room <br> Furniture on Sale</p>
-            </div>
-            <div>
-                <img src="assets/Screenshot 2022-09-30 075531.png" alt="">
-            </div>
-        </div> -->
-        <!-- <h2>Shop by Category</h2> -->
-        <!-- <div id="cp2">
-            <div>
-                <h6>Sale</h6>
-                <img src="https://ak1.ostkcdn.com/images/products/is/images/direct/da8e341a52b0b4168f5531527177130eec875ca8/Carson-Carrington-Odhult-Tufted-Contemporary-Tuxedo-Sofa.jpg?imWidth=320&impolicy=medium"
-                    alt="">
-                <p>Sofas & Couches</p>
-            </div>
-            <div>
-                <h6>Sale</h6>
-                <img src=https://ak1.ostkcdn.com/images/products/22341232/Candace-Mid-Century-Modern-Fabric-Arm-Chair-and-Loveseat-Set-by-Christopher-Knight-Home-087d71b4-c7d8-4352-b7f5-ac19c5a60ce2_1000.jpg?imWidth=320&impolicy=medium"
-                    alt="">
-                <p>Living Room Sets</p>
-            </div>
-            <div>
-                <h6>Sale</h6>
-                <img src="https://ak1.ostkcdn.com/images/products/24151999/Welles-Mid-Century-2-Piece-Chaise-Sectional-Sofa-Set-With-Tufted-by-Christopher-Knight-Home-62f39e28-0a20-4594-8815-be5fb283c2b1_1000.jpg?imWidth=320&impolicy=medium"
-                    alt="">
-                <p>Sectional Sofas</p>
-            </div>
-            <div>
-                <h6>Sale</h6>
-                <img src="https://ak1.ostkcdn.com/images/products/is/images/direct/cc3e23e59b0b7275ff6cb732d7c2d7f6f18df9e9/The-Grey-Barn-70%22-Rustic-Fireplace-TV-Stand-Console.jpg?imWidth=320&impolicy=medium"
-                    alt="">
-                <p>TV Stands & Entertainment Centers
-                    Sale</p>
-            </div>
-            <div>
-                <h6>Sale</h6>
-                <img src="https://ak1.ostkcdn.com/images/products/is/images/direct/2c822047c6482dd072478dac0a517f7fd4ba74f2/Berwick-Metal-and-Wood-Nesting-Basket-Tables.jpg?imWidth=320&impolicy=medium"
-                    alt="">
-                <p>Console, Coffee & End Tables
-                    Sale</p>
-            </div>
-            <div>
-                <h6>Sale</h6>
-                <img src="https://ak1.ostkcdn.com/images/products/is/images/direct/f7e4607f8a2129ab4b1ab22cd1769a61b681c3db/Abbyson-Holloway-Mid-century-Top-Grain-Leather-Pushback-Recliner.jpg?imWidth=320&impolicy=medium"
-                    alt="">
-                <p>Recliner Chairs & Rocking Recliners Sale</p>
-            </div>
-        </div> -->
-        <div id="cp4">
-            <select name="" id="sort">
-                <option value="no">Sort by price</option>
-                <option value="asc">Low to High</option>
-                <option value="dsc">High to Low</option>
-            </select>
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img
+            src="https://ak1.ostkcdn.com/img/mxc/01232023-SB-BedroomFurniture-767x800_Promo1.jpg?imwidth=1080"
+            style="width: 100%;height: 500px; object-fit: cover;"
+          />
+          <div class="text"></div>
         </div>
 
-        <div id="cp5">
-
+        <div class="mySlides fade">
+          <div class="numbertext"></div>
+          <img
+            src="https://ak1.ostkcdn.com/img/mxc/01232023-SB-Lighting-1400x550_Promo2.jpg?imwidth=1920"
+            style="width: 100%;height: 500px; object-fit: cover;"
+          />
+          <div class="text"></div>
         </div>
+      </div>
+      <br />
 
-    </div>
-    <!-- <div id="cp6">
-        <img src="assets/Screenshot 2022-09-29 190743.png" alt="">
-    </div> -->
-    <div id="footer">
-        <div>
-            <div>
-                <h5>MY ACCOUNT</h5>
-                <p>Orders & Returns</p>
-                <p>Email Preferences</p>
-                <p>Account Settings</p>
+      <div style="text-align: center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </section>
+    <section id="top-container">
+      <div>
+        <select id="filter" >
+          <option value="all">Filter By Rating</option>
+          <option value="★★★★★">★★★★★</option>
+          <option value="★★★★">★★★★</option>
+          <option value="★★★">★★★</option>
+          <option value="★★">★★</option>
+          <option value="★">★</option>
+        </select>
+      </div>
+      <div>
+        <select id="sort" >
+          <option value="all">Sort by price</option>
+          <option value="one">Between 1K-10K</option>
+          <option value="two">Between 11K-20K</option>
+          <option value="three">Between 21K-30K</option>
+        </select>
+      </div>
+    </section>
+    <div id="main-container" ></div>
 
-            </div>
-            <div>
-                <h5>LET US HELP</h5>
-                <p>Contact Customer Care</p>
-                <p>Shipping Information</p>
-                <p>Return Policy</p>
-                <p>International Help</p>
-                <p>Accessibility</p>
-            </div>
-            <div>
-                <h5>COMPANY INFORMATION</h5>
-                <p>About Overstock™</p>
-                <p>Contact Us</p>
-                <p>Careers</p>
-                <p>Investor Relations</p>
-                <p>Sell Your Products</p>
-                <p>Supply Chain Transparency</p>
+    <section id="pagination" class="section-p1">
+      <a href="#">1</a>
+      <a href="#">2</a>
+      <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+    </section>
 
-            </div>
-            <div>
-                <h5>MORE WAYS TO SHOP</h5>
-                <p>Tips & Ideas</p>
-                <p>Deals</p>
-                <p>Clearance</p>
-                <p>New Arrivals</p>
+    <section id="banner3">
+      <div class="banner-box">
+        <h2>Season Sale</h2>
+        <h3>Winter Collections - 50% Off</h3>
+      </div>
 
-            </div>
-        </div>
+      <div class="banner-box banner-box2">
+        <h2>New Collections</h2>
+        <h3>Spring summer 2023</h3>
+      </div>
 
-        <div>
-            <p>© Copyright 2022, Overstock.comⓇ, Inc<br>799 Coliseum Way Midvale, UT 84047 | 1-800-843-2446</p>
-            <div>
-                <p>Privacy Policy</p>
-                <p>Terms & Conditions</p>
-                <p>*Promotion Terms</p>
-                <p>Ship to:</p>
-                <img src="https://ak1.ostkcdn.com/img/mxc/intFlag_IN.gif" alt="">
-
-            </div>
-
-        </div>
-
-
-
-    </div>
-
-
-</body>
-
+      <div class="banner-box banner-box3">
+        <h2>bedding</h2>
+        <h3>New Trendy Collections</h3>
+      </div>
+    </section>
+  </body>
 </html>
 
-<script src="/scripts/navbar.js"></script>
-<script src="/scripts/dropDown.js"></script>
-<script src="/scripts/rugs.js"></script>
+<script>
+  var furniture = [
+    {
+      id: 1,
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/f599cdbb63899bf894c137f13b3633dca096c7a1/Harrisburg-Tobey-Compact-Round-Dining-Set.jpg?imwidth=480&impolicy=medium",
+      name: "Harrisburg Tobey Compact Round Dining very-comfortable  Set",
+      price: "₹ 16389",
+      strikedoffprice: "₹ 25000",
+      rating: "★★★★★",
+      Details: "Details",
+      addCart: "Addtocart",
+    },
+    {
+      id: 2,
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/8b971b8ade9c60c26df8f4a210620e399e48cb30/Simple-Living-Solid-Wood-Slat-Back-Dining-Chairs-%28Set-of-4%29.jpg?imwidth=480&impolicy=medium",
+      name: "Carson Carrington Klemens Round Dining Table beautiful set",
+      price: "₹ 19000",
+      strikedoffprice: "₹ 21000",
+      rating: "★★★★",
+      Details: "Details",
+      addCart: "Addtocart",
+    },
+    {
+      id: 3,
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/b72199d22d8c50160a99566afef66fe167f99d92/Middlebrook-Cassandra-58-inch-Mid-century-Modern-4-door-Buffet.jpg?imwidth=480&impolicy=medium",
+      name: "SAFAVIEH Country Classic Blanchard Dining Chairs (Set of 2)",
+      price: "₹ 13000",
+      strikedoffprice: "₹ 15600",
+      rating: "★★★★",
+      Details: "Details",
+      addCart: "Addtocart",
+    },
+    {
+      id: 4,
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/40589834cb760419da0f59d5a823431a930324d2/Monsoon-Villa-Faux-Leather-Parson-Dining-Chairs-%28Set-of-2%29.jpg?imwidth=480&impolicy=medium",
+      name: "Nathan James Hylie Nailhead Wood Pub-Height Counter Bar Stool",
+      price: "₹ 6579",
+      strikedoffprice: "₹ 10000",
+      rating: "★★★★",
+      Details: "Details",
+      addCart: "Addtocart",
+    },
+    {
+      id: 5,
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/fa60b94336d4a60c62b883bff19daa1dac8f9d3c/Simple-Living-Templeton-5-Piece-Dining-Set.jpg?imwidth=480&impolicy=medium",
+      name: "Bar Stools Adjustable Armless Swivel PU Leather Barstools Set of 2",
+      price: "₹ 13000",
+      strikedoffprice: "₹ 19000",
+      rating: "r★★★★★",
+      Details: "Details",
+      addCart: "Addtocart",
+    },
+    {
+      id: 6,
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/8b605f2f32dc7c71080c13e934b0fa0a57567d95/Simple-Living-Baxter-Dining-Set-with-Storage-Ottomans.jpg?imwidth=480&impolicy=medium",
+      name: "47 in. Modern X-Door Wine Cabinet beautiful and comfortable",
+      price: "₹ 19000",
+      strikedoffprice: "₹ 19000",
+      rating: "★★★★★",
+      Details: "Details",
+      addCart: "Addtocart",
+    },
+    {
+      id: 7,
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/4502c0929575891bc4c9780a2f8f1b70675e5a33/Mai-Faux-Leather-Dining-Chairs-%28Set-of-2%29.jpg?imwidth=480&impolicy=medium",
+      name: "Art Leon Adjustable Swivel Barstool very comfortable (Set of 2)",
+      price: "₹ 19000",
+      strikedoffprice: "₹ 19000",
+      rating: "★★★★★",
+      Details: "Details",
+      addCart: "Addtocart",
+    },
+    {
+      id: 8,
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/abb0dc96c5e0339ab43943370925086e21af689a/Simple-Living-Albury-Dining-Chairs-%28Set-of-2%29.jpg?imwidth=480&impolicy=medium",
+      name: "The Gray Barn Barish Backless Saddle Seat Counter Stools (Set of 2)",
+      price: "₹ 14300",
+      strikedoffprice: "₹ 15000",
+      rating: "★★★",
+      Details: "Details",
+      addCart: "Addtocart",
+    },
+    {
+      id: 9,
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/2f0114fddcf0cd781a2d9e0e0c4ee3e4615a5c25/Middlebrook-Solid-Wood-72-inch-Distressed-Dining-Table.jpg?imwidth=480&impolicy=medium",
+      name: "East West Furniture Round Table with Two 9-inch Drop Leaves",
+      price: "₹ 4345",
+      strikedoffprice: "₹ 6500",
+      rating: "★★★★★",
+      Details: "Details",
+      addCart: "Addtocart",
+    },
+    {
+      id: 10,
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/b4d686d1f3307f26dbff4cc7637551c3f7b5801d/East-West-Furniture-Round-Small-Dining-Table.jpg?imwidth=480&impolicy=medium",
+      name: "Simple Living Carolina Windsor Dining Chairs (Set of 2)",
+      price: "₹ 10650",
+      strikedoffprice: "₹ 19999",
+      rating: "★★★",
+      Details: "Details",
+      addCart: "Addtocart",
+    },
+    {
+      id: 11,
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/355edfd3752748772420c31058a5f5bc38174a55/LeatherSoft-Counter-height-Stools-%28Set-of-2%29.jpg?imwidth=480&impolicy=medium",
+      name: "Simple Living Country Cottage Drop-Leaf Dining Table",
+      price: "₹ 11324",
+      strikedoffprice: "₹ 45000",
+      rating: "★★",
+      Details: "Details",
+      addCart: "Addtocart",
+    },
+    {
+      id: 12,
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/db792ad96574a90926655de2d8f8d70df2a36460/Simple-Living-Tall-Cabinet.jpg?imwidth=480&impolicy=medium",
+      name: "Simple Living Venice Farmhouse Dining Chairs (Set of 2)",
+      price: "₹ 12345",
+      strikedoffprice: "₹ 29999",
+      rating: "★★★★★",
+      Details: "Details",
+      addCart: "Addtocart",
+    },
+    {
+      id: 13,
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/c094f16eb91381e383d23b3b3da3fb49c3dbf379/Homall-Walnut-Bentwood-Bar-Stools-with-PU-Leather-1-Piece.jpg?imwidth=480&impolicy=medium",
+      name: "Carson Carrington Horsens 3-drawer Mid-century Modern Buffet",
+      price: "₹ 15321",
+      strikedoffprice: "₹ 39999",
+      rating: "★★★★★",
+      Details: "Details",
+      addCart: "Addtocart",
+    },
+    {
+      id: 14,
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/543c19681a4333da9e84646017ec0a3ee7a5c238/FirsTime-%26-Co.-Gold-Kennedy-Oval-Bar-Cart%2C-Metal.jpg?imwidth=480&impolicy=medium",
+      name: "Simple Living Solid Wood Farmhouse Table vry comfortable set",
+      price: "₹ 36580",
+      strikedoffprice: "₹ 49999",
+      rating: "★",
+      Details: "Details",
+      addCart: "Addtocart",
+    },
+    {
+      id: 15,
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/a773e382786db1b54951767355a35e0b1f20f8cb/VEIKOUS-Kitchen-Buffet-Sideboard-Storage-Cabinet-with-2-Glass-Doors-and-4-Drawers.jpg?imwidth=480&impolicy=medium",
+      name: "Andeworld farmhouse bar stools ,counter height bar stools set of 4",
+      price: "₹ 19999",
+      strikedoffprice: "₹ 25000",
+      rating: "★★★★★",
+      Details: "Details",
+      addCart: "Addtocart",
+    },
+    {
+      id: 16,
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/666c13497d9518501dd8a8ef75b31a1448526ae3/Porch-%26-Den-Jefferson-Sliding-Glass-Door-Stackable-China-Cabinet.jpg?imwidth=480&impolicy=medium",
+      name: "Solid Pine Drop Leaf Table 3-piece Dining very comfortable Set",
+      price: "₹ 21300",
+      strikedoffprice: "₹ 29999",
+      rating: "★★★★★",
+      Details: "Details",
+      addCart: "Addtocart",
+    },
+    {
+      id: 17,
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/991945135b2eb22425780c61b9caeac111cb4e6e/Simple-Living-Extra-tall-Cabinet.jpg?imwidth=480&impolicy=medium",
+      name: "Palmer Mid-Century Modern Fabric Dining Chair in 2 Pack",
+      price: "₹ 27600",
+      strikedoffprice: "₹ 39999",
+      rating: "★★★★",
+      Details: "Details",
+      addCart: "Addtocart",
+    },
+    {
+      id: 18,
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/17a33d346f0b20ce22f2043c17c2947e3da4d0e0/Carson-Carrington-Klemens-Round-Dining-Table.jpg?imwidth=480&impolicy=medium",
+      name: "Simple Living Shaker Dining Table very comfortable Set",
+      price: "₹ 11500",
+      strikedoffprice: "₹ 19999",
+      rating: "★★★",
+      Details: "Details",
+      addCart: "Addtocart",
+    },
+    {
+      id: 19,
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/ffb3c3f41b1ffa118a76bd73a2111cac99eee035/SAFAVIEH-Country-Classic-Dining-Blanchard-Dining-Chairs-%28Set-of-2%29.jpg?imwidth=480&impolicy=medium",
+      name: "Lifestorey Tabaria Four Door Sideboard very comfortable Set",
+      price: "₹ 31567",
+      strikedoffprice: "₹ 34355",
+      rating: "★★",
+      Details: "Details",
+      addCart: "Addtocart",
+    },
+    {
+      id: 20,
+      image_url:
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/e551442f4859cbeaf7730260871b9160442cec79/Nathan-James-Hylie-Nailhead-Wood-Pub-Height-Counter-Bar-Stool.jpg?imwidth=480&impolicy=medium",
+      name: "Stetson Adjustable Height Swivel Metal Bar Stools (Set of 3)",
+      price: "₹ 12456",
+      strikedoffprice: "₹ 40000",
+      rating: "★★★★",
+      Details: "Details",
+      addCart: "Addtocart",
+    },
+  ];
+
+  // var getItem = JSON.parse(localStorage.getItem("book-list")) || [];
+
+  displayData(furniture);
+
+  document.getElementById("filter").addEventListener("change", furfilter);
+  function furfilter() {
+    var x = document.getElementById("filter").value;
+    var s = furniture.filter(function (elem) {
+      if(x==="" || x=="all"){
+          return true;
+        
+         }
+
+     return elem.rating ==x;
+    });
+    console.log(s);
+    displayData(s);
+  }
+
+
+
+  document.getElementById("sort").addEventListener("change", filterprice);
+  function filterprice() {
+    var x1 = document.getElementById("sort").value;
+    var s = furniture.filter(function (elem) {
+      var str=elem.price
+      var matches = str.match(/(\d+)/);
+      var x=(parseInt(matches[0]))
+                        if(x1==="one" && (x>0 && x<10000) ){
+           return elem
+                        }
+                        if(x1==="two" && (x>10000 && x<20000) ){
+           return elem
+                        }
+                        if(x1==="three" && (x>20000 && x<30000) ){
+           return elem
+                        }
+                        if(x1==="" || x1=="all"){
+          return true;
+        
+         }
+          
+     
+    });
+    console.log(x1)
+    displayData(s);
+  }
+
+
+
+
+
+
+
+
+
+ 
+  function displayData(furniture) {
+    document.getElementById("main-container").innerText=""
+    furniture.map(function (elem,index) {
+      var div = document.createElement("div");
+      div.style.cursor = "pointer";
+
+      var image = document.createElement("img");
+      image.setAttribute("src", elem.image_url);
+
+      var name = document.createElement("h5");
+      name.textContent = elem.name;
+
+      var priceBox = document.createElement("div");
+      priceBox.setAttribute("class", "priceBox");
+
+      var price = document.createElement("h2");
+      price.textContent = elem.price;
+      price.setAttribute("class", "price");
+
+      var strikedoffprice = document.createElement("p");
+      strikedoffprice.textContent = elem.strikedoffprice;
+      strikedoffprice.setAttribute("class", "strikedoffprice");
+
+      priceBox.append(price, strikedoffprice);
+
+      var ratingBox = document.createElement("div");
+
+      rating = document.createElement("p");
+      rating.textContent = elem.rating;
+      rating.setAttribute("class", "rating");
+
+      Details = document.createElement("button");
+      Details.textContent = "Details";
+      Details.setAttribute("class", "Details");
+      Details.onclick = function() {
+    window.location.href = "showDetails.html";
+  };
+      
+      Details.addEventListener("click",function(){
+       
+      prod_details(elem,index);
+     
+     })
+
+      ratingBox.append(rating, Details);
+      ratingBox.setAttribute("class", "ratingBox");
+
+      addToCart = document.createElement("button");
+      addToCart.textContent = "Add to Cart";
+      addToCart.setAttribute("class", "addToCart");
+
+      div.append(image, name, priceBox, ratingBox, addToCart);
+      document.getElementById("main-container").append(div);
+    });
+  }
+
+  //  slide show start js
+
+  let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+      slideIndex = 1;
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+  }
+
+  function  prod_details(elem,index){
+     localStorage.setItem("prod_details",JSON.stringify(elem))
+ }
+</script>
+
+<script
+  src="https://kit.fontawesome.com/25bb53796d.js"
+  crossorigin="anonymous"
+></script>

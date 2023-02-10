@@ -32,10 +32,29 @@
       }
 
       #main-container > div {
+        border-radius: 20px;
         justify-content: center;
         text-align: center;
         padding: 10px;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+
+      #main-container > div img{
+        transition: transform 0.5s;
+      }
+
+      #main-container > div img:hover{
+        transform: scale(1.2);
+        border-radius: 10px;
+      }
+
+      #main-container > div h2{
+        transition: transform 0.5s;
+      }
+
+      #main-container > div h2:hover{
+        transform: scale(1.2);
+        border-radius: 10px;
       }
 
       .priceBox {
@@ -99,26 +118,44 @@
       }
 
       #top-container {
-        width: 90%;
-
+        
         display: flex;
-        justify-content: flex-end;
+        justify-content: flex-start;
         align-items: center;
+        margin-bottom: 20px;
+        margin-left:  5%;
+      
+        width: 433px;
+        border: 4px solid black;
+  animation: mymove 5s infinite;
+      
       }
+      @keyframes mymove {
+  50% {
+  border-color: rgb(176, 178, 178);}
+  100%{
+    border-color: rgb(238, 189, 99);
+  }
+}
+
+
 
       #top-container > div {
         padding: 10px;
-        background-color: #088178;
+        background-color: #eae6e6;
+
       }
 
       #filter,
       #sort {
         font-size: 20px;
         padding: 10px;
+        
       }
       #filter option,
       #sort option {
-        color: crimson;
+        color: rgb(12, 12, 12);
+        
       }
 
       /* slidee show start */
@@ -130,8 +167,14 @@
         font-family: Verdana, sans-serif;
       }
       .mySlides {
-        display: none;
+        /* display: none; */
+       
+        width: 100%;
+        
+        
       }
+
+
       img {
         vertical-align: middle;
         width: 100%;
@@ -151,12 +194,25 @@
         vertical-align: middle;
       }
 
+      
+
       /* Slideshow container */
       .slideshow-container {
-        max-width: 1200px;
+         height: 500px;
+        max-width: 90%;
+        margin-left: 3%;
+        margin-right: 3%;
         position: relative;
         margin: auto;
+       
+        margin-top: 20px;
+      
       }
+      .slideshow-container img {
+             min-height:100%
+
+}
+
 
       /* Caption text */
       .text {
@@ -249,18 +305,34 @@
           /* cop */
         }
 
-        @media (max-width: 477px) {
-          .section-p1 {
-            padding: 20px;
-            /* cop */
-          }
+        #banner3 {
+          padding: 0 40px;
+        }
+
+        #banner3 .banner-box {
+          width: 28%;
+        }
+      }
+
+      @media (max-width: 477px) {
+        .section-p1 {
+          padding: 20px;
+          /* cop */
+        }
+
+        #banner3 {
+          padding: 0 20px;
+        }
+
+        #banner3 .banner-box {
+          width: 100%;
         }
       }
 
       /* end pagination */
 
-/* banner 3 start */
-#banner3 {
+      /* banner 3 start */
+      #banner3 {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -300,41 +372,63 @@
         font-weight: 800;
         font-size: 15px;
       }
-      /* banner 3 end */
 
+      #banner3 .banner-box2 h2{
+        transition: transform 0.5s;
+      }
+
+      #banner3 .banner-box2 h2:hover{
+        transform: scale(1.2);
+      }
+
+      #banner3 .banner-box3 h2{
+        transition: transform 0.5s;
+      }
+
+      #banner3 .banner-box3 h2:hover{
+        transform: scale(1.2);
+      }
+
+      #banner3 .banner-box h2{
+        transition: transform 0.5s;
+      }
+
+      #banner3 .banner-box h2:hover{
+        transform: scale(1.4);
+      }
+      /* banner 3 end */
     </style>
   </head>
   <body>
     <section id="slideshow">
-      <h2>Automatic Slideshow</h2>
-      <p>Change image every 2 seconds:</p>
+     
 
       <div class="slideshow-container">
         <div class="mySlides fade">
-          <div class="numbertext">1 / 3</div>
+          <div class="numbertext"></div>
           <img
-            src="https://ak1.ostkcdn.com/images/products/is/images/direct/2ddd678f0635c1bb8d4b03d5ecb6900c828b7fb1/52%22-Matte-Black-Plywood-5-Blade-Ceiling-Fan-with-Remote.jpg?imwidth=480&impolicy=medium"
-            style="width: 100%"
+            src="https://ak1.ostkcdn.com/images/products/is/images/direct/fedbd1147194f6ec8b634bfede4a6e1b35bcee14/Bola-Mid-Century-Modern-6-Light-27%22-Gold-Globe-Glass-Chandelier-for-Dining-Room.jpg?imwidth=480&impolicy=medium"
+            style="width: 100%;height: 500px; object-fit: cover;"
           />
-          <div class="text">Caption Text</div>
+          <div class="text"></div>
         </div>
 
         <div class="mySlides fade">
-          <div class="numbertext">2 / 3</div>
+          <div class="numbertext"></div>
           <img
-            src="https://ak1.ostkcdn.com/images/products/is/images/direct/33e9bca87c136ca38f6454efb3d72f538f1e2403/Oaks-Aura-App-Plus-Remote-Control-Bladeless-Low-Profile-Ceiling-Fan-Flush-Mount-Dimmable-Lighting-For-Bedroom.jpg?imwidth=480&impolicy=medium"
-            style="width: 100%"
+            src="https://ak1.ostkcdn.com/images/products/is/images/direct/0c111748cb83ec8cea31271ca318665069245924/Capiz-Honeycomb-Two-Tier-Chandelier-Pendant-Light%2C-Capiz-White-Seashells-with-Black-Metal.jpg?imwidth=480&impolicy=medium"
+            style="width: 100%;height: 500px; object-fit: cover;"
           />
-          <div class="text">Caption Two</div>
+          <div class="text"></div>
         </div>
 
         <div class="mySlides fade">
-          <div class="numbertext">3 / 3</div>
+          <div class="numbertext"></div>
           <img
-            src="https://ak1.ostkcdn.com/images/products/is/images/direct/93fbe978bc32ffe380431e3421b4c8eea4ee3162/52-In-Satin-Nickel-Modern-LED-Ceiling-Fan-with-Light-and-Remote-Control%285-Blade%29.jpg?imwidth=480&impolicy=medium"
-            style="width: 100%"
+            src="https://ak1.ostkcdn.com/images/products/is/images/direct/9de63ab62a7f7cad5def3c3d74241db75acb8c22/4-Light-Glamor-Painted-Brass-Tiered-Chandelier-with-Water-Glass-Shade.jpg?imwidth=480&impolicy=medium"
+            style="width: 100%;height: 500px; object-fit: cover;"
           />
-          <div class="text">Caption Three</div>
+          <div class="text"></div>
         </div>
       </div>
       <br />
@@ -347,8 +441,8 @@
     </section>
     <section id="top-container">
       <div>
-        <select id="filter" onchange="handleFilter">
-          <option value="">Filter By Rating</option>
+        <select id="filter" >
+          <option value="all">Filter By Rating</option>
           <option value="★★★★★">★★★★★</option>
           <option value="★★★★">★★★★</option>
           <option value="★★★">★★★</option>
@@ -357,14 +451,15 @@
         </select>
       </div>
       <div>
-        <select id="sort" onchange="handleSort">
-          <option value="">Sort by price</option>
-          <option value="lth">Low to High</option>
-          <option value="htl">High to Low</option>
+        <select id="sort" >
+          <option value="all">Sort by price</option>
+          <option value="one">Between 1K-10K</option>
+          <option value="two">Between 11K-20K</option>
+          <option value="three">Between 21K-30K</option>
         </select>
       </div>
     </section>
-    <div id="main-container"></div>
+    <div id="main-container" ></div>
 
     <section id="pagination" class="section-p1">
       <a href="#">1</a>
@@ -396,8 +491,8 @@
     {
       id: 1,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/8014cf999e1edcd9c98a853728b0d8f6a3b8cfa6/Tiffany-Style-Jewel-69%22-Floor-Torchiere-Lamp-Amora-AM071FL14-Lighting.jpg?imwidth=480&impolicy=medium",
-      name: "1-Light Oil-rubbed Bronze and Briarwood Finish Cage Drum Flush Mount",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/5f76d867f603149bf67c50e467d65ff1a3a4a017/Traditional-Crystal-25-Light-Polished-Brass-Chandelier.jpg?imwidth=480&impolicy=medium",
+      name: "Harrisburg Tobey Compact Round Dining very-comfortable  Set",
       price: "₹ 16389",
       strikedoffprice: "₹ 25000",
       rating: "★★★★★",
@@ -407,7 +502,7 @@
     {
       id: 2,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/5afe8f774c2fc5a8e6b668964cc1d8d4fcbea007/Floor-Lamp-Pastoral-with-Hand-Woven-Flower-Rattan-Art-Lamp.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/c7d5ad19d6c9a02cf93c30654dcaf55abb5029ca/16-Inch-4-Light-Chandelier%2C-Classic-Design%2C-Fir-Wood-Iron%2C-Distressed-White.jpg?imwidth=480&impolicy=medium",
       name: "Carson Carrington Klemens Round Dining Table beautiful set",
       price: "₹ 19000",
       strikedoffprice: "₹ 21000",
@@ -418,7 +513,7 @@
     {
       id: 3,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/9a148ac0785b864ac7f4a09ec867377fdf001d5b/HOMCOM-3-Light-Modern-Floor-Lamps-for-Living-Room%2C-Tree-Standing-Lamp-for-Bedroom-with-Globe-Lampshade%2C-Steel-Base%2C-Gold.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/37b2b8d8128714a7f869f94db14119af3fc95deb/4-Light-Modern-Creative-Circular-Golden-LED-Stepless-Dimming-Pendant.jpg?imwidth=480&impolicy=medium",
       name: "SAFAVIEH Country Classic Blanchard Dining Chairs (Set of 2)",
       price: "₹ 13000",
       strikedoffprice: "₹ 15600",
@@ -429,7 +524,7 @@
     {
       id: 4,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/12556971/Tensor-Black-Brass-Metal-54.5-Inch-Articulating-Antique-Floor-Lamp-321de531-9981-4a59-affe-627732ac10de_600.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/6e814388fc09acd9f949c7a29be1eeb5a5daf844/Gaines-12%22-2-Light-Crystal-LED-Chandelier%2C-Polished-Nickel-Clear-by-JONATHAN-Y.jpg?imwidth=480&impolicy=medium",
       name: "Nathan James Hylie Nailhead Wood Pub-Height Counter Bar Stool",
       price: "₹ 6579",
       strikedoffprice: "₹ 10000",
@@ -440,7 +535,7 @@
     {
       id: 5,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/28480688/Amora-Lighting-Tiffany-Style-Dragonfly-Reading-Floor-Lamp-62-Inches-f9c9cc01-a277-4ee8-8f8d-cf8144c3720c_600.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/826e37809ae8f074dc169f99f4676cc3749970dc/4-Light-Lantern-Chandelier-with-Metal-Finish.jpg?imwidth=480&impolicy=medium",
       name: "Bar Stools Adjustable Armless Swivel PU Leather Barstools Set of 2",
       price: "₹ 13000",
       strikedoffprice: "₹ 19000",
@@ -451,7 +546,8 @@
     {
       id: 6,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/38469e842b0cc4d03b8d24329963dd961ca68a2e/Malta-Floor-Lamp-with-Seeded-Glass-Shade-in-Blackened-Bronze.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/38496f0a8be7eba769022a18d9b1bd02cf92df77/GetLedel-Modern-6-Light-Sputnik-Linear-Chandelier-with-Glass-Shade.jpg?imwidth=480&impolicy=medium",
+      name: "47 in. Modern X-Door Wine Cabinet beautiful and comfortable",
       price: "₹ 19000",
       strikedoffprice: "₹ 19000",
       rating: "★★★★★",
@@ -461,7 +557,7 @@
     {
       id: 7,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/bd42c2be62ff71dbcec164b4cc535cee1172e19b/55%22-RGB-Metal-Corner-Lamp-Minimalist-LED-Floor-Lamp.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/4d42905268b6aff8c8681f618fb65f1af86840d7/28-in.-W-6-Light-Black-Modern-Farmhouse-Chandelier.jpg?imwidth=480&impolicy=medium",
       name: "Art Leon Adjustable Swivel Barstool very comfortable (Set of 2)",
       price: "₹ 19000",
       strikedoffprice: "₹ 19000",
@@ -472,7 +568,7 @@
     {
       id: 8,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/18507679/Livex-Lighting-Williamsburgh-3-Light-Bronze-Convertible-Chain-Hang-Ceiling-Mount-ba279dd6-624f-4046-a683-0942f2ed634d_600.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/98d133142d365ad1bd9bac50f499776709c75389/4-Light-Gold-Round-Beaded-Drum-Chandelier-with-Hanging-Crystals.jpg?imwidth=480&impolicy=medium",
       name: "The Gray Barn Barish Backless Saddle Seat Counter Stools (Set of 2)",
       price: "₹ 14300",
       strikedoffprice: "₹ 15000",
@@ -483,7 +579,7 @@
     {
       id: 9,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/08efee0f5b8a8f9136d7a24f6d4d0464e5fc4e3a/4-inch-LED-Surface-Mount-Fixture-CCT-Selectable-3K-4K-5K-Brushed-Nickel.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/fb1a042f7d82d9ffa89ca0552fb8f3465ed17e80/Light-Society-Lise-22%22-Chandelier.jpg?imwidth=480&impolicy=medium",
       name: "East West Furniture Round Table with Two 9-inch Drop Leaves",
       price: "₹ 4345",
       strikedoffprice: "₹ 6500",
@@ -494,7 +590,7 @@
     {
       id: 10,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/a3ce4f812afeb8c09038a195b0f59f1f15196a6a/1-Light-Oil-rubbed-Bronze-and-Briarwood-Finish-Cage-Drum-Flush-Mount.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/63b703d25960cbf52f9fd55c910e4f183fc025c6/15-light-Glass-Globe-Bubble-Sputnik-Chandelier.jpg?imwidth=480&impolicy=medium",
       name: "Simple Living Carolina Windsor Dining Chairs (Set of 2)",
       price: "₹ 10650",
       strikedoffprice: "₹ 19999",
@@ -505,7 +601,7 @@
     {
       id: 11,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/5ab7f98204f0aeaf7d2acdda9cb11d7951ebbc5f/Cieonna-Brass-and-White-Milk-Glass-Pendant.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/b62d501126ab0e51412902e2169a749298ac0eaf/3-light-Glass-Globe-Bubble-Chandelier.jpg?imwidth=480&impolicy=medium",
       name: "Simple Living Country Cottage Drop-Leaf Dining Table",
       price: "₹ 11324",
       strikedoffprice: "₹ 45000",
@@ -516,7 +612,7 @@
     {
       id: 12,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/abe548cf53d27991d9572f828c3057c5d3baa918/OYIPRO-3-Light-Crystal-Cluster-Cylinder-Pendant-Lighting.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/f95d6dc2e27d05e3d4c2878599a85754b5564031/Plug-in-Swag-Chandelier-Chrome-Chandelier-with-Acrylic-Crystal-4-Light.jpg?imwidth=480&impolicy=medium",
       name: "Simple Living Venice Farmhouse Dining Chairs (Set of 2)",
       price: "₹ 12345",
       strikedoffprice: "₹ 29999",
@@ -527,7 +623,7 @@
     {
       id: 13,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/86f8a5a3a7232b99edc1b43cd1f3887793589f41/1-Light-Cylinder-Pendant-with-Clear-Glass-Shade.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/5acf3425343eceaeeed8450546ed448c7c8b8860/Acroma-12-Light-40-In-Modern-Farmhouse-Wagon-Wheel-Chandelier.jpg?imwidth=480&impolicy=medium",
       name: "Carson Carrington Horsens 3-drawer Mid-century Modern Buffet",
       price: "₹ 15321",
       strikedoffprice: "₹ 39999",
@@ -538,7 +634,7 @@
     {
       id: 14,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/0c953f9029001a6d95833a7e34af39b72ff9dd5e/Modern-Farmhouse-1-Light-Cylinder-Wood-Grain-Pendant-Lantern-Kitchen-Island-Lights.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/e2ba49126208d855bc4230ddcfd45884fd976bd3/37%27%27-Modern-Contemporary-8-light-Chandelier-Gold-Dimmable-Island-Lights-for-Kitchen-Island.jpg?imwidth=480&impolicy=medium",
       name: "Simple Living Solid Wood Farmhouse Table vry comfortable set",
       price: "₹ 36580",
       strikedoffprice: "₹ 49999",
@@ -549,7 +645,7 @@
     {
       id: 15,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/c9ee644db184c3a1252be11f13c906993216e712/INK%2BIVY-Asher-Bell-Shaped-Rope-Pendant.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/27481097c3d39c501b0f504339b56b321e0840e9/Adreanna-20-Light-40-Inch-Modern-Farmhouse-Wagon-Wheel-Chandelier.jpg?imwidth=480&impolicy=medium",
       name: "Andeworld farmhouse bar stools ,counter height bar stools set of 4",
       price: "₹ 19999",
       strikedoffprice: "₹ 25000",
@@ -560,7 +656,7 @@
     {
       id: 16,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/6e814388fc09acd9f949c7a29be1eeb5a5daf844/Gaines-12%22-2-Light-Crystal-LED-Chandelier%2C-Polished-Nickel-Clear-by-JONATHAN-Y.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/668bbdc87352ec67fbd738a1401d8eb5ed6b35cf/Oaks-Aura-Modern-Glam-6-Light-Rustic-Wood-Pendant-Light-Farmhouse-Chandelier%2C-D%C3%A9cor-Your-own-Halloween-Light.jpg?imwidth=480&impolicy=medium",
       name: "Solid Pine Drop Leaf Table 3-piece Dining very comfortable Set",
       price: "₹ 21300",
       strikedoffprice: "₹ 29999",
@@ -571,7 +667,7 @@
     {
       id: 17,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/58d55e885ccd45782822b6082e8a769f1ca19dc1/1-Light-Matte-Black-Cylinder-Pendant-Light.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/f96a4775979b05f8202942588968bc6c0d90a860/Capiz-Honeycomb-Globe-Pendant-Light%2C-Capiz-White-Seashells-with-Antique-Gold.jpg?imwidth=480&impolicy=medium",
       name: "Palmer Mid-Century Modern Fabric Dining Chair in 2 Pack",
       price: "₹ 27600",
       strikedoffprice: "₹ 39999",
@@ -582,7 +678,7 @@
     {
       id: 18,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/133429c34f6c26fafd4a564de2688887ff2fa6ba/2-Pack-Industrial-Pendant-Light-Vintage-Hanging-Lighting-Fixuture-With-Black-Metal-Dome-Lamp-Shade.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/1d77fbbd7ed7baabc5b34ec0e11480d432a4afb9/4-Light-Bohemian-Hand-Woven-Drum-Chandelier---W20%22-x-H75.6%22.jpg?imwidth=480&impolicy=medium",
       name: "Simple Living Shaker Dining Table very comfortable Set",
       price: "₹ 11500",
       strikedoffprice: "₹ 19999",
@@ -593,7 +689,7 @@
     {
       id: 19,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/4ccb86a35a9ed8887e0f1947f3c1421fde59602c/Marion-4-Bulb-Lantern-Metal-LED-Pendant%2C-by-JONATHAN-Y.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/d7b8d4f9f3e505ba22573c0b0ae8606b964a4aee/16-Light-47In-Modern-Farmhouse-Wagon-Wheel-Chandelier.jpg?imwidth=480&impolicy=medium",
       name: "Lifestorey Tabaria Four Door Sideboard very comfortable Set",
       price: "₹ 31567",
       strikedoffprice: "₹ 34355",
@@ -604,7 +700,7 @@
     {
       id: 20,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/e681ee85cafabf668cf99d7bffd000713a026efa/Modern-1-light-Metal-Wire-Woven-Pendant-Cage-Ceiling-Lights-for-Dining-Room.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/cd8dfdae4ba408e6cb02900bac82f553159e83c2/Modern-Antique-Gold-Chandelier-Swing-Arms-Handmade-Wood-Beads-for-Dining-Room.jpg?imwidth=480&impolicy=medium",
       name: "Stetson Adjustable Height Swivel Metal Bar Stools (Set of 3)",
       price: "₹ 12456",
       strikedoffprice: "₹ 40000",
@@ -616,11 +712,66 @@
 
   // var getItem = JSON.parse(localStorage.getItem("book-list")) || [];
 
-  displayData();
+  displayData(furniture);
 
-  function displayData() {
-    furniture.map(function (elem) {
+  document.getElementById("filter").addEventListener("change", furfilter);
+  function furfilter() {
+    var x = document.getElementById("filter").value;
+    var s = furniture.filter(function (elem) {
+      if(x==="" || x=="all"){
+          return true;
+        
+         }
+
+     return elem.rating ==x;
+    });
+    console.log(s);
+    displayData(s);
+  }
+
+
+
+  document.getElementById("sort").addEventListener("change", filterprice);
+  function filterprice() {
+    var x1 = document.getElementById("sort").value;
+    var s = furniture.filter(function (elem) {
+      var str=elem.price
+      var matches = str.match(/(\d+)/);
+      var x=(parseInt(matches[0]))
+                        if(x1==="one" && (x>0 && x<10000) ){
+           return elem
+                        }
+                        if(x1==="two" && (x>10000 && x<20000) ){
+           return elem
+                        }
+                        if(x1==="three" && (x>20000 && x<30000) ){
+           return elem
+                        }
+                        if(x1==="" || x1=="all"){
+          return true;
+        
+         }
+          
+     
+    });
+    console.log(x1)
+    displayData(s);
+  }
+
+
+
+
+
+
+
+
+
+ 
+  function displayData(furniture) {
+    document.getElementById("main-container").innerText=""
+    furniture.map(function (elem,index) {
       var div = document.createElement("div");
+      div.style.cursor = "pointer";
 
       var image = document.createElement("img");
       image.setAttribute("src", elem.image_url);
@@ -650,6 +801,15 @@
       Details = document.createElement("button");
       Details.textContent = "Details";
       Details.setAttribute("class", "Details");
+      Details.onclick = function() {
+    window.location.href = "showDetails.html";
+  };
+      
+      Details.addEventListener("click",function(){
+       
+      prod_details(elem,index);
+     
+     })
 
       ratingBox.append(rating, Details);
       ratingBox.setAttribute("class", "ratingBox");
@@ -687,7 +847,9 @@
     setTimeout(showSlides, 2000); // Change image every 2 seconds
   }
 
-  //slid show end
+  function  prod_details(elem,index){
+     localStorage.setItem("prod_details",JSON.stringify(elem))
+ }
 </script>
 
 <script

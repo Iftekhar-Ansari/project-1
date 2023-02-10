@@ -32,10 +32,29 @@
       }
 
       #main-container > div {
+        border-radius: 20px;
         justify-content: center;
         text-align: center;
         padding: 10px;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+
+      #main-container > div img{
+        transition: transform 0.5s;
+      }
+
+      #main-container > div img:hover{
+        transform: scale(1.2);
+        border-radius: 10px;
+      }
+
+      #main-container > div h2{
+        transition: transform 0.5s;
+      }
+
+      #main-container > div h2:hover{
+        transform: scale(1.2);
+        border-radius: 10px;
       }
 
       .priceBox {
@@ -99,26 +118,44 @@
       }
 
       #top-container {
-        width: 90%;
-
+        
         display: flex;
-        justify-content: flex-end;
+        justify-content: flex-start;
         align-items: center;
+        margin-bottom: 20px;
+        margin-left:  5%;
+      
+        width: 433px;
+        border: 4px solid black;
+  animation: mymove 5s infinite;
+      
       }
+      @keyframes mymove {
+  50% {
+  border-color: rgb(176, 178, 178);}
+  100%{
+    border-color: rgb(238, 189, 99);
+  }
+}
+
+
 
       #top-container > div {
         padding: 10px;
-        background-color: #088178;
+        background-color: #eae6e6;
+
       }
 
       #filter,
       #sort {
         font-size: 20px;
         padding: 10px;
+        
       }
       #filter option,
       #sort option {
-        color: crimson;
+        color: rgb(12, 12, 12);
+        
       }
 
       /* slidee show start */
@@ -130,8 +167,14 @@
         font-family: Verdana, sans-serif;
       }
       .mySlides {
-        display: none;
+        /* display: none; */
+       
+        width: 100%;
+        
+        
       }
+
+
       img {
         vertical-align: middle;
         width: 100%;
@@ -151,12 +194,25 @@
         vertical-align: middle;
       }
 
+      
+
       /* Slideshow container */
       .slideshow-container {
-        max-width: 1200px;
+         height: 500px;
+        max-width: 90%;
+        margin-left: 3%;
+        margin-right: 3%;
         position: relative;
         margin: auto;
+       
+        margin-top: 20px;
+      
       }
+      .slideshow-container img {
+             min-height:100%
+
+}
+
 
       /* Caption text */
       .text {
@@ -249,18 +305,34 @@
           /* cop */
         }
 
-        @media (max-width: 477px) {
-          .section-p1 {
-            padding: 20px;
-            /* cop */
-          }
+        #banner3 {
+          padding: 0 40px;
+        }
+
+        #banner3 .banner-box {
+          width: 28%;
+        }
+      }
+
+      @media (max-width: 477px) {
+        .section-p1 {
+          padding: 20px;
+          /* cop */
+        }
+
+        #banner3 {
+          padding: 0 20px;
+        }
+
+        #banner3 .banner-box {
+          width: 100%;
         }
       }
 
       /* end pagination */
 
-/* banner 3 start */
-#banner3 {
+      /* banner 3 start */
+      #banner3 {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -300,41 +372,63 @@
         font-weight: 800;
         font-size: 15px;
       }
-      /* banner 3 end */
 
+      #banner3 .banner-box2 h2{
+        transition: transform 0.5s;
+      }
+
+      #banner3 .banner-box2 h2:hover{
+        transform: scale(1.2);
+      }
+
+      #banner3 .banner-box3 h2{
+        transition: transform 0.5s;
+      }
+
+      #banner3 .banner-box3 h2:hover{
+        transform: scale(1.2);
+      }
+
+      #banner3 .banner-box h2{
+        transition: transform 0.5s;
+      }
+
+      #banner3 .banner-box h2:hover{
+        transform: scale(1.4);
+      }
+      /* banner 3 end */
     </style>
   </head>
   <body>
     <section id="slideshow">
-      <h2>Automatic Slideshow</h2>
-      <p>Change image every 2 seconds:</p>
+     
 
       <div class="slideshow-container">
         <div class="mySlides fade">
-          <div class="numbertext">1 / 3</div>
+          <div class="numbertext"></div>
           <img
-            src="https://ak1.ostkcdn.com/images/products/is/images/direct/2ebad0a4e7d94b6acf2bee922879c8f1ec5bda9d/Middlebrook-Gammelstaden-Mid-Century-Solid-Wood-6-Drawer-Dresser.jpg?imwidth=480&impolicy=medium"
-            style="width: 100%"
+            src="https://ak1.ostkcdn.com/images/products/9965408/Echelon-Home-Three-Line-Hotel-Collection-Cotton-Sateen-3-piece-Duvet-Cover-Set-in-Queen-f9236fa7-eb58-4ab0-9499-7e3b50f99e2f_1000.jpg?imwidth=480"
+            style="width: 100%;height: 500px; object-fit: cover;"
           />
-          <div class="text">Caption Text</div>
+          <div class="text"></div>
         </div>
 
         <div class="mySlides fade">
-          <div class="numbertext">2 / 3</div>
+          <div class="numbertext"></div>
           <img
-            src="https://ak1.ostkcdn.com/images/products/is/images/direct/9fb70a27d1a1e067f65a6f2ef2e0bfb98e0e525d/CraftPorch-2-Piece-Bedroom-Set-in-Luxurious-Velvet-Wingback-Panel.jpg?imwidth=480&impolicy=medium"
-            style="width: 100%"
+            src="https://ak1.ostkcdn.com/images/products/is/images/direct/2799d25353ac2226ab5799b3c15e3c3f9e60d14d/VCNY-Nina-Embossed-Quilt-Set.jpg?imwidth=480"
+            style="width: 100%;height: 500px; object-fit: cover;"
           />
-          <div class="text">Caption Two</div>
+          <div class="text"></div>
         </div>
 
         <div class="mySlides fade">
-          <div class="numbertext">3 / 3</div>
+          <div class="numbertext"></div>
           <img
-            src="https://ak1.ostkcdn.com/images/products/is/images/direct/a47942e09d11c9b004b7dab974245ea920445883/Kotter-Home-Zinnia-Victorian-Metal---Iron-Bed.jpg?imwidth=480&impolicy=medium"
-            style="width: 100%"
+            src="https://ak1.ostkcdn.com/images/products/is/images/direct/2c2b6df0d9fb585ef9e70c48029702c9b3daa236/Madison-Park-Loleta-8-Piece-Cotton-Floral-Printed-Reversible-Comforter-Set.jpg?imwidth=480"
+            style="width: 100%;height: 500px; object-fit: cover;"
           />
-          <div class="text">Caption Three</div>
+          <div class="text"></div>
         </div>
       </div>
       <br />
@@ -347,8 +441,8 @@
     </section>
     <section id="top-container">
       <div>
-        <select id="filter" onchange="handleFilter">
-          <option value="">Filter By Rating</option>
+        <select id="filter" >
+          <option value="all">Filter By Rating</option>
           <option value="★★★★★">★★★★★</option>
           <option value="★★★★">★★★★</option>
           <option value="★★★">★★★</option>
@@ -357,14 +451,15 @@
         </select>
       </div>
       <div>
-        <select id="sort" onchange="handleSort">
-          <option value="">Sort by price</option>
-          <option value="lth">Low to High</option>
-          <option value="htl">High to Low</option>
+        <select id="sort" >
+          <option value="all">Sort by price</option>
+          <option value="one">Between 1K-10K</option>
+          <option value="two">Between 11K-20K</option>
+          <option value="three">Between 21K-30K</option>
         </select>
       </div>
     </section>
-    <div id="main-container"></div>
+    <div id="main-container" ></div>
 
     <section id="pagination" class="section-p1">
       <a href="#">1</a>
@@ -396,10 +491,10 @@
     {
       id: 1,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/da0b69990c8cc5966c25f4393e0425a7b03223d9/Moorea-Patchwork-3-piece-Quilt-Set.jpg?imwidth=480",
-      name: "Serenta Emma 5 Piece Printed Quilt Bedspread Coverlet Set",
-      price: "₹ 7689",
-      strikedoffprice: "₹ 9999",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/431e28446ec716a2c5198cc39a610823a70fca8c/MarCielo-3-Piece-Printed-Quilt-Set-Lightweight-Bedspread-Set-By014.jpg?imwidth=480",
+      name: "Harrisburg Tobey Compact Round Dining very-comfortable  Set",
+      price: "₹ 16389",
+      strikedoffprice: "₹ 25000",
       rating: "★★★★★",
       Details: "Details",
       addCart: "Addtocart",
@@ -407,10 +502,10 @@
     {
       id: 2,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/29806746/Watercolor-Floral-Cotton-Quilt-Set-5b67608c-d9cc-483a-af6e-8811be5e26c9_1000.jpg?imwidth=480",
-      name: "Watercolor Floral Cotton Quilt ultra-soft and comfortable Set",
-      price: "₹ 14814",
-      strikedoffprice: "₹ 19999",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/076a6c2f13c3d7b7e5a1aae63cb3cb48a7b2b28b/Madison-Park-Dillon-8-Piece-Jacquard-Comforter-Set.jpg?imwidth=480",
+      name: "Carson Carrington Klemens Round Dining Table beautiful set",
+      price: "₹ 19000",
+      strikedoffprice: "₹ 21000",
       rating: "★★★★",
       Details: "Details",
       addCart: "Addtocart",
@@ -418,10 +513,10 @@
     {
       id: 3,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/25e98963a16c779e5d5498f105c4386261235cc3/Greenland-Home-Fashions-Atlantis-Coastal-Reversible-Quilt-Set.jpg?imwidth=480",
-      name: "Wildwood Beach Party Reversible Ultra-Soft comforatable set",
-      price: "₹ 6555",
-      strikedoffprice: "₹ 9999",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/e99d8586a6f96b73fbe5f3b31eb2d1c5b32d6a14/Alton-Plush-to-Sherpa-Down-Alternative-Comforter-Set-by-Woolrich.jpg?imwidth=480",
+      name: "SAFAVIEH Country Classic Blanchard Dining Chairs (Set of 2)",
+      price: "₹ 13000",
+      strikedoffprice: "₹ 15600",
       rating: "★★★★",
       Details: "Details",
       addCart: "Addtocart",
@@ -429,10 +524,10 @@
     {
       id: 4,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/20102300/Southshore-Fine-Linens-Pure-Melody-Quilt-Set-e59d7222-f1a3-478c-8e7c-8e5afb597f20_1000.jpg?imwidth=480",
-      name: "Vilano Ultra-soft Lightweight Pure Melody 3-piece comfertable set",
-      price: "₹ 4475",
-      strikedoffprice: "₹ 7999",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/07aa96e51f68b293b2c18da5732c31e84a071f59/Madison-Park-Essentials-Parker-Red-Jacquard-Embroidered-Pieced-24-Piece-Room-in-a-Bag.jpg?imwidth=480",
+      name: "Nathan James Hylie Nailhead Wood Pub-Height Counter Bar Stool",
+      price: "₹ 6579",
+      strikedoffprice: "₹ 10000",
       rating: "★★★★",
       Details: "Details",
       addCart: "Addtocart",
@@ -440,21 +535,21 @@
     {
       id: 5,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/826b5d24aad8802ec99b0d6189cc76a16e884b36/Soft-Essentials-All-Season-2-Piece-Watercolor-Leaves-Stripe-Reversible-Quilt-Set-with-Shams.jpg?imwidth=480",
-      name: "Oversized Solid 3-piece Quilt Set by Southshore Fine Linens with 2 pilow",
-      price: "₹ 3444",
-      strikedoffprice: "₹ 5999",
-      rating: "★★★★★",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/e893835f399ea833bb3e1144b5f58b11ea3ab10d/Tommy-Bahama-Bonny-Cove-Cotton-Reversible-Beige-Quilt-Set.jpg?imwidth=480",
+      name: "Bar Stools Adjustable Armless Swivel PU Leather Barstools Set of 2",
+      price: "₹ 13000",
+      strikedoffprice: "₹ 19000",
+      rating: "r★★★★★",
       Details: "Details",
       addCart: "Addtocart",
     },
     {
       id: 6,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/7695801d0428aa0b8a20666804107041aad66b99/Cozy-Line-Florabella-Cotton-Floral-3-pc.-Reversible-Quilt-Set.jpg?imwidth=480",
-      name: "Cozy Line Florabella Cotton Floral 3-pc. Reversible Quilt Set",
-      price: "₹ 7731",
-      strikedoffprice: "₹ 9999",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/05df3e98d92de7cb27a9ce7aa48d776c5256b241/Riverbrook-Home-Turin-Comforter-Spice-Microfiber-Comforter-Set.jpg?imwidth=480",
+      name: "47 in. Modern X-Door Wine Cabinet beautiful and comfortable",
+      price: "₹ 19000",
+      strikedoffprice: "₹ 19000",
       rating: "★★★★★",
       Details: "Details",
       addCart: "Addtocart",
@@ -462,10 +557,10 @@
     {
       id: 7,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/28069572/Luxury-Ultra-Soft-Herring-Quilted-Coverlet-Set-by-Sharon-Osbourne-Home-2c3113f3-2a42-421a-bced-9c377a59923f_1000.jpg?imwidth=480",
-      name: "Luxury Ultra Soft Herring Quilted Coverlet Set by Home Collection",
-      price: "₹ 5467",
-      strikedoffprice: "₹ 12999",
+        "https://ak1.ostkcdn.com/images/products/20254898/The-Curated-Nomad-Sandia-3-piece-Cotton-Quilt-Set-59e6f5de-193d-412f-a0d3-d94faa394b62_1000.jpg?imwidth=480",
+      name: "Art Leon Adjustable Swivel Barstool very comfortable (Set of 2)",
+      price: "₹ 19000",
+      strikedoffprice: "₹ 19000",
       rating: "★★★★★",
       Details: "Details",
       addCart: "Addtocart",
@@ -473,7 +568,7 @@
     {
       id: 8,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/ae1d1692917c7d183c668c1ee3170b196be1d2d4/MarCielo-3-Piece-Cotton-Oversized-Bedspread-Quilt-Set-Tmonica.jpg?imwidth=480",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/36ce4b8cd4151108d636d59e0e1a9e83866f766c/Madison-Park-Westbrook-7-Piece-Faux-Suede-Comforter-Set.jpg?imwidth=480",
       name: "The Gray Barn Barish Backless Saddle Seat Counter Stools (Set of 2)",
       price: "₹ 14300",
       strikedoffprice: "₹ 15000",
@@ -484,10 +579,10 @@
     {
       id: 9,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/2034e3c0fbe3218a601190f1fe576d0e9d618db5/Madison-Park-Mansfield-Reversible-Bedspread-Set-%2811-Color-Option%29.jpg?imwidth=480",
-      name: "Madison Park Mansfield Reversible Bedspread with beautiful set",
-      price: "₹ 5874",
-      strikedoffprice: "₹ 9999",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/de6760dd86a2098e053ee5d35b31ad7fdf027390/Tommy-Bahama-Palmiers-4-pc.-Comforter-Set.jpg?imwidth=480",
+      name: "East West Furniture Round Table with Two 9-inch Drop Leaves",
+      price: "₹ 4345",
+      strikedoffprice: "₹ 6500",
       rating: "★★★★★",
       Details: "Details",
       addCart: "Addtocart",
@@ -495,10 +590,10 @@
     {
       id: 10,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/30109999/Christmas-Quilt-Bedspread-Set-bd54c37c-10bd-4c6a-9298-1081c1317023_1000.jpg?imwidth=480",
-      name: "Serenta Bloom Medallion 5 Piece Reversible Quilt Bedspread Set",
-      price: "₹ 6952",
-      strikedoffprice: "₹ 9999",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/f9ffbd80fbe9ba83d0a95be72b559211d027302a/Riverbrook-Home-Turin-Velvet-7-Piece-Comforter-Set.jpg?imwidth=480",
+      name: "Simple Living Carolina Windsor Dining Chairs (Set of 2)",
+      price: "₹ 10650",
+      strikedoffprice: "₹ 19999",
       rating: "★★★",
       Details: "Details",
       addCart: "Addtocart",
@@ -506,10 +601,10 @@
     {
       id: 11,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/781e4223c577f255128d7934c44e9230069ded97/Beaute-Living-Sophia-Floral-Printed-Lightweight-5-Piece-Comforter.jpg?imwidth=480",
-      name: "Beaute Living Sophia 5-Piece Floral Pattern Comforter comfortable ",
-      price: "₹ 8938",
-      strikedoffprice: "₹ 9000",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/270a4376a6a01082e9491d10e1df5bfa5ef9a722/VCNY-Home-Leaf-Bed-in-a-Bag-Comforter-Set.jpg?imwidth=480",
+      name: "Simple Living Country Cottage Drop-Leaf Dining Table",
+      price: "₹ 11324",
+      strikedoffprice: "₹ 45000",
       rating: "★★",
       Details: "Details",
       addCart: "Addtocart",
@@ -517,10 +612,10 @@
     {
       id: 12,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/4e0ab0c75452f396dfe1cbd4e05bdf1353177fef/Serenta-Marisol-Printed-Microfiber-7-piece-Bedspread-Quilt-Coverlet-Set.jpg?imwidth=480",
-      name: "Marisol Printed Microfiber 7-piece Bedspread Quilt Coverlet Set",
-      price: "₹ 3253",
-      strikedoffprice: "₹ 9999",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/3125ae0aeb7c132eecbfc59deec35e1d5aa5835f/Madison-Park-Melody-7-Piece-Jacquard-Comforter-Set.jpg?imwidth=480",
+      name: "Simple Living Venice Farmhouse Dining Chairs (Set of 2)",
+      price: "₹ 12345",
+      strikedoffprice: "₹ 29999",
       rating: "★★★★★",
       Details: "Details",
       addCart: "Addtocart",
@@ -528,10 +623,10 @@
     {
       id: 13,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/97d919f27014f30c8bbec56fa968593e19830e3e/Naples-Oversized-Quilt-Set.jpg?imwidth=480",
-      name: "Naples Solid Oversized Quilt with comfortable for two person",
-      price: "₹ 4320",
-      strikedoffprice: "₹ 9990",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/171b29fb3444d21c802dd173ca9466d8a44d464e/Becky-Cameron-Ultra-soft-Deep-Pocket-Microfiber-4-piece-Bed-Sheet-Set.jpg?imwidth=480",
+      name: "Carson Carrington Horsens 3-drawer Mid-century Modern Buffet",
+      price: "₹ 15321",
+      strikedoffprice: "₹ 39999",
       rating: "★★★★★",
       Details: "Details",
       addCart: "Addtocart",
@@ -539,10 +634,10 @@
     {
       id: 14,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/e893835f399ea833bb3e1144b5f58b11ea3ab10d/Tommy-Bahama-Bonny-Cove-Cotton-Reversible-Beige-Quilt-Set.jpg?imwidth=480",
-      name: "Tommy Bahama Bonny Cove Cotton Reversible Beige Quilt Set",
-      price: "₹ 96354",
-      strikedoffprice: "₹ 7999",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/39530475093433d4e9e9f2f6d4dcba2821cc0a5f/Madison-Park-Cadence-24-piece-Room-in-a-Bag.jpg?imwidth=480",
+      name: "Simple Living Solid Wood Farmhouse Table vry comfortable set",
+      price: "₹ 36580",
+      strikedoffprice: "₹ 49999",
       rating: "★",
       Details: "Details",
       addCart: "Addtocart",
@@ -550,10 +645,10 @@
     {
       id: 15,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/2799d25353ac2226ab5799b3c15e3c3f9e60d14d/VCNY-Nina-Embossed-Quilt-Set.jpg?imwidth=480",
-      name: "VCNY Nina Embossed Quilt with two confortable beautiful pillow",
-      price: "₹ 3200",
-      strikedoffprice: "₹ 7000",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/db9f7fb458ab2d404bd1f6c0d51428a9a87345c7/Blantyre-Scalloped-Edge-White-Cotton-3-piece-Oversized-Quilt-Set.jpg?imwidth=480",
+      name: "Andeworld farmhouse bar stools ,counter height bar stools set of 4",
+      price: "₹ 19999",
+      strikedoffprice: "₹ 25000",
       rating: "★★★★★",
       Details: "Details",
       addCart: "Addtocart",
@@ -561,10 +656,10 @@
     {
       id: 16,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/29b74603c736db047917c61add269c485e416506/Lugano-Honeycomb-Velvet-Oversized-Solid-Quilt-Set.jpg?imwidth=480",
-      name: "Lugano Honeycomb Velvet Oversized Solid Quilt beautiful set",
-      price: "₹ 6416",
-      strikedoffprice: "₹ 8678",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/4e509d311619249058dba4931e16a74d9417ed1b/Modern-Threads-Braelyn-4-Piece-Garment-Washed-Comforter-Set.jpg?imwidth=480",
+      name: "Solid Pine Drop Leaf Table 3-piece Dining very comfortable Set",
+      price: "₹ 21300",
+      strikedoffprice: "₹ 29999",
       rating: "★★★★★",
       Details: "Details",
       addCart: "Addtocart",
@@ -572,10 +667,10 @@
     {
       id: 17,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/9d7e3b55ed55a175d515aa36ef8394317593a30b/Madison-Park-Emery-Faux-Velvet-Reversible-3-Piece-Coverlet-Set.jpg?imwidth=480",
-      name: "Madison Park Emery Velvet 3 Piece Coverlet multicoloue and veri confortable Set",
-      price: "₹ 6042",
-      strikedoffprice: "₹ 8999",
+        "https://ak1.ostkcdn.com/images/products/22543761/Lush-Decor-Ruffle-Skirt-Bedspread-Set-167c0a5d-c9bb-48cf-bd6e-e76fdbd5fa75_1000.jpg?imwidth=480",
+      name: "Palmer Mid-Century Modern Fabric Dining Chair in 2 Pack",
+      price: "₹ 27600",
+      strikedoffprice: "₹ 39999",
       rating: "★★★★",
       Details: "Details",
       addCart: "Addtocart",
@@ -583,10 +678,10 @@
     {
       id: 18,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/d9c54a2852d42224c54a8fdeed88999b935a28bc/Capri-Medallion-Velvet-Oversized-Solid-Quilt-Set.jpg?imwidth=480",
-      name: "Capri Medallion Velvet Oversized Solid Quilt very soft and colourful Set",
-      price: "₹ 6454",
-      strikedoffprice: "₹ 9678",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/796373e0f03dda3f292cfb16f41849a388a8460b/Nanshing-Kath-7-piece-Comforter-Set.jpg?imwidth=480",
+      name: "Simple Living Shaker Dining Table very comfortable Set",
+      price: "₹ 11500",
+      strikedoffprice: "₹ 19999",
       rating: "★★★",
       Details: "Details",
       addCart: "Addtocart",
@@ -594,10 +689,10 @@
     {
       id: 19,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/078e7bf053813f1769debb3034284da641737d58/Copper-Grove-Boylston-Ikat-Blue-5-piece-Coverlet-Set.jpg?imwidth=480",
-      name: "Boylston Ikat Blue 5-piece Coverlet confortable and colourful Set",
-      price: "₹ 4567",
-      strikedoffprice: "₹ 9765",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/7695801d0428aa0b8a20666804107041aad66b99/Cozy-Line-Florabella-Cotton-Floral-3-pc.-Reversible-Quilt-Set.jpg?imwidth=480",
+      name: "Lifestorey Tabaria Four Door Sideboard very comfortable Set",
+      price: "₹ 31567",
+      strikedoffprice: "₹ 34355",
       rating: "★★",
       Details: "Details",
       addCart: "Addtocart",
@@ -605,21 +700,78 @@
     {
       id: 20,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/279f8f55c5d4926756af889c1a56fd2ee923bcca/Serenta-5-Piece-Printed-Microfiber-LA-Boheme-Quilt-Set.jpg?imwidth=480",
-      name: "Serenta 5 Piece Printed Microfiber LA Boheme Quilt beautiful Set",
-      price: "₹ 6349",
-      strikedoffprice: "₹ 9678",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/30fb82387e7ad942c95e8210ff7b674faff20884/Are-You-Kidding---Coma-Inducer-Oversized-Comforter---Frosted-Chocolate.jpg?imwidth=480",
+      name: "Stetson Adjustable Height Swivel Metal Bar Stools (Set of 3)",
+      price: "₹ 12456",
+      strikedoffprice: "₹ 40000",
       rating: "★★★★",
       Details: "Details",
       addCart: "Addtocart",
     },
   ];
 
-  displayData();
+  // var getItem = JSON.parse(localStorage.getItem("book-list")) || [];
 
-  function displayData() {
-    furniture.map(function (elem) {
+  displayData(furniture);
+
+  document.getElementById("filter").addEventListener("change", furfilter);
+  function furfilter() {
+    var x = document.getElementById("filter").value;
+    var s = furniture.filter(function (elem) {
+      if(x==="" || x=="all"){
+          return true;
+        
+         }
+
+     return elem.rating ==x;
+    });
+    console.log(s);
+    displayData(s);
+  }
+
+
+
+  document.getElementById("sort").addEventListener("change", filterprice);
+  function filterprice() {
+    var x1 = document.getElementById("sort").value;
+    var s = furniture.filter(function (elem) {
+      var str=elem.price
+      var matches = str.match(/(\d+)/);
+      var x=(parseInt(matches[0]))
+                        if(x1==="one" && (x>0 && x<10000) ){
+           return elem
+                        }
+                        if(x1==="two" && (x>10000 && x<20000) ){
+           return elem
+                        }
+                        if(x1==="three" && (x>20000 && x<30000) ){
+           return elem
+                        }
+                        if(x1==="" || x1=="all"){
+          return true;
+        
+         }
+          
+     
+    });
+    console.log(x1)
+    displayData(s);
+  }
+
+
+
+
+
+
+
+
+
+ 
+  function displayData(furniture) {
+    document.getElementById("main-container").innerText=""
+    furniture.map(function (elem,index) {
       var div = document.createElement("div");
+      div.style.cursor = "pointer";
 
       var image = document.createElement("img");
       image.setAttribute("src", elem.image_url);
@@ -648,8 +800,16 @@
 
       Details = document.createElement("button");
       Details.textContent = "Details";
-      Details.onclick = "";
       Details.setAttribute("class", "Details");
+      Details.onclick = function() {
+    window.location.href = "showDetails.html";
+  };
+      
+      Details.addEventListener("click",function(){
+       
+      prod_details(elem,index);
+     
+     })
 
       ratingBox.append(rating, Details);
       ratingBox.setAttribute("class", "ratingBox");
@@ -687,11 +847,12 @@
     setTimeout(showSlides, 2000); // Change image every 2 seconds
   }
 
-  //slid show end
+  function  prod_details(elem,index){
+     localStorage.setItem("prod_details",JSON.stringify(elem))
+ }
 </script>
 
 <script
   src="https://kit.fontawesome.com/25bb53796d.js"
   crossorigin="anonymous"
 ></script>
-

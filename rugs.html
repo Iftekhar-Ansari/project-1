@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>furniture</title>
+    <title>rugs</title>
     <style>
       * {
         margin: 0;
@@ -39,8 +39,22 @@
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       }
 
-      #main-container > div:hover {
-        
+      #main-container > div img{
+        transition: transform 0.5s;
+      }
+
+      #main-container > div img:hover{
+        transform: scale(1.2);
+        border-radius: 10px;
+      }
+
+      #main-container > div h2{
+        transition: transform 0.5s;
+      }
+
+      #main-container > div h2:hover{
+        transform: scale(1.2);
+        border-radius: 10px;
       }
 
       .priceBox {
@@ -104,26 +118,44 @@
       }
 
       #top-container {
-        width: 90%;
-
+        
         display: flex;
-        justify-content: flex-end;
+        justify-content: flex-start;
         align-items: center;
+        margin-bottom: 20px;
+        margin-left:  5%;
+      
+        width: 433px;
+        border: 4px solid black;
+  animation: mymove 5s infinite;
+      
       }
+      @keyframes mymove {
+  50% {
+  border-color: rgb(176, 178, 178);}
+  100%{
+    border-color: rgb(238, 189, 99);
+  }
+}
+
+
 
       #top-container > div {
         padding: 10px;
-        background-color: #088178;
+        background-color: #eae6e6;
+
       }
 
       #filter,
       #sort {
         font-size: 20px;
         padding: 10px;
+        
       }
       #filter option,
       #sort option {
-        color: crimson;
+        color: rgb(12, 12, 12);
+        
       }
 
       /* slidee show start */
@@ -135,8 +167,14 @@
         font-family: Verdana, sans-serif;
       }
       .mySlides {
-        display: none;
+        /* display: none; */
+       
+        width: 100%;
+        
+        
       }
+
+
       img {
         vertical-align: middle;
         width: 100%;
@@ -156,12 +194,25 @@
         vertical-align: middle;
       }
 
+      
+
       /* Slideshow container */
       .slideshow-container {
-        max-width: 1200px;
+         height: 500px;
+        max-width: 90%;
+        margin-left: 3%;
+        margin-right: 3%;
         position: relative;
         margin: auto;
+       
+        margin-top: 20px;
+      
       }
+      .slideshow-container img {
+             min-height:100%
+
+}
+
 
       /* Caption text */
       .text {
@@ -321,40 +372,63 @@
         font-weight: 800;
         font-size: 15px;
       }
+
+      #banner3 .banner-box2 h2{
+        transition: transform 0.5s;
+      }
+
+      #banner3 .banner-box2 h2:hover{
+        transform: scale(1.2);
+      }
+
+      #banner3 .banner-box3 h2{
+        transition: transform 0.5s;
+      }
+
+      #banner3 .banner-box3 h2:hover{
+        transform: scale(1.2);
+      }
+
+      #banner3 .banner-box h2{
+        transition: transform 0.5s;
+      }
+
+      #banner3 .banner-box h2:hover{
+        transform: scale(1.4);
+      }
       /* banner 3 end */
     </style>
   </head>
   <body>
     <section id="slideshow">
-      <h2>Automatic Slideshow</h2>
-      <p>Change image every 2 seconds:</p>
+     
 
       <div class="slideshow-container">
         <div class="mySlides fade">
-          <div class="numbertext">1 / 3</div>
+          <div class="numbertext"></div>
           <img
-            src="https://ak1.ostkcdn.com/images/products/is/images/direct/56b01647c595acde4bb7023e96997b0547cf341c/SAFAVIEH-Madison-Poranna-Modern-Abstract-Rug.jpg?imwidth=480&impolicy=medium"
-            style="width: 100%"
+            src="https://ak1.ostkcdn.com/images/products/is/images/direct/af33bd3433f4ab1075e2dd00aaed772b410e78fe/Covey-Plush-Checkered-Thick-Shag-Area-Rug.jpg?imwidth=480&impolicy=medium"
+            style="width: 100%;height: 500px; object-fit: cover;"
           />
-          <div class="text">Caption Text</div>
+          <div class="text"></div>
         </div>
 
         <div class="mySlides fade">
-          <div class="numbertext">2 / 3</div>
+          <div class="numbertext"></div>
           <img
-            src="https://ak1.ostkcdn.com/images/products/is/images/direct/44d606cf7157741e1e1e4d6b1ec3989ada1d44b1/SAFAVIEH-Florida-Shag-Sigtraud-Abstract-Waves-1.2-inch-Thick-Rug.jpg?imwidth=480&impolicy=medium"
-            style="width: 100%"
+            src="https://ak1.ostkcdn.com/images/products/is/images/direct/947adaaeb44e27ea4ab99567e0c3cccffce8a51d/SAFAVIEH-Madison-Sabire-Boho-Medallion-Distressed-Rug.jpg?imwidth=480&impolicy=medium"
+            style="width: 100%;height: 500px; object-fit: cover;"
           />
-          <div class="text">Caption Two</div>
+          <div class="text"></div>
         </div>
 
         <div class="mySlides fade">
-          <div class="numbertext">3 / 3</div>
+          <div class="numbertext"></div>
           <img
-            src="https://ak1.ostkcdn.com/images/products/is/images/direct/77a9310679a9a456d6aa93bc173802a79838a34c/SAFAVIEH-Handmade-Classic-Signa-Traditional-Oriental-Wool-Rug.jpg?imwidth=480&impolicy=medium"
-            style="width: 100%"
+            src="https://ak1.ostkcdn.com/images/products/is/images/direct/e1ae5c77b004e62556c0228cf6e4f08076f6be11/SAFAVIEH-Handmade-Aspen-Alida-Boho-Medallion-Wool-Rug.jpg?imwidth=480&impolicy=medium"
+            style="width: 100%;height: 500px; object-fit: cover;"
           />
-          <div class="text">Caption Three</div>
+          <div class="text"></div>
         </div>
       </div>
       <br />
@@ -367,8 +441,8 @@
     </section>
     <section id="top-container">
       <div>
-        <select id="filter" onchange="handleFilter()">
-          <option value="">Filter By Rating</option>
+        <select id="filter" >
+          <option value="all">Filter By Rating</option>
           <option value="★★★★★">★★★★★</option>
           <option value="★★★★">★★★★</option>
           <option value="★★★">★★★</option>
@@ -377,10 +451,11 @@
         </select>
       </div>
       <div>
-        <select id="sort" onchange="handleSort()">
-          <option value="none">Sort by price</option>
-          <option value="lth">Low to High</option>
-          <option value="htl">High to Low</option>
+        <select id="sort" >
+          <option value="all">Sort by price</option>
+          <option value="one">Between 1K-10K</option>
+          <option value="two">Between 11K-20K</option>
+          <option value="three">Between 21K-30K</option>
         </select>
       </div>
     </section>
@@ -416,10 +491,10 @@
     {
       id: 1,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/4b3ed5d39f99c2bb99394b37f677db7092c24f5d/Adenia-Vintage-Medallion-Printed-Area-Rug.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/9b86fb816f68b6c5bf7c495d71f5470d7f20257f/SAFAVIEH-Handmade-Braided-Country-Casual-Lavada-Rug.jpg?imwidth=480&impolicy=medium",
       name: "Harrisburg Tobey Compact Round Dining very-comfortable  Set",
-      price: "16389",
-      strikedoffprice: "25000",
+      price: "₹ 16389",
+      strikedoffprice: "₹ 25000",
       rating: "★★★★★",
       Details: "Details",
       addCart: "Addtocart",
@@ -427,10 +502,10 @@
     {
       id: 2,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/947adaaeb44e27ea4ab99567e0c3cccffce8a51d/SAFAVIEH-Madison-Sabire-Boho-Medallion-Distressed-Rug.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/2f1a88be8f9df5afba4add8a302ab04055f3d8be/SAFAVIEH-Handmade-Cape-Cod-Marget-Boho-Coastal-Jute-Rug.jpg?imwidth=480&impolicy=medium",
       name: "Carson Carrington Klemens Round Dining Table beautiful set",
-      price: "19000",
-      strikedoffprice: "21000",
+      price: "₹ 19000",
+      strikedoffprice: "₹ 21000",
       rating: "★★★★",
       Details: "Details",
       addCart: "Addtocart",
@@ -438,9 +513,10 @@
     {
       id: 3,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/2fe9558498e4cd4d298da62d94b75847f63b27d4/Hauteloom-Holi-Traditional-Machine-Washable-Vintage-Distressed-Persian-Oriental-Area-Rug.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/f37c292000ae2aac2c4fc5e3f6c80e7936c21423/SAFAVIEH-Natural-Fiber-Oceana-Herringbone-Seagrass-Rug.jpg?imwidth=480&impolicy=medium",
       name: "SAFAVIEH Country Classic Blanchard Dining Chairs (Set of 2)",
-      price: "13000",
+      price: "₹ 13000",
+      strikedoffprice: "₹ 15600",
       rating: "★★★★",
       Details: "Details",
       addCart: "Addtocart",
@@ -448,10 +524,10 @@
     {
       id: 4,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/e1ae5c77b004e62556c0228cf6e4f08076f6be11/SAFAVIEH-Handmade-Aspen-Alida-Boho-Medallion-Wool-Rug.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/5cac4b03d62055b675aace4763fa56463f901e49/SAFAVIEH-Handmade-Rodeo-Drive-Sofoula-Mid-Century-Modern-Abstract-Wool-Rug.jpg?imwidth=480&impolicy=medium",
       name: "Nathan James Hylie Nailhead Wood Pub-Height Counter Bar Stool",
-      price: "6579",
-      strikedoffprice: "10000",
+      price: "₹ 6579",
+      strikedoffprice: "₹ 10000",
       rating: "★★★★",
       Details: "Details",
       addCart: "Addtocart",
@@ -459,10 +535,10 @@
     {
       id: 5,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/8c3516e97b43433e42c308751ed0038dba121f7c/SAFAVIEH-Reflection-Suhad-Oriental-Rug.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/2b707837a5e8e033958220ffcc3bb09f2cae6fa3/SAFAVIEH-Handmade-Chelsea-Rubi-French-Country-Floral-Wool-Rug.jpg?imwidth=480&impolicy=medium",
       name: "Bar Stools Adjustable Armless Swivel PU Leather Barstools Set of 2",
-      price: "13000",
-      strikedoffprice: "19000",
+      price: "₹ 13000",
+      strikedoffprice: "₹ 19000",
       rating: "r★★★★★",
       Details: "Details",
       addCart: "Addtocart",
@@ -470,10 +546,10 @@
     {
       id: 6,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/0d72ea091148ecda8b6dbe9d0cf29c622eae33c2/SAFAVIEH-Amelia-Modern-Abstract-Rug.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/61a0d72f413be50555cb23d9dc7d3cbb7ac843fb/Alexander-Home-Isabelle-Traditional-Vintage-Border-Printed-Area-Rug.jpg?imwidth=480&impolicy=medium",
       name: "47 in. Modern X-Door Wine Cabinet beautiful and comfortable",
-      price: "19000",
-      strikedoffprice: "19000",
+      price: "₹ 19000",
+      strikedoffprice: "₹ 19000",
       rating: "★★★★★",
       Details: "Details",
       addCart: "Addtocart",
@@ -481,10 +557,10 @@
     {
       id: 7,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/c0f621a2a42fd7739d1b827a21ec7e4dc2290017/SAFAVIEH-Handmade-Cape-Cod-Dina-Coastal-Jute-Rug.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/0d72ea091148ecda8b6dbe9d0cf29c622eae33c2/SAFAVIEH-Amelia-Modern-Abstract-Rug.jpg?imwidth=480&impolicy=medium",
       name: "Art Leon Adjustable Swivel Barstool very comfortable (Set of 2)",
-      price: "19000",
-      strikedoffprice: "19000",
+      price: "₹ 19000",
+      strikedoffprice: "₹ 19000",
       rating: "★★★★★",
       Details: "Details",
       addCart: "Addtocart",
@@ -492,10 +568,10 @@
     {
       id: 8,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/659026acd9117070fb538a2f3c9b09b40849832e/Lauren-Ralph-Lauren-Handmade-Carisbrooke-Solid-Wool-Rug.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/970b081b5865a7983da15c183f1f52d28967ed74/SAFAVIEH-Athens-Shag-Ilaha-1.5-inch-Thick-Rug.jpg?imwidth=480&impolicy=medium",
       name: "The Gray Barn Barish Backless Saddle Seat Counter Stools (Set of 2)",
-      price: "14300",
-      strikedoffprice: "15000",
+      price: "₹ 14300",
+      strikedoffprice: "₹ 15000",
       rating: "★★★",
       Details: "Details",
       addCart: "Addtocart",
@@ -503,10 +579,10 @@
     {
       id: 9,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/9b86fb816f68b6c5bf7c495d71f5470d7f20257f/SAFAVIEH-Handmade-Braided-Country-Casual-Lavada-Rug.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/e3ab403595d774afc897bdf0789c174adbd00e28/SAFAVIEH-Lyndhurst-Feryal-Traditional-Oriental-Medallion-Rug.jpg?imwidth=480&impolicy=medium",
       name: "East West Furniture Round Table with Two 9-inch Drop Leaves",
-      price: "4345",
-      strikedoffprice: "6500",
+      price: "₹ 4345",
+      strikedoffprice: "₹ 6500",
       rating: "★★★★★",
       Details: "Details",
       addCart: "Addtocart",
@@ -514,10 +590,10 @@
     {
       id: 10,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/bf4ae48f4e564618270b3a2e9c5aea9132c4a84f/SAFAVIEH-Veranda-Eyvor-Indoor--Outdoor-Patio-Backyard-Rug.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/fe77618ffa3521cd49edd506bd0a5e6c5b45e42e/SAFAVIEH-Vintage-Hamadan-Gody-Oriental-Distressed-Rug.jpg?imwidth=480&impolicy=medium",
       name: "Simple Living Carolina Windsor Dining Chairs (Set of 2)",
-      price: "10650",
-      strikedoffprice: "19999",
+      price: "₹ 10650",
+      strikedoffprice: "₹ 19999",
       rating: "★★★",
       Details: "Details",
       addCart: "Addtocart",
@@ -525,10 +601,10 @@
     {
       id: 11,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/2f1a88be8f9df5afba4add8a302ab04055f3d8be/SAFAVIEH-Handmade-Cape-Cod-Marget-Boho-Coastal-Jute-Rug.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/5c1041cbb5b834e1aea0a027dd87303cbdd76fea/Nickie-Plush-Abstract-Area-Rug.jpg?imwidth=480&impolicy=medium",
       name: "Simple Living Country Cottage Drop-Leaf Dining Table",
-      price: "11324",
-      strikedoffprice: "45000",
+      price: "₹ 11324",
+      strikedoffprice: "₹ 45000",
       rating: "★★",
       Details: "Details",
       addCart: "Addtocart",
@@ -536,10 +612,10 @@
     {
       id: 12,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/ce3ba87ae93f97239cd24025cc15e90af7f441cd/SAFAVIEH-Handmade-Arctic-Shag-Guenevere-3-inch-Extra-Thick-Rug.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/e0d9f2f435e5050885598a18d51b391231b1b826/SAFAVIEH-Handmade-Cape-Cod-Ermine-Coastal-Jute-Rug.jpg?imwidth=480&impolicy=medium",
       name: "Simple Living Venice Farmhouse Dining Chairs (Set of 2)",
-      price: "12345",
-      strikedoffprice: "29999",
+      price: "₹ 12345",
+      strikedoffprice: "₹ 29999",
       rating: "★★★★★",
       Details: "Details",
       addCart: "Addtocart",
@@ -547,10 +623,10 @@
     {
       id: 13,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/dfa0c0c2ee2935646635743abdbd90a758be1c88/SAFAVIEH-Fontana-Shag-Gisela-Modern-Abstract-2-inch-Thick-Rug.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/e2a9bb4b674d7a4872861847f51abb003b5125fa/SAFAVIEH-Reflection-Gyda-Modern-Oriental-Rug.jpg?imwidth=480&impolicy=medium",
       name: "Carson Carrington Horsens 3-drawer Mid-century Modern Buffet",
-      price: "15321",
-      strikedoffprice: "39999",
+      price: "₹ 15321",
+      strikedoffprice: "₹ 39999",
       rating: "★★★★★",
       Details: "Details",
       addCart: "Addtocart",
@@ -558,10 +634,10 @@
     {
       id: 14,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/956be53c5ee357088cba69050f50cf3199d30e30/SAFAVIEH-Natural-Fiber-Pacific-Casual-Border-Sisal-Rug.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/1c4a49f5f8435423d84e5ac03dcabec5fe4620e0/SAFAVIEH-Handmade-Antiquity-Anner-Traditional-Oriental-Wool-Rug.jpg?imwidth=480&impolicy=medium",
       name: "Simple Living Solid Wood Farmhouse Table vry comfortable set",
-      price: "36580",
-      strikedoffprice: "49999",
+      price: "₹ 36580",
+      strikedoffprice: "₹ 49999",
       rating: "★",
       Details: "Details",
       addCart: "Addtocart",
@@ -569,10 +645,10 @@
     {
       id: 15,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/0de84ae55eec7e6edd83de74f961221523bffece/SAFAVIEH-Amelia-Modern-Abstract-Rug.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/77a9310679a9a456d6aa93bc173802a79838a34c/SAFAVIEH-Handmade-Classic-Signa-Traditional-Oriental-Wool-Rug.jpg?imwidth=480&impolicy=medium",
       name: "Andeworld farmhouse bar stools ,counter height bar stools set of 4",
-      price: "19999",
-      strikedoffprice: "25000",
+      price: "₹ 19999",
+      strikedoffprice: "₹ 25000",
       rating: "★★★★★",
       Details: "Details",
       addCart: "Addtocart",
@@ -580,10 +656,10 @@
     {
       id: 16,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/fae4bceab4e1b9ea90c9949823022d1b3204d859/SAFAVIEH-Hudson-Shag-Lulzime-Modern-Abstract-2-inch-Thick-Rug.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/a2847bee31270f086f15346d93859af1a4dded4c/Alexander-Home-Vail-Mid-century-Modern-Geometric-Area-Rug.jpg?imwidth=480&impolicy=medium",
       name: "Solid Pine Drop Leaf Table 3-piece Dining very comfortable Set",
-      price: "21300",
-      strikedoffprice: "29999",
+      price: "₹ 21300",
+      strikedoffprice: "₹ 29999",
       rating: "★★★★★",
       Details: "Details",
       addCart: "Addtocart",
@@ -591,10 +667,10 @@
     {
       id: 17,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/2b707837a5e8e033958220ffcc3bb09f2cae6fa3/SAFAVIEH-Handmade-Chelsea-Rubi-French-Country-Floral-Wool-Rug.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/c9cf2df5e6cf903861de7b9afaa7310df9d57657/SAFAVIEH-Porcello-Thinh-Mid-Century-Modern-Abstract-Rug.jpg?imwidth=480&impolicy=medium",
       name: "Palmer Mid-Century Modern Fabric Dining Chair in 2 Pack",
-      price: "27600",
-      strikedoffprice: "39999",
+      price: "₹ 27600",
+      strikedoffprice: "₹ 39999",
       rating: "★★★★",
       Details: "Details",
       addCart: "Addtocart",
@@ -602,10 +678,10 @@
     {
       id: 18,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/f37c292000ae2aac2c4fc5e3f6c80e7936c21423/SAFAVIEH-Natural-Fiber-Oceana-Herringbone-Seagrass-Rug.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/25ed026e459a7730653551b211fade7a5c3f41c0/Copper-Grove-Oxford-Floral-Area-Rug.jpg?imwidth=480&impolicy=medium",
       name: "Simple Living Shaker Dining Table very comfortable Set",
-      price: "11500",
-      strikedoffprice: "19999",
+      price: "₹ 11500",
+      strikedoffprice: "₹ 19999",
       rating: "★★★",
       Details: "Details",
       addCart: "Addtocart",
@@ -613,10 +689,10 @@
     {
       id: 19,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/b4d4b2e915d798ed88ad0276949e9649e33e7564/SAFAVIEH-Amherst-Erma-Modern-Rug.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/155b7701ad67aa31762624f97a6951f07ca9ba85/SAFAVIEH-Fiorello-Handmade-Blossom-French-Country-Wool-Area-Rug.jpg?imwidth=480&impolicy=medium",
       name: "Lifestorey Tabaria Four Door Sideboard very comfortable Set",
-      price: "31567",
-      strikedoffprice: "34355",
+      price: "₹ 31567",
+      strikedoffprice: "₹ 34355",
       rating: "★★",
       Details: "Details",
       addCart: "Addtocart",
@@ -624,10 +700,10 @@
     {
       id: 20,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/5cac4b03d62055b675aace4763fa56463f901e49/SAFAVIEH-Handmade-Rodeo-Drive-Sofoula-Mid-Century-Modern-Abstract-Wool-Rug.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/d0eee329c2c2f23856f9a12587ae3db4a4e5e86e/Artistic-Weavers-Dellie-Indoor--Outdoor-Traditional-Medallion-Area-Rug.jpg?imwidth=480&impolicy=medium",
       name: "Stetson Adjustable Height Swivel Metal Bar Stools (Set of 3)",
-      price: "12456",
-      strikedoffprice: "40000",
+      price: "₹ 12456",
+      strikedoffprice: "₹ 40000",
       rating: "★★★★",
       Details: "Details",
       addCart: "Addtocart",
@@ -636,10 +712,64 @@
 
   // var getItem = JSON.parse(localStorage.getItem("book-list")) || [];
 
-  displayData();
+  displayData(furniture);
 
-  function displayData() {
-    furniture.map(function (elem) {
+  document.getElementById("filter").addEventListener("change", furfilter);
+  function furfilter() {
+    var x = document.getElementById("filter").value;
+    var s = furniture.filter(function (elem) {
+      if(x==="" || x=="all"){
+          return true;
+        
+         }
+
+     return elem.rating ==x;
+    });
+    console.log(s);
+    displayData(s);
+  }
+
+
+
+  document.getElementById("sort").addEventListener("change", filterprice);
+  function filterprice() {
+    var x1 = document.getElementById("sort").value;
+    var s = furniture.filter(function (elem) {
+      var str=elem.price
+      var matches = str.match(/(\d+)/);
+      var x=(parseInt(matches[0]))
+                        if(x1==="one" && (x>0 && x<10000) ){
+           return elem
+                        }
+                        if(x1==="two" && (x>10000 && x<20000) ){
+           return elem
+                        }
+                        if(x1==="three" && (x>20000 && x<30000) ){
+           return elem
+                        }
+                        if(x1==="" || x1=="all"){
+          return true;
+        
+         }
+          
+     
+    });
+    console.log(x1)
+    displayData(s);
+  }
+
+
+
+
+
+
+
+
+
+ 
+  function displayData(furniture) {
+    document.getElementById("main-container").innerText=""
+    furniture.map(function (elem,index) {
       var div = document.createElement("div");
       div.style.cursor = "pointer";
 
@@ -670,8 +800,16 @@
 
       Details = document.createElement("button");
       Details.textContent = "Details";
-      Details.onclick = "";
       Details.setAttribute("class", "Details");
+      Details.onclick = function() {
+    window.location.href = "showDetails.html";
+  };
+      
+      Details.addEventListener("click",function(){
+       
+      prod_details(elem,index);
+     
+     })
 
       ratingBox.append(rating, Details);
       ratingBox.setAttribute("class", "ratingBox");
@@ -684,32 +822,6 @@
       document.getElementById("main-container").append(div);
     });
   }
-
-  // sorting 
-  var getSort = document.getElementById("sort").value;
-
-  function handleSort() {
-      var sortByPrice = document.getElementById("sort").value;
-      if (sortByPrice === "lth") {
-        furniture.sort(function (a, b) {
-          return a.price - b.price;
-        });
-      }
-      displayData(furniture);
-      console.log(furniture + "middle")
-
-
-      if (sortByPrice=== "descending") {
-        furniture.sort(function (a, b) {
-          return b.price - a.price;
-        });
-      }
-      displayData(furniture);
-
-      console.log(furniture + "bottom")
-    }
-  
-  
 
   //  slide show start js
 
@@ -735,7 +847,9 @@
     setTimeout(showSlides, 2000); // Change image every 2 seconds
   }
 
-  //slid show end
+  function  prod_details(elem,index){
+     localStorage.setItem("prod_details",JSON.stringify(elem))
+ }
 </script>
 
 <script
