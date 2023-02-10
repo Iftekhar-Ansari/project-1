@@ -68,6 +68,7 @@ input::placeholder{
     float: left;
     height: 40px;
     box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+    /* flex-wrap: wrap; */
     /* gap: 40px; */
 } 
 ul{
@@ -154,10 +155,23 @@ ul li a:hover{
     margin-top: 20px;
     margin-right: 25px;
 }
-/* medium screen */
-/* @media only screen and ( min-widht: 480px) and (max-widht:768){
-    .container{
-        grid-template-columns: repeat(4,1fr);
+
+
+@media only screen and (min-width: 0px) and (max-width: 480px) {  
+
+    .level-3 li{
+        /* flex-wrap: wrap; */
+        display: none;
     }
-    
-} */
+
+  }
+
+
+  @media only screen and (min-width: 481px) and (max-width: 768px) {   
+
+        .level-3 li{
+            /* flex-wrap: wrap; */
+            display: none;
+        }
+
+     }

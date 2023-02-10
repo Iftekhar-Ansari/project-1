@@ -1,4 +1,6 @@
 
+let users = JSON.parse(localStorage.getItem("users")) || [];
+
 
 document.querySelector("#ca").addEventListener("click", createAccount);
 
@@ -130,7 +132,6 @@ function loginUser(e, p) {
 
   }
   localStorage.setItem("loggedUser",JSON.stringify(uobj));
-  window.location.href="index.html"
 }
 
 
