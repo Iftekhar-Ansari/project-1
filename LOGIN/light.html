@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>furniture</title>
+    <title>lights</title>
     <style>
-      * {
+       * {
         margin: 0;
         padding: 0;
       }
@@ -39,7 +39,23 @@
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       }
 
-     
+      #main-container > div img{
+        transition: transform 0.5s;
+      }
+
+      #main-container > div img:hover{
+        transform: scale(1.2);
+        border-radius: 10px;
+      }
+
+      #main-container > div h2{
+        transition: transform 0.5s;
+      }
+
+      #main-container > div h2:hover{
+        transform: scale(1.2);
+        border-radius: 10px;
+      }
 
       .priceBox {
         margin: 10px;
@@ -356,9 +372,293 @@
         font-weight: 800;
         font-size: 15px;
       }
+
+      #banner3 .banner-box2 h2{
+        transition: transform 0.5s;
+      }
+
+      #banner3 .banner-box2 h2:hover{
+        transform: scale(1.2);
+      }
+
+      #banner3 .banner-box3 h2{
+        transition: transform 0.5s;
+      }
+
+      #banner3 .banner-box3 h2:hover{
+        transform: scale(1.2);
+      }
+
+      #banner3 .banner-box h2{
+        transition: transform 0.5s;
+      }
+
+      #banner3 .banner-box h2:hover{
+        transform: scale(1.4);
+      }
       /* banner 3 end */
+
+      /* ********************************************************* */
+      .level-1{
+    display:flex;
+    gap: 8px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+    height: 30px;
+    background-color:rgb(235, 240, 245);
+}
+.level-1 >img{
+        width: 40px;
+        height:30px;
+        margin-top: -3px;
+        clip-path: circle();
+        margin-left: -3px;
+        
+
+}
+.level-1 p{
+    margin-top: 2px;
+    /* margin-left: 13px; */
+    font-family: Arial;
+    color: rgb(167, 173, 177);
+}
+.level-1 h5{
+    margin-top: 4px;
+    font-family: Arial;
+    font-size: 15px;
+}
+.level-2{
+    width: 100%;
+    display:flex;
+    gap: 8px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+    height: 100px;
+}
+.logo>img{
+    width: 35px;
+    height: 35px;
+    margin-right: 1px;
+    margin-top: 35px;
+    margin-left: 10px;
+}
+.active-link{
+    display: flex;
+    /* width: 20px; */
+    gap: 25px;
+    margin-top:25px ;
+    text-align: center;
+    font-family: Arial;
+    margin-left: -14px;
+   
+}
+.active-link a{
+   text-decoration: none;
+   color: rgb(43, 41, 41);
+   font-size: 17px;
+}
+.active-link i{
+    size: 10px;
+}
+input::placeholder{
+        font-family: Arial;
+        color: rgb(144, 155, 165);
+        font-size: 16px;
+}
+
+.level-2 img{
+    width: 40px;
+    height: 40px;
+}
+
+.level-2 img{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+}
+
+.level-3{
+    /* width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center; */
+    /* float: left;
+    height: 40px; */
+    /* box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1); */
+    /* flex-wrap: wrap; */
+    /* gap: 40px; */
+} 
+ul{
+  margin: 20px;
+  padding-left: 50px;
+    width: 80%;
+    /* margin: auto; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul li{
+    /* list-style: none; */
+    /* margin-left: 62px;
+    margin-top: -5px; */
+
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#wrap li{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul li a{
+    text-decoration: none;
+    color: black;
+    font-family: Arial;
+}
+ul li a:hover{
+    color: rgb(145, 152, 40);
+    /* scrollbar-arrow-color: beige; */
+    box-shadow: 2px 2px 5px #fc894d;
+    display: none;
+    display: block;
+
+    
+}
+#red{
+    color: rgb(190, 29, 29);
+}
+.search{
+    width: 70%;
+    display: flex;
+    margin-right: 30px;
+    /* float: left; */
+    /* margin-left: 270px; */
+}
+.search  i{
+    /* padding: 10px; */
+}
+.srch{
+    display: flex;
+
+    font-family: 'Times New Roman';
+    width: 100%;
+    height: 36px;
+    background-color: rgb(230, 234, 238);
+    border: 1px solid rgb(192, 196, 201);
+    margin-top: 35px;
+    border-right: none;
+    /* float: left; */
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.btn{
+    width: 50px;
+    height: 36px ;
+    background: red;
+    /* border: 2px solid blue; */
+    border: 0px;
+    margin-top: 35px;
+    color: white;
+    font-size: 15px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.btn > i{
+        font-size: x-large;
+}
+.btn:focus{
+    outline: none;
+}
+.srch:focus{
+    outline: none;
+}
+.ovr{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+    font-family: system-ui;
+    font-weight: 200;
+    /* margin-bottom: 100px; */
+    margin-top: 30px;
+    margin-right: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+      /* **************************************************** */
     </style>
   </head>
+
+   <!-- ------------------------------------------------------- -->
+   <section>
+    <div id="container">
+      <div class="level-1">
+          <p>Ships to :</p>
+          <img src="https://ak1.ostkcdn.com/img/mxc/intFlag_IN.gif" alt="Indian flage">
+          <h5>INDIA</h5>
+      </div>
+  <div class="level-2">
+          
+      <div class="logo">
+          <img src="https://companieslogo.com/img/orig/OSTK-35dbe613.png?t=1659805054" alt="logo">
+      </div> 
+      
+      <div >
+        <a href="index.html" > <h3 class="ovr">overstock</h3></a>
+      </div>
+  <form class="search">
+      <!-- <div class="search"> -->
+          <input type="search" class="srch" placeholder="Search.....everything you find ships for free" > 
+          <a href="#"><button class="btn"><i class="fa fa-magnifying-glass"></i> </button></a>      
+      <!-- </div> -->
+  </form>
+      <div class="active-link">
+          <a href="#"><i class=" fa -thin fa-user fa-2x"></i> <br> Account </a> 
+          <!-- <a href="#"><i class="fa-regular fa-heart fa-2x"></i><br> List</a>   -->
+          <a href="cart.html"> <i class="fa fa-cart-plus fa-2x "></i> <br> Cart</a>  
+      </div>
+  </div>    
+  <div class="level-3">
+          <ul id="wrap">
+              <li><a href="#">Furniture</a></li>
+              <li><a href="#">Rugs</a></li>
+              <li><a href="#">Home Improvement</a></li>
+              <li><a href="#">Kitchen</a></li>
+              <li><a href="#">Outdoor</a></li>
+              <li><a href="#">Bath</a></li>
+              <li><a href="#">More</a></li>
+              <li><a href="#" id="red">Sales & Deals</a></li>
+          </ul>
+
+  </div>
+</div>
+
+  </section>
+  <!-- ------------------------------------------------------- -->
   <body>
     <section id="slideshow">
      
@@ -367,7 +667,7 @@
         <div class="mySlides fade">
           <div class="numbertext"></div>
           <img
-            src="https://ak1.ostkcdn.com/img/mxc/01232023-HP-A1-INTL-1400x550_DSK-INTL.jpg"
+            src="https://ak1.ostkcdn.com/images/products/is/images/direct/fedbd1147194f6ec8b634bfede4a6e1b35bcee14/Bola-Mid-Century-Modern-6-Light-27%22-Gold-Globe-Glass-Chandelier-for-Dining-Room.jpg?imwidth=480&impolicy=medium"
             style="width: 100%;height: 500px; object-fit: cover;"
           />
           <div class="text"></div>
@@ -376,7 +676,7 @@
         <div class="mySlides fade">
           <div class="numbertext"></div>
           <img
-            src="https://ak1.ostkcdn.com/img/mxc/01232023-SB-BedroomFurniture-767x800_Promo1.jpg?imwidth=1080"
+            src="https://ak1.ostkcdn.com/images/products/is/images/direct/0c111748cb83ec8cea31271ca318665069245924/Capiz-Honeycomb-Two-Tier-Chandelier-Pendant-Light%2C-Capiz-White-Seashells-with-Black-Metal.jpg?imwidth=480&impolicy=medium"
             style="width: 100%;height: 500px; object-fit: cover;"
           />
           <div class="text"></div>
@@ -385,7 +685,7 @@
         <div class="mySlides fade">
           <div class="numbertext"></div>
           <img
-            src="https://ak1.ostkcdn.com/img/mxc/01232023-SB-Lighting-1400x550_Promo2.jpg?imwidth=1920"
+            src="https://ak1.ostkcdn.com/images/products/is/images/direct/9de63ab62a7f7cad5def3c3d74241db75acb8c22/4-Light-Glamor-Painted-Brass-Tiered-Chandelier-with-Water-Glass-Shade.jpg?imwidth=480&impolicy=medium"
             style="width: 100%;height: 500px; object-fit: cover;"
           />
           <div class="text"></div>
@@ -451,7 +751,7 @@
     {
       id: 1,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/f599cdbb63899bf894c137f13b3633dca096c7a1/Harrisburg-Tobey-Compact-Round-Dining-Set.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/5f76d867f603149bf67c50e467d65ff1a3a4a017/Traditional-Crystal-25-Light-Polished-Brass-Chandelier.jpg?imwidth=480&impolicy=medium",
       name: "Harrisburg Tobey Compact Round Dining very-comfortable  Set",
       price: "₹ 16389",
       strikedoffprice: "₹ 25000",
@@ -462,7 +762,7 @@
     {
       id: 2,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/8b971b8ade9c60c26df8f4a210620e399e48cb30/Simple-Living-Solid-Wood-Slat-Back-Dining-Chairs-%28Set-of-4%29.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/c7d5ad19d6c9a02cf93c30654dcaf55abb5029ca/16-Inch-4-Light-Chandelier%2C-Classic-Design%2C-Fir-Wood-Iron%2C-Distressed-White.jpg?imwidth=480&impolicy=medium",
       name: "Carson Carrington Klemens Round Dining Table beautiful set",
       price: "₹ 19000",
       strikedoffprice: "₹ 21000",
@@ -473,7 +773,7 @@
     {
       id: 3,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/b72199d22d8c50160a99566afef66fe167f99d92/Middlebrook-Cassandra-58-inch-Mid-century-Modern-4-door-Buffet.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/37b2b8d8128714a7f869f94db14119af3fc95deb/4-Light-Modern-Creative-Circular-Golden-LED-Stepless-Dimming-Pendant.jpg?imwidth=480&impolicy=medium",
       name: "SAFAVIEH Country Classic Blanchard Dining Chairs (Set of 2)",
       price: "₹ 13000",
       strikedoffprice: "₹ 15600",
@@ -484,7 +784,7 @@
     {
       id: 4,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/40589834cb760419da0f59d5a823431a930324d2/Monsoon-Villa-Faux-Leather-Parson-Dining-Chairs-%28Set-of-2%29.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/6e814388fc09acd9f949c7a29be1eeb5a5daf844/Gaines-12%22-2-Light-Crystal-LED-Chandelier%2C-Polished-Nickel-Clear-by-JONATHAN-Y.jpg?imwidth=480&impolicy=medium",
       name: "Nathan James Hylie Nailhead Wood Pub-Height Counter Bar Stool",
       price: "₹ 6579",
       strikedoffprice: "₹ 10000",
@@ -495,7 +795,7 @@
     {
       id: 5,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/fa60b94336d4a60c62b883bff19daa1dac8f9d3c/Simple-Living-Templeton-5-Piece-Dining-Set.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/826e37809ae8f074dc169f99f4676cc3749970dc/4-Light-Lantern-Chandelier-with-Metal-Finish.jpg?imwidth=480&impolicy=medium",
       name: "Bar Stools Adjustable Armless Swivel PU Leather Barstools Set of 2",
       price: "₹ 13000",
       strikedoffprice: "₹ 19000",
@@ -506,7 +806,7 @@
     {
       id: 6,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/8b605f2f32dc7c71080c13e934b0fa0a57567d95/Simple-Living-Baxter-Dining-Set-with-Storage-Ottomans.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/38496f0a8be7eba769022a18d9b1bd02cf92df77/GetLedel-Modern-6-Light-Sputnik-Linear-Chandelier-with-Glass-Shade.jpg?imwidth=480&impolicy=medium",
       name: "47 in. Modern X-Door Wine Cabinet beautiful and comfortable",
       price: "₹ 19000",
       strikedoffprice: "₹ 19000",
@@ -517,7 +817,7 @@
     {
       id: 7,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/4502c0929575891bc4c9780a2f8f1b70675e5a33/Mai-Faux-Leather-Dining-Chairs-%28Set-of-2%29.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/4d42905268b6aff8c8681f618fb65f1af86840d7/28-in.-W-6-Light-Black-Modern-Farmhouse-Chandelier.jpg?imwidth=480&impolicy=medium",
       name: "Art Leon Adjustable Swivel Barstool very comfortable (Set of 2)",
       price: "₹ 19000",
       strikedoffprice: "₹ 19000",
@@ -528,7 +828,7 @@
     {
       id: 8,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/abb0dc96c5e0339ab43943370925086e21af689a/Simple-Living-Albury-Dining-Chairs-%28Set-of-2%29.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/98d133142d365ad1bd9bac50f499776709c75389/4-Light-Gold-Round-Beaded-Drum-Chandelier-with-Hanging-Crystals.jpg?imwidth=480&impolicy=medium",
       name: "The Gray Barn Barish Backless Saddle Seat Counter Stools (Set of 2)",
       price: "₹ 14300",
       strikedoffprice: "₹ 15000",
@@ -539,7 +839,7 @@
     {
       id: 9,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/2f0114fddcf0cd781a2d9e0e0c4ee3e4615a5c25/Middlebrook-Solid-Wood-72-inch-Distressed-Dining-Table.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/fb1a042f7d82d9ffa89ca0552fb8f3465ed17e80/Light-Society-Lise-22%22-Chandelier.jpg?imwidth=480&impolicy=medium",
       name: "East West Furniture Round Table with Two 9-inch Drop Leaves",
       price: "₹ 4345",
       strikedoffprice: "₹ 6500",
@@ -550,7 +850,7 @@
     {
       id: 10,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/b4d686d1f3307f26dbff4cc7637551c3f7b5801d/East-West-Furniture-Round-Small-Dining-Table.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/63b703d25960cbf52f9fd55c910e4f183fc025c6/15-light-Glass-Globe-Bubble-Sputnik-Chandelier.jpg?imwidth=480&impolicy=medium",
       name: "Simple Living Carolina Windsor Dining Chairs (Set of 2)",
       price: "₹ 10650",
       strikedoffprice: "₹ 19999",
@@ -561,7 +861,7 @@
     {
       id: 11,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/355edfd3752748772420c31058a5f5bc38174a55/LeatherSoft-Counter-height-Stools-%28Set-of-2%29.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/b62d501126ab0e51412902e2169a749298ac0eaf/3-light-Glass-Globe-Bubble-Chandelier.jpg?imwidth=480&impolicy=medium",
       name: "Simple Living Country Cottage Drop-Leaf Dining Table",
       price: "₹ 11324",
       strikedoffprice: "₹ 45000",
@@ -572,7 +872,7 @@
     {
       id: 12,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/db792ad96574a90926655de2d8f8d70df2a36460/Simple-Living-Tall-Cabinet.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/f95d6dc2e27d05e3d4c2878599a85754b5564031/Plug-in-Swag-Chandelier-Chrome-Chandelier-with-Acrylic-Crystal-4-Light.jpg?imwidth=480&impolicy=medium",
       name: "Simple Living Venice Farmhouse Dining Chairs (Set of 2)",
       price: "₹ 12345",
       strikedoffprice: "₹ 29999",
@@ -583,7 +883,7 @@
     {
       id: 13,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/c094f16eb91381e383d23b3b3da3fb49c3dbf379/Homall-Walnut-Bentwood-Bar-Stools-with-PU-Leather-1-Piece.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/5acf3425343eceaeeed8450546ed448c7c8b8860/Acroma-12-Light-40-In-Modern-Farmhouse-Wagon-Wheel-Chandelier.jpg?imwidth=480&impolicy=medium",
       name: "Carson Carrington Horsens 3-drawer Mid-century Modern Buffet",
       price: "₹ 15321",
       strikedoffprice: "₹ 39999",
@@ -594,7 +894,7 @@
     {
       id: 14,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/543c19681a4333da9e84646017ec0a3ee7a5c238/FirsTime-%26-Co.-Gold-Kennedy-Oval-Bar-Cart%2C-Metal.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/e2ba49126208d855bc4230ddcfd45884fd976bd3/37%27%27-Modern-Contemporary-8-light-Chandelier-Gold-Dimmable-Island-Lights-for-Kitchen-Island.jpg?imwidth=480&impolicy=medium",
       name: "Simple Living Solid Wood Farmhouse Table vry comfortable set",
       price: "₹ 36580",
       strikedoffprice: "₹ 49999",
@@ -605,7 +905,7 @@
     {
       id: 15,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/a773e382786db1b54951767355a35e0b1f20f8cb/VEIKOUS-Kitchen-Buffet-Sideboard-Storage-Cabinet-with-2-Glass-Doors-and-4-Drawers.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/27481097c3d39c501b0f504339b56b321e0840e9/Adreanna-20-Light-40-Inch-Modern-Farmhouse-Wagon-Wheel-Chandelier.jpg?imwidth=480&impolicy=medium",
       name: "Andeworld farmhouse bar stools ,counter height bar stools set of 4",
       price: "₹ 19999",
       strikedoffprice: "₹ 25000",
@@ -616,7 +916,7 @@
     {
       id: 16,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/666c13497d9518501dd8a8ef75b31a1448526ae3/Porch-%26-Den-Jefferson-Sliding-Glass-Door-Stackable-China-Cabinet.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/668bbdc87352ec67fbd738a1401d8eb5ed6b35cf/Oaks-Aura-Modern-Glam-6-Light-Rustic-Wood-Pendant-Light-Farmhouse-Chandelier%2C-D%C3%A9cor-Your-own-Halloween-Light.jpg?imwidth=480&impolicy=medium",
       name: "Solid Pine Drop Leaf Table 3-piece Dining very comfortable Set",
       price: "₹ 21300",
       strikedoffprice: "₹ 29999",
@@ -627,7 +927,7 @@
     {
       id: 17,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/991945135b2eb22425780c61b9caeac111cb4e6e/Simple-Living-Extra-tall-Cabinet.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/f96a4775979b05f8202942588968bc6c0d90a860/Capiz-Honeycomb-Globe-Pendant-Light%2C-Capiz-White-Seashells-with-Antique-Gold.jpg?imwidth=480&impolicy=medium",
       name: "Palmer Mid-Century Modern Fabric Dining Chair in 2 Pack",
       price: "₹ 27600",
       strikedoffprice: "₹ 39999",
@@ -638,7 +938,7 @@
     {
       id: 18,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/17a33d346f0b20ce22f2043c17c2947e3da4d0e0/Carson-Carrington-Klemens-Round-Dining-Table.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/1d77fbbd7ed7baabc5b34ec0e11480d432a4afb9/4-Light-Bohemian-Hand-Woven-Drum-Chandelier---W20%22-x-H75.6%22.jpg?imwidth=480&impolicy=medium",
       name: "Simple Living Shaker Dining Table very comfortable Set",
       price: "₹ 11500",
       strikedoffprice: "₹ 19999",
@@ -649,7 +949,7 @@
     {
       id: 19,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/ffb3c3f41b1ffa118a76bd73a2111cac99eee035/SAFAVIEH-Country-Classic-Dining-Blanchard-Dining-Chairs-%28Set-of-2%29.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/d7b8d4f9f3e505ba22573c0b0ae8606b964a4aee/16-Light-47In-Modern-Farmhouse-Wagon-Wheel-Chandelier.jpg?imwidth=480&impolicy=medium",
       name: "Lifestorey Tabaria Four Door Sideboard very comfortable Set",
       price: "₹ 31567",
       strikedoffprice: "₹ 34355",
@@ -660,7 +960,7 @@
     {
       id: 20,
       image_url:
-        "https://ak1.ostkcdn.com/images/products/is/images/direct/e551442f4859cbeaf7730260871b9160442cec79/Nathan-James-Hylie-Nailhead-Wood-Pub-Height-Counter-Bar-Stool.jpg?imwidth=480&impolicy=medium",
+        "https://ak1.ostkcdn.com/images/products/is/images/direct/cd8dfdae4ba408e6cb02900bac82f553159e83c2/Modern-Antique-Gold-Chandelier-Swing-Arms-Handmade-Wood-Beads-for-Dining-Room.jpg?imwidth=480&impolicy=medium",
       name: "Stetson Adjustable Height Swivel Metal Bar Stools (Set of 3)",
       price: "₹ 12456",
       strikedoffprice: "₹ 40000",
