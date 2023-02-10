@@ -16,7 +16,7 @@
 }
 .level-1 p{
     margin-top: 2px;
-    margin-left: 13px;
+    /* margin-left: 13px; */
     font-family: Arial;
     color: rgb(167, 173, 177);
 }
@@ -63,29 +63,63 @@ input::placeholder{
         font-size: 16px;
 }
 
-.level-3{
-    width: 100%;
-    float: left;
+.level-2 img{
+    width: 40px;
     height: 40px;
-    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.level-2 img{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+}
+
+.level-3{
+    /* width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items: center; */
+    /* float: left;
+    height: 40px; */
+    /* box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1); */
     /* flex-wrap: wrap; */
     /* gap: 40px; */
 } 
 ul{
-    float: left;
+    width: 80%;
+    /* margin: auto; */
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 70px;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 ul li{
-    list-style: none;
-    margin-left: 62px;
-    margin-top: -5px;
+    /* list-style: none; */
+    /* margin-left: 62px;
+    margin-top: -5px; */
+
     font-size: 15px;
     font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
 
+}
+
+#wrap li{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
 ul li a{
@@ -107,21 +141,25 @@ ul li a:hover{
 }
 .search{
     width: 70%;
-    float: left;
+    display: flex;
+    margin-right: 30px;
+    /* float: left; */
     /* margin-left: 270px; */
 }
 .search  i{
     /* padding: 10px; */
 }
 .srch{
+    display: flex;
+
     font-family: 'Times New Roman';
-    width: 90%;
+    width: 100%;
     height: 36px;
     background-color: rgb(230, 234, 238);
     border: 1px solid rgb(192, 196, 201);
     margin-top: 35px;
     border-right: none;
-    float: left;
+    /* float: left; */
     padding: 10px;
     border-bottom-left-radius: 5px;
     border-top-left-radius: 5px;
@@ -148,30 +186,22 @@ ul li a:hover{
     outline: none;
 }
 .ovr{
-    font-size: 48px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
     font-family: system-ui;
     font-weight: 200;
     /* margin-bottom: 100px; */
-    margin-top: 20px;
+    margin-top: 30px;
     margin-right: 25px;
 }
 
 
-@media only screen and (min-width: 0px) and (max-width: 480px) {  
-
-    .level-3 li{
-        /* flex-wrap: wrap; */
-        display: none;
-    }
-
-  }
 
 
-  @media only screen and (min-width: 481px) and (max-width: 768px) {   
 
-        .level-3 li{
-            /* flex-wrap: wrap; */
-            display: none;
-        }
 
-     }
+
+
+

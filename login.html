@@ -8,13 +8,16 @@
     <link rel="stylesheet" href="login.css">
 </head>
 <body>
+    <form>
     <div id="alertBox">Invalid details.</div>
 
     <div id="scontainer">
-
+        
         <div id="signup">
+          
             <h3>Sign Up</h3>
             <label for="">Email Address*</label>
+           
             <input id="email" type="email" placeholder="Email">
             <div id="passwordDiv">
                 <div>
@@ -22,11 +25,11 @@
                     <input id="pass" type="password" placeholder="password">
 
                 </div>
-                <div>
+                <!-- <div>
                     <label for="">Confirm Password*</label>
                     <input id="cpass" type="password" placeholder="Confirm Password">
 
-                </div>
+                </div> -->
             </div>
 
             <div id="check">
@@ -34,12 +37,16 @@
                 <label for="">Sign up today for exclusive offers from Overstock.com delivered right to your inbox**</label>
             </div>
 
-            <button id="ca">Sign Up</button>
+            <button  onclick="funclick()" id="ca">Sign Up</button>
             <div id="bar"></div>
             <button id="cag">Continue as Guest</button>
+     
             <p>By creating an account or continuing as a Guest, you agree to our <a href="">Terms & Conditions</a>  and <a href="">Privacy Policy.</a> </p>
             <p><a href="">Terms & Conditions</a> |<a href="">Privacy Policy.</a><br>**You can unsubscribe at any time</p>
+        
         </div>
+    </form>
+  
 
         <div id="vbar"></div>
         <div id="signin">
@@ -51,7 +58,7 @@
             <label for="">Passsword*</label>
             <input type="password" placeholder="Password" id="upass">
 
-            <button id="si">Sign In</button>
+            <button  onclick="funclick2()"  id="si">Sign In</button>
 
             <a href="">Forgot your password?</a>
 
@@ -62,13 +69,12 @@
 
     </div>
 
-    <div id="sfooter">
+    <!-- <div id="sfooter">
         <img src="assets/Screenshot 2022-09-29 101714.png" alt="">
-    </div>
+    </div> -->
     
 </body>
 </html>
 <script src="login.js"></script>
 </body>
 </html>
-
