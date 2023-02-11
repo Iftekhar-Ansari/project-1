@@ -1,328 +1,132 @@
-let cart = JSON.parse(localStorage.getItem("ocart")) || [];
+import {topmost,navbar,bottom_nav} from "../components/navbar.js";
 
-let stoggle = 0;
-document.querySelector("#closePromo").addEventListener("click", slidePromo);
 
-function slidePromo(event) {
-  let slide = document.querySelector(
-    "#itemsCon>div:nth-child(2)>div:nth-child(1)"
-  );
-  let closePromo = document.querySelector("#closePromo");
-  if (stoggle == 0) {
-    slide.style.maxHeight = "200px";
-    slide.style.transition = "max-height 0.5s";
-    stoggle = 1;
-    closePromo.style.transform = "rotate(45deg)";
-    closePromo.style.transition = "transform 0.5s";
-  } else {
-    slide.style.maxHeight = "60px";
-    slide.style.transition = "max-height 0.5s";
-    stoggle = 0;
-    closePromo.style.transform = "rotate(0deg)";
-    closePromo.style.transition = "transform 0.5s";
-  }
+
+document.getElementById("topmost").innerHTML = topmost();
+document.getElementById("navbar").innerHTML = navbar();
+document.getElementById("bottom_nav").innerHTML = bottom_nav();
+
+
+
+
+
+var cartProducts = JSON.parse(localStorage.getItem("cart")) || [];
+// console.log(cartData);
+// var cartProducts = [{image: "https://ak1.ostkcdn.com/images/products/is/images/direct/46a2619bf7e2515d8d79a4b5e658a5a3f78d02d1/LUCID-Comfort-Collection-10-inch-Luxury-Gel-Memory-Foam-Mattress.jpg?impolicy=mediumlow",
+//                      name: "LUCID Comfort Collection 10-inch Luxury Gel Memory Foam Mattress",
+//                      price: 99.99,
+//                      category: "Chair"}];
+
+if (cartProducts.length === 0)
+{
+    let h1 = document.createElement("h1");
+    h1.innerText = "Your Cart is Empty";
+    document.getElementById("showProduct").append(h1)
+} else
+{
+    displayData(cartProducts);
 }
 
-let totalPrice = 0;
-let totalDiscount = 0;
-let checkoutPrice = 0;
-let totalItem = 0;
-inflateCart();
 
-function inflateCart() {
-  document.querySelector("#cartItems").innerText = "";
-  cart.forEach((el, index) => {
-    totalItem++;
-    totalPrice += +el.price * el.quan;
-    totalDiscount += +el.price * el.quan - +el.strikeOff * el.quan;
-    checkoutPrice += +el.strikeOff * el.quan;
-    let mainDiv = document.createElement("div");
+document.querySelector(".counter").innerText = `(${cartProducts.length})`;
 
-    let subDiv1 = document.createElement("div");
-    let subDiv2 = document.createElement("div");
-    let image = document.createElement("img");
-    image.src = el.image;
-    subDiv1.append(image);
-    let name = document.createElement("h4");
-    name.innerText = el.name;
+// Calculating total price of items
+var total = cartProducts.reduce(function(sum,elem){
+    return sum + Number(elem.price);
+}, 0);
 
-    let priceDiv = document.createElement("div");
 
-    let strikeOff = document.createElement("p");
-    strikeOff.innerText = "INR " + el.price;
-    let savings = document.createElement("p");
-    savings.innerText = el.off + "%" + " Savings";
-    priceDiv.append(strikeOff, savings);
+console.log(total);
+document.getElementById("finalTotal").innerText = `${total}`;
+document.getElementById("total").innerText = `₹${total}`;
 
-    let price = document.createElement("h3");
-    price.innerText = "Sale INR " + el.strikeOff;
 
-    let quan = document.createElement("select");
-    let op0 = document.createElement("option");
+function displayData(cartProducts) {
 
-    op0.innerText = "Remove 0";
-    op0.setAttribute("value", "0");
-    let op1 = document.createElement("option");
+    cartProducts.map(function(elem,index) {
+        let main_product_box = document.createElement("div");
+        main_product_box.setAttribute("id","mainProductBox");
+        
+        let image_div = document.createElement("div");
+        image_div.setAttribute("id","imageDiv");
 
-    op1.innerText = "1";
-    op1.setAttribute("value", "1");
-    let op2 = document.createElement("option");
+        let product_image = document.createElement("img");
+        product_image.setAttribute("id","productImage");
+        product_image.src = elem.image;
 
-    op2.innerText = "2";
-    op2.setAttribute("value", "2");
-    let op3 = document.createElement("option");
+        image_div.append(product_image);
 
-    op3.innerText = "3";
-    op3.setAttribute("value", "3");
-    let op4 = document.createElement("option");
+        let product_details = document.createElement("div");
+        product_details.setAttribute("id","productDetails");
 
-    op4.innerText = "4";
-    op4.setAttribute("value", "4");
-    let op5 = document.createElement("option");
+        let product_name = document.createElement("p");
+        product_name.setAttribute("id","productName");
+        product_name.innerText = elem.title;
 
-    op5.innerText = "5";
-    op5.setAttribute("value", "5");
-    let op6 = document.createElement("option");
+        let product_price = document.createElement("p");
+        product_price.setAttribute("id","productPrice");
+        product_price.innerText = `₹${elem.price}`; 
+        
+        let selectTag = document.createElement("select");
 
-    op6.innerText = "6";
-    op6.setAttribute("value", "6");
-    let op7 = document.createElement("option");
+        let option1 = document.createElement("option");
+        option1.innerText = "1";
+        option1.value = "1";
 
-    op7.innerText = "7";
-    op7.setAttribute("value", "7");
-    let op8 = document.createElement("option");
+        let option2 = document.createElement("option");
+        option2.innerText = "2";
+        option2.value = "2";
 
-    op8.innerText = "8";
-    op8.setAttribute("value", "8");
-    let op9 = document.createElement("option");
+        let option3 = document.createElement("option");
+        option3.innerText = "3";
+        option3.value = "3";
 
-    op9.innerText = "9";
-    op9.setAttribute("value", "9");
-    let op10 = document.createElement("option");
+        let option4 = document.createElement("option");
+        option4.innerText = "4";
+        option4.value = "4";
 
-    op10.innerText = "10";
-    op10.setAttribute("value", "10");
-    let op11 = document.createElement("option");
+        let option5 = document.createElement("option");
+        option5.innerText = "5";
+        option5.value = "5";
 
-    op11.innerText = "11";
-    op11.setAttribute("value", "11");
-    let op12 = document.createElement("option");
+        selectTag.append(option1,option2,option3,option4,option5);
 
-    op12.innerText = "12";
-    op12.setAttribute("value", "12");
-    let op13 = document.createElement("option");
+        let remove_div = document.createElement("div");
+        remove_div.setAttribute("id","removeDiv");
 
-    op13.innerText = "13";
-    op13.setAttribute("value", "13");
-    let op14 = document.createElement("option");
+        let removeBtn = document.createElement("p");
+        removeBtn.setAttribute("id","remove");
+        removeBtn.innerText = "Remove";
+        removeBtn.addEventListener("click",function () {
+            removeItem(elem,index);
+        });
+        
+        let saveLaterBtn = document.createElement("p");
+        saveLaterBtn.setAttribute("id","saveLater");
+        saveLaterBtn.innerText = "Save for later";
 
-    op14.innerText = "14";
-    op14.setAttribute("value", "14");
-    let op15 = document.createElement("option");
+        remove_div.append(removeBtn,saveLaterBtn);
 
-    op15.innerText = "15";
-    op15.setAttribute("value", "15");
-    let op16 = document.createElement("option");
+        product_details.append(product_name,product_price,selectTag,remove_div);
 
-    op16.innerText = "16";
-    op16.setAttribute("value", "16");
-    let op17 = document.createElement("option");
+        main_product_box.append(image_div,product_details);
 
-    op17.innerText = "17";
-    op17.setAttribute("value", "17");
-    let op18 = document.createElement("option");
-
-    op18.innerText = "18";
-    op18.setAttribute("value", "18");
-    let op19 = document.createElement("option");
-
-    op19.innerText = "19";
-    op19.setAttribute("value", "19");
-    let op20 = document.createElement("option");
-
-    op20.innerText = "20";
-    op20.setAttribute("value", "20");
-
-    quan.append(
-      op0,
-      op1,
-      op2,
-      op3,
-      op4,
-      op5,
-      op6,
-      op7,
-      op8,
-      op9,
-      op10,
-      op11,
-      op12,
-      op13,
-      op14,
-      op15,
-      op16,
-      op17,
-      op18,
-      op19,
-      op20
-    );
-    let fs = document.createElement("fieldset");
-    let legend = document.createElement("legend");
-    legend.innerText = "Qty";
-    fs.append(legend, quan);
-    quan.value = el.quan;
-    quan.addEventListener("change", function (event) {
-      updatePrice(el, index, event);
+        document.getElementById("showProduct").append(main_product_box);
+        
     });
 
-    let remove = document.createElement("p");
-    remove.innerText = "Remove";
-    remove.addEventListener("click", function (event) {
-      removeItem(el, index, event, "a");
-    });
-
-    subDiv2.append(name, priceDiv, price, fs, remove);
-    mainDiv.append(subDiv1, subDiv2);
-
-    let cartItems = document.querySelector("#cartItems");
-    cartItems.append(mainDiv);
-  });
-
-  let itemCount = document.querySelector("#count");
-  itemCount.innerText = `(${totalItem})`;
-  let total = document.querySelector("#total");
-  total.innerText = totalPrice.toFixed(2);
-  let savings = document.querySelector("#savings");
-  savings.innerText = totalDiscount.toFixed(2);
-  let finalPrice = document.querySelector("#subtotal");
-  finalPrice.innerText = checkoutPrice.toFixed(2);
-  let yourTotal = document.querySelector("#yourTotal");
-  yourTotal.innerText = checkoutPrice.toFixed(2);
-  emptyCart()
-  let c = JSON.parse(localStorage.getItem("ocart"))||[]
-  document.querySelector("#cartNum>div").innerText=c.length
 }
 
-function updatePrice(el, index, event) {
-  let newQuan = event.target.value;
-  if (newQuan == "0") {
-    removeItem(el, index, event, "b");
-  } else {
-    el.quan = newQuan;
-    localStorage.setItem("ocart", JSON.stringify(cart));
-    resetValues()
-    inflateCart();
-  }
+let removeItem = (elem,index) => {
+    console.log(elem,index);
+    cartProducts.splice(index,1);
+    console.log(cartProducts);
+    localStorage.setItem("cart",JSON.stringify(cartProducts));
+    window.location.reload();
+    displayData(cartProducts);
 }
 
-function removeItem(el, index, event, node) {
-  if (node == "a") {
-    event.target.parentNode.parentNode.remove();
-    removeFromCart(el, index);
-  } else {
-    event.target.parentNode.parentNode.parentNode.remove();
-    removeFromCart(el, index);
-  }
-}
-
-function removeFromCart(el, index) {
-  cart.splice(index, 1);
-  localStorage.setItem("ocart", JSON.stringify(cart));
-  resetValues()
-  inflateCart();
-  
-}
-
-function resetValues() {
-  totalPrice = 0;
-  totalDiscount = 0;
-  checkoutPrice = 0;
-  totalItem = 0;
-}
-
-document.querySelector("#apply").addEventListener("click",applyPromo);
-
-function applyPromo(event){
-  if(cart.length==0){
-
-    swal({
-      title: "Empty Cart!",
-      text: "Add Some Item to your Cart !",
-      icon: "error",
-      button: "Let's Shop",
-    });
-    return
-  }
-let promoCode = document.querySelector("#promoCode").value
-  if(promoCode==""){
-    swal({
-      title: "Invalid Code!",
-      text: "Your Promo Code Is Invalid!",
-      icon: "error",
-      button: "Try Again",
-    });
-  }else if(promoCode=="OVERSTOCK40"){
-    swal({
-      title: "Promo Code Applied !",
-      text: "Yaay , You got 40% off on your order",
-      icon: "success",
-      button: "I am excited",
-    });
-
-    newTotal()
-
-  }else{
-    swal({
-      title: "Invalid Code!",
-      text: "Your Promo Code Is Invalid!",
-      icon: "error",
-      button: "Try Again",
-    });
-
-  }
-
-}
-
-function newTotal(){
-  checkoutPrice=(checkoutPrice*60)/100
-  let finalPrice = document.querySelector("#subtotal");
-  finalPrice.innerText = checkoutPrice.toFixed(2);
-  let yourTotal = document.querySelector("#yourTotal");
-  yourTotal.innerText = checkoutPrice.toFixed(2);
-  document.querySelector("#promo>div:last-child").style.display="none";
-  document.querySelector("#promo>div:first-child>h3").innerText="Promo Code Applied"
-  document.querySelector("#promo>div:first-child>i").style.display="none";
-  document.querySelector("#promo>p").style.display="none";
-  document.querySelector("#promo>div:first-child>h3").style.color="green";
-}
-
-
-document.querySelector("#checkOutButton").addEventListener("click",CheckOut);
-
-function CheckOut(){
-  if(localStorage.getItem("loggedUser")==null){
-    window.location.href="signup.html"
-    return
-  }
-  if(cart.length>0){
-    localStorage.setItem("checkout",checkoutPrice);
-    window.location.href="payment.html"
-  }else{
-    swal({
-      title: "Empty Cart!",
-      text: "Add Some Item to your Cart !",
-      icon: "error",
-      button: "Let's Shop",
-    });
-  }
- 
-}
-
-function emptyCart(){
-  if(cart.length==0){
-    document.querySelector("#container>h2:nth-child(1)").innerHTML="Your cart is empty"
-    document.querySelector("#checkout>table").style.display="none";
-    document.querySelector("#bar").style.display="none";
-    document.querySelector("#checkOutButton").innerText="Continue Shopping"
-  }
+document.getElementById("checkoutBtn").addEventListener("click",gotoPayment);
+function gotoPayment() {
+    window.location.href = "payment.html";
 }
